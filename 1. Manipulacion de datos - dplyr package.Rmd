@@ -1,0 +1,303 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# A. Instalación del paquete dplyr
+
+Instalamos el paquete dplyr a través del interfaz de RStudio o con la funcion install.packages(""). Luego activamos el paquete con la siguiente función:
+
+```{r}
+library(dplyr)
+```
+
+Una vez instalado podemos utilizar todas las funciones que se encuentran dentro del paquete dplyr. Como hemos explicado en clase, este paquete es utilizado para ordenar y manipular bases de dato. Aprendiendo a utilizar alguna de sus principales funciones facilitará tener un total control sobre los datos para su posterior analisis. 
+
+A manera de ejemplo vamos a trabajar con diferentes bases de datos para aprender a utilizar las principales funciones del paquete "dplyr". Cargamos la base de datos de "starwars"
+
+```{r}
+data("starwars")
+
+starwars
+```
+
+Dentro del paquete "dplyr" vamos a concentrarnos en 6 funciones principales o "mas usadas", las cuales son:
+1. filter()  -> filtrar observaciones a partir de valores concretos
+2. arrange() -> reordenar las filas
+3. select()  -> seleccionar variables por sus nombres
+4. mutate()  -> crea nuevas variables con funciones a partir de las existentes
+5. summarise() -> colapsar varios valores para dar un resumen de los mismos
+6. group_by()  -> opera la funcion a la que acompaña grupo a grupo
+7. rename()   -> Nos permite cambiar el nombre de las variables
+
+
+## 1. Funcion filter()
+
+Recordamos en primero lugar los operadores logicos que se vieron en clase:
+
+ + **>** : Mayor 
+ + **<** : Menor
+ + >= : Mayor e igual
+ + <=: Menor e igual
+ + ==: Igual
+ + !=: Diferente
+ 
+Si queremos todos los personajes con ojos de color azul de las sagas de las peliculas star wars utilizariamos la funcion filter() con los argumentos a continuacion (el resultado de este filtrado se almacenará en una nueva variables llamada "Starwars_ojos_azules)
+
+```{r}
+Starwars_ojos_azules <- dplyr::filter(starwars, eye_color == "blue")
+
+Starwars_ojos_azules
+```
+
+De igual manera, es importante recordar los operadores de algebra boleana vistos en clase teorica. Siendo x e y dos variables: 
+
++ Operador & : y & x
++ Operador & + operador logico !: x & y
++ Operador o : x | y
++ Operador xor: xor(x,y) es la union exclusiva, lo que no es de x ni de y
++ Operador %in% : variable almacenada en un vector
+
+### 1.1 Filtrando variables cuantitativas
+Podemos filtrar de frente sin almacenar los resultados en una nueva variable
+```{r}
+dplyr::filter(starwars, eye_color == "blue")
+```
+
+Vamos a trabajar asi para los siguientes ejercicios.
+
+Si queremos filtrar los personajes con color de ojos azules y amarillos
+```{r}
+dplyr::filter(starwars, eye_color == "blue" | eye_color == "yellow")
+```
+
+Si lo intentaramos de la siguiente manera...
+
+dplyr::filter(starwars, eye_color == "blue" | "yellow")
+
+...No funcionaria, ya que el lenguaje de progración R no esta diseñado de esta manera. Para esos casos se utiliza el operador %in%, y se debe agrupar los colores de colores que queramos filtrar en un vector:
+```{r}
+dplyr::filter(starwars, eye_color %in% c("blue","yellow"))
+```
+
+El operador %in% es muy utilizado cuando queremos incluir varias categorias de una variable en una linea de codigo simple. Si quisieramos filtrar mas de dos colores de ojos
+```{r}
+filter(starwars, eye_color %in% c("blue","yellow","red"))
+```
+
+### 1.2 Filtrando variables cuantitativas
+Las variables cuantitativas nos permiten hacer filtrados mas avanzados ya que nos permiten jugar con los valores **mayores** y **menores**. Por ejemplo, si quieremos filtrar a todos los personajes con un peso corporal mayor a 80 kilogramos: 
+
+```{r}
+filter(starwars, mass > 80)
+```
+
+![](JabbaPromo.png)
+Podemos ser mas especicos en nuestro filtrado, por ejemplo si queremos seleccionar un intervalo de pesos. Seleccionando los personajes que se encuentran entre los pesos de 60 a 80 kilogramos. 
+
+```{r}
+filter(starwars, mass >60 & mass < 80)
+```
+Se pueden de esta manera crear multiples sub grupos de datos para su analisis particular. Incluso se pueden filtrar dos variables al mismo tiempo. Combinamos por ejemplo y filtramos los personajes con un peso menor a 80 Kg y con ojos azules:
+
+```{r}
+filter(starwars, mass < 80,
+       eye_color == "blue")
+```
+
+Las posibilidades son infinitas como en cualquier sistema de filtrado. Se filtran los valore que nos permitan estudiar la base de datos de mejor manera o que nos permita trabajar con los datos en los que estamos interesados evaluar y analizar. 
+
+Nota: Es importante tener cuidado con los valores NA, que significa ausencia de valor para la variable "x" y el individuo "z". Estas muchas veces no serán computadas en las operaciones o no permitiran reproducir el codigo. Veremos mas adelante como tratar estas variables.
+
+## 2. Función arrange()
+
+La función arrange() del paquete dplyr nos ayuda a ordenar nuestra base de datos en orden alfabetico o por valores de numeros (del mayor al menor o viseversa). 
+
+### 2.1 Arreglando variables cualitativas
+Para ordenar por ejemplo a los personajes por el color de sus ojos:
+```{r}
+dplyr::arrange(starwars, eye_color)
+```
+Arregla la base de datos de acuerdo al color de ojos y en funcion del orden del alfabeto. Adicionalmente, podemos colocar mas de una sola variable, para que nos ordene no solo por el color de ojos, sino tambien por el genero de cada personaje (siempre hay que separar las variables por una ",").
+```{r}
+dplyr::arrange(starwars, eye_color, gender)
+```
+Sin embargo, realizar arreglos de varias variables al mimsmo tiempo puede resultar algo confuso de interpretar. Siempre la primera variable que pongamos prevalecera en jerarquia. 
+
+### 2.2 Arreglando variables cuantitativas
+Para odernar por ejemplo a los personajes de starwars por su peso corporal utilizamos el siguiente codigo:
+```{r}
+dplyr::arrange(starwars, mass)
+```
+Esto automaticamente podemos observar que coloca a todos los personajes del mas liviano al mas pesado. Si quisieramos el efecto contrario utilizariamos dentro del argumento la funcion desc():
+```{r}
+dplyr::arrange(starwars, desc(mass))
+```
+En donde encontramos nuevamente a Jabba como el personaje mas pesado de las sagas Star Wars.
+
+## 3. Función select()
+Esta función nos permite seleccionar un conjunto de variables de interes (numero de columnas). Si queremos entenderlo facilmente, hace un filtrado de las columnas con las que queramos trabajar para tener una mejor visualización (esto especialmente cierto si la base de datos presenta mucha información o son variables no importantes para nuestros analisis)
+
+De igual manera que las otras funciones, para utilizarla solo la escribimos, colocamos el nombre de la base de datos que estamos estudianto (siempre en la primera posición), para luego escribir el nombre de la variable que queramos seleccionar. Por ejemplo, si queremos solo seleccionar el nombre del personaje y el color de sus ojos, seria de la siguiente manera:
+
+```{r}
+dplyr::select(starwars, name, eye_color)
+```
+Podemos seleccionar cuantas columnas(variables queramos).Ejemplo:
+```{r}
+dplyr::select(starwars, name, eye_color, mass, height, hair_color)
+```
+Nota: Es importante notas que podemos aprovechar para cambiar el orden en la que queremos que aparezcan las columnas, eso lo definira en relacion al orden que le demos al escribir el codigo. Por ejemplo, si cambiamos el orden en el codigo anterior, obtendremos un resultado diferente:
+```{r}
+dplyr::select(starwars, eye_color, height, hair_color, name, mass)
+```
+La función delay es muy versatil y se le pueden añadir diversos argumentos para aumentar la especificidad en la busqueda. Algunos argumentos son (estos argumentos van dentro de la funcion select()): 
+
++ starts_with("ma")) : la funcion "starts_with" buscara todas las columnas del data que empiecen por "ma".
++ ends_with("or"))   : la funcion "ends_with" buscara todas las columnas que terminan en "or".
++ contains("s"))     : la funcion "contains" buscara todas las columnas que tienen una "s" en su nombre. La "s" solo tiene que estar en la palabra, al comienzo, al medio o final es indiferentemente.
++ num_range("x", 1:5)): Busca variables que comienzan con x, continuado por los numeros del 1 al 5. Como por ejemplo "x1".
+Siempre podemos utilizar el comando *?select* en la consola de R para tener mas información acerca de la función. Asi mismo, podemos ver tutoriales o buscar mas informacion en los canales de ayuda o google. 
+
+## 4. Función mutate()
+Utilizamos esta funcion para añadir variables a nuestra base de datos original. Generalmente le damos un nuevo nombre a esta variable asi como una regla para calcular los valores que tomará dependiendo casi siempre de las demas variables. Es decir, creamos una nueva columna en funcion de las ya existentes. Las nuevas columnas generadas se añadirán por defecto al final de la base de datos. Generalmente la nueva variable toma valores en relacion a calculos matematicos que realizamos con las variables ya presentes en la base de datos. Por ejemplo, supongamos que en la base de starwars queremos crear una nueva variable llamada Coeficiente_masa_altura (que resumiremos como CMA). Esta nueva variable sera el resultado de dividir la masa de los personajes sobre el peso para cada uno de ellos:
+
+```{r}
+dplyr::mutate(starwars, CMA = mass/height)
+```
+Se puede visualizar que la ultima columna es ahora CMA y se han calculado los valores para cada uno de los personajes en relacion con su peso y altura.
+
+Esta función es muy util para calcular valores de interes que pueden calcularse apartir de los valores de nuestra base de estudio original. La funcion mutate() tiene una función muy cercana llamada transmute(). Esta función realiza lo mismo que mutate() pero elimina todas las demas variables del resultado final, quedandose solo con aquellas que le indicamos.
+```{r}
+dplyr::transmute(starwars, name = name, CMA = mass/height)
+```
+Como se puede visualizar podemos añadir la variable "name" e igualarma a "name" lo cual no cambiara nada de la variable pero permitira visualizarla. Asi como las demas funciones estudiadas, no hay limite en el numero de variables que podamos poner en una sola función. 
+
+## 5 y 6. Función summarise() y group_by()
+
+Colocamos estas dos funciones en un mismo titulo ya que trabajan casi siempre en conjunto. La funcion summarise() nos permite realizar operaciones dentro de cada columna (variable). Esta funcion es muy util para calcular estadisticos, como la mediana, la media, la desviacion estandar, entre otros. Por ejemplo, si queremos calcular el peso promedio de todos los personajes de Star Wars:
+```{r}
+dplyr::summarise(starwars, Peso_Promedio = mean(mass))
+```
+Fijese que el calculo ha resultado igual a NA, esto es debido a que basta con que exita un personaje con NA o "dato perdido" para que el calculo de como resultado NA. Una manera de eliminar los NA dentro de nuestro codigo es añadiendo dentro del argumento "na.rm = T" (rm = remove):
+```{r}
+dplyr::summarise(starwars, Peso_Promedio = mean(mass, na.rm =T))
+```
+En esta ocasión se eliminaron los valores NA para el calculo, teniendo como resultado 97.31186 para el peso promedio de todos los personajes de starwars. 
+
+Sin embargo, y dependiendo de la riqueza de nuestra base de datos, no solo queremos saber el peso promedio de todos los personajes, sino que tambien queremos averiguar por ejemplo, el peso promedio de los personajes en funcion a su color de ojos. Es en estos casos donde la función group_by() tiene un papel decisivo. Utilizemosla en el siguiente ejemplo (tenemos necesariamente que guardar el resultado del agrupamiento en una variable): 
+```{r}
+Agrupado_por_colorojos <- dplyr::group_by(starwars,eye_color)
+```
+A esta nueva base de datos podemos aplicar la función summarise():
+```{r}
+dplyr::summarise(Agrupado_por_colorojos, Peso_Promedio = mean(mass, na.rm =T))
+```
+Podemos visulizar ahora claramente que se ha realizado el calculo de peso promedio en funcion al grupo al que pertenecen. 
+
+Nota: Podemos realizar agrupamientos con la función group_by()con mas de una sola variable. Asi mismo, podemos calcular más de un valor estadistico con la fucnión summarise(). Por ejemplo:
+
+```{r}
+Para <- dplyr::group_by(starwars,eye_color, hair_color)
+dplyr::summarise(Para, PesoP = mean(mass, na.rm=T),
+                 AlturaP = mean(height, na.rm=T))
+```
+### Nota importante.
+Para variables principalmente cualitativas sera muy importante tener en cuenta la funcion "n()" la cual contará el numero de veces (frecuencia) que se repite una variable especificamente (generalmente usado para variables cualitativas o categoricas). Ejemplo: 
+
+```{r}
+dplyr::summarise(Para, frecuencia = n())
+```
+Nota: hay otros comando especificos que aprenderemos en R conforme avancemos en el curso.
+
+## 7. Función rename()
+Podemos utilizar la función rename() para facilmente modificar el nombre de una variable. Esto es muy beneficioso cuando trabajamos en lenguaje de programación debido a que muchas veces las variables tienen nombres muy largos que impiden trabajar comodamente o incluso nos permite traducir un nombre para un facil entendimiento. 
+
+Si queremos por ejemplo renombrar la variable "name" por "nombre" en la base de datos de starwars
+```{r}
+dplyr::rename(starwars, Nombre = name)
+```
+Podemos realizar para multiples variables, solo hay que separar por "," en el codigo para diferenciar:
+```{r}
+dplyr::rename(starwars, Nombre = name, Peso = mass)
+```
+Notese que las demas variables permanecen iguales. 
+
+# B. Utilizando pipes :  %>% (Ctrl + M)
+Despues de repasar las funciones principales del paquete dplyr, llegamos a uno de sus operadores emblemas y mas importantes de estudiar. Si queremos traducirlo, lo llamariamos el operado tuberia, pero es mas conocido como el operador "pipe". Este operado, representado por la simbologia **%>%** nos permite realizar una concatenacion de funciones a una misma base de datos. Para entender mejor, el siguiente ejemplo. De nuestra base de datos starwars, imaginemos que queremos seleccionar las variables de nombre, color de ojos y peso corporal e inmediatamente despues realizar un filtrado de aquellos personajes con ojos de color azul. Si queremos realizarlo en una linea de codigo, seria de la siguiente manera:
+
+```{r}
+dplyr::filter((dplyr::select(starwars, name, eye_color, mass)), eye_color == "blue")
+```
+
+Si bien el codigo funciona, esto se volverian muy engorroso si es que quisieramos aparte hacer una agrupacion (group_by()) y luego un summarise. Ante esta situación se creo el operador "pipe", el cual realiza el proceso opuesto y sacamos la base de datos afuera para luego realizar la siguiente operación. Por ejemplo, el procedimiento anterior, pero con el operador %>% :
+
+```{r}
+starwars %>% 
+        dplyr::select(name, eye_color, hair_color, mass) %>%
+        dplyr::filter(eye_color == "blue")
+        
+```
+Obtenemos el mismo resultado, pero en un codigo mas limpio. Iniciamos siempre de la base de datos y vamos sumandole funciones (el orden de las funciones determina el resultado final y depende del investigador y los objetivos). Si queremos ahora hacer una agrupacion y calculos de estadisticos, podemos escribir el siguiente codigo:
+
+```{r}
+starwars %>% 
+        dplyr::select(name, eye_color, hair_color, mass) %>%
+        dplyr::filter(eye_color == "blue") %>% 
+        dplyr::group_by(hair_color) %>% 
+        dplyr::summarise(Peso_Promedio = mean(mass, na.rm = T))
+```
+El resultado nos da el peso promedio de los personajes que tiene ojos color azul en funcion a su color de pelo.
+Nota: Cuando se usar el operador %>% ya no tenemos que colocar la base de datos una y otra vez en el primer argumento de cada función, esto se realiza de manera automatica.
+
+# C. Tratamiento de NA
+
+Como hemos visto, podemos colocar na.rm = T, cada vez que hagamos uso de una función especifico. Sin embargo, una manera práctica de eliminar los NA tambien es eliminarlos inicialmente (limpieza de datos) para que no interfiera en los calculos. Esto lo podemos realizar facilmente con la funcion filter()
+```{r}
+dplyr::filter(starwars, !is.na(eye_color), !is.na(hair_color))
+```
+Esto eliminara todos los individuos de estudio (personajes de starwars) que no tenian definido el color de ojo, ni de pelo en la base original de starwars.
+
+El manejo de los "missing value" o datos perdidos, sera un tema que veremos recurrentemente a los largo del curso y se vera a mas detalle las implicancias de eliminar sujetos dentro de una base y sus consecuencias en el analisis. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
