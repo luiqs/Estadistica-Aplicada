@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Conceptos Básicos en R"
 output: github_document
 ---
 
@@ -74,6 +74,8 @@ En la figura observamos por ejemplo que tiene 234 filas y 11 columnas (rojo). Ta
 Tambien podemos observar al comienzo de la tabla que se trata de un formato tibble. Este formato brinda detalle adicional y mantiene la base de datos mas ordenada que el formato dataframe. Sin embargo, ambos formatos se siguen utilizando el dia de hoy. Si tenemos un dataframe y queremos pasarlo a formato tibble, usaremos el comando:
 
 + as_tibble() : donde el argumento que colocaremos será igual al nombre de la base de datos.
+
+# C. Creacion de variables
 
 
 
