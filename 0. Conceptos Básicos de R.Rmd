@@ -1,0 +1,96 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# A. Conceptos básicos de R
+Las bases de datos se guardan en formatos Data Frames o tibbles, almacenados de manera tabular. Cualquier base de datos esta generalmente en alguna de estas versiones. Es importante en consecuencia saber manejar las bases de datos, saber observar su contenido abrir la pagina de ayuda de las bases de datos guardadas en R y identificar el tipo de variable y tipos en los dos formatos.
+
+Trabajaremos con dos bases de datos para aprender los conceptos basico su manejo.
+
++ mpg
++ flights
+
+## 1. Instalación de paquetes (o librerias) de R
+
+Las bases de datos generalmente se importan de nuestra computadora o web (formatos csv, xlsx, github, otros). Sin embargo, para facilitar el aprendizaje y enseñanza muchos de los paquetes de R ya vienen con bases de datos preinstaladas a las que podemos ingresar rapidamente, luego de instalar y activar el paquete (o libreria). Para instalar un paquete podemos utilizar la interface de Rstudio. 
+
+![](VentanaInstalacion.PNG)
+
+En la pestaña de paquetes ("Packages") damos click. En esta aparecera un boton de instalación ("Install") al cual daremos click. Esto abrira una nueva pestaña en la que podemos colocar el nombre del paquete que queramos instalar. Los nombres de los paquetes son unicos y se tienen que saber de antemano para poder buscarlos. Es por tal motivo importante familiarizarse con los principales paquetes de R e ir adicionando mas conforme nuestros objetivos especificos. 
+
+![](InstalacionPaquete.PNG)
+
+De igual manera, podemos instalar cualquier paquete mediante codigo, para esto se coloca dentro de la funcion install.packages() el nombre del paquete entre comillas. Por ejemplo, si quisieramos instalar el paquete llamado "ggplot2" utilizariamos el siguiente codigo:
+
++ install.packages("ggplot2")
+
+Al correr esta linea de codigo, el paquete comenzara automaticamente en Rstudio e instalara. 
+
+## 2. Activación de paquetes (o librerias) en R
+
+Una vez instalado un paquete en nuestra computadora, siempre estará disponible al abrir R o Rstudio (a menos que exista algun inconveniente que no pida desintalar e instalar nuevamente el paquete o si instalamos una nueva version de R, etc.). Sin embargo, que este activado, no significa que este disponible para su uso. Cada vez que iniciamos una nueva sesion o un nuevo proyecto o un nuevo script(manuscrito) debemos activar la libreria que usaremos. Por ejemplo, si queremos activar el paquete ggplot2, lo haremos utilizando la funcion library(): 
+
+```{r}
+library(ggplot2)
+```
+Una vez activado, podemos verificarlo qen la pestaña de paquetes. Si el nombre del paquete aparece con un check, significa que esta activado, como se puede visualizar en la siguiente figura: 
+
+![](ActivacionPaquete.PNG)
+
+#B. Bases de datos en paquetes de R
+
+La primera base de datos que cargaremos se encuentra dentro del paquete ggplot2, ya que esta instalado y activado, podemos aumentar la base de datos a nuestro ambiente de trabajo mediante la funcion data():
+
+```{r}
+data(mpg)
+```
+
+Podra visaulizar que la pestaña de ambiente, aparacio la nueva base de datos llamada mpg. Si le damos click encima, podemos visualizar en que consiste esta base. Recordar que solo hace falta llamar una vez la base de datos, luego permanecerá disponible para su uso. 
+
+![](AmbienteData.PNG)
+
+Podemos visualizar la data con tan solo llamarla por su nombre:
+
+```{r}
+mpg
+```
+
+Todas las bases de datos guardadas en cualquier paquete de R, siempre tiene una pagina de ayuda que nos permite saber a mayor detalle en que consiste la base de datos. Para acceder facilmente a ella podemos escribir el simbolo "?" adelante de la base de datos, por ejemplo:
+
++ ?mpg
+
+Lo cual cargará y nos dará como resultado en que consiste la base de datos, como observamos en la figura:
+![](HelpPestaña.PNG)
+
+Regresando a la base de datos mpg, pudimos observar que al cargarla nos ofrece informacion general, como el numero de filas (individuos) y columnas (variables). 
+![](BaseDatos.PNG)
+En la figura observamos por ejemplo que tiene 234 filas y 11 columnas (rojo). Tambien podemos observar que cada una de las variables tiene una etiqueta de tres letras, por ejemplo <chr>, <dbl>, <int>, etc. Las cuales hemos visto en clase y nos da la informacion de que tipo de variables tenemos en nuestra base de datos (aunque a veces hay que modificar la interpretación del software ya que se puede equivocar o tener objetivos diferentes a los del investigador).
+
+Tambien podemos observar al comienzo de la tabla que se trata de un formato tibble. Este formato brinda detalle adicional y mantiene la base de datos mas ordenada que el formato dataframe. Sin embargo, ambos formatos se siguen utilizando el dia de hoy. Si tenemos un dataframe y queremos pasarlo a formato tibble, usaremos el comando:
+
++ as_tibble() : donde el argumento que colocaremos será igual al nombre de la base de datos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
