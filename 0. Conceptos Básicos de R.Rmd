@@ -7,7 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Antes de comenzar a escribir codigos y interactuar con R, debemos de crear un nuevo proyecto. Para ello, iremos a la ventada de Archivo (File) -> Nuevo proyecto (New Project)
+Antes de comenzar a escribir codigos y interactuar con R, debemos de crear un nuevo proyecto. Para ello, iremos a la ventada de Archivo (File) -> Nuevo proyecto (New Project).
 
 ![](NewProject.PNG)
 ![](NewProject2.PNG)
@@ -296,7 +296,6 @@ f) ¿Cuánto difieren los números redondeados de los originales?
 
 ### 9. La función *unique(x)* devuelve un vector como x, pero con los elementos duplicados eliminados.La función *duplicated(x)* determina que elementos de un vector estan duplicados
 anteriormente y devuelve un vector logico. Utilicelas en la base de datos mpg en alguna variable de su interes. 
-
 
 ### 10. Corran las siguientes operaciones en su Script y analicen los resultados. 
 
