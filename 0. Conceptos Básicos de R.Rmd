@@ -255,11 +255,9 @@ Seleccion_variable2
 
 Hemos visto de manera general como funciona Rstudio y como podemos utilizar el lenguaje de programación dentro de el. Existen adicionalmente otras funciones claves dentro del lenguaje de programación básico de R, pero es probable que no los necesitemos en el curso de estadistica aplicada o los veamos sutilmente en los ultimos temas. Con lo aprendido en esta primera parte introductoria basta para comenzar a aprender especificamente que hacen diferentes paquetes y para que los podemos usar. Durante el curso, veremos los principales paquetes básicos de R, pero en la actualidad existe un sin numero de paquetes almacenados en los servidores de R (repositorio CRAN) o paquetes piloto almacenados en GitHub (los que aun tienen que pasar pruebas y ensayos para ser oficiales).
 
+En el siguiente link, ustedes podran encontrar todas la "hojas de trucos" o "Cheatsheets" creados por la comunidad de Rstudio. En esta pagina, encontraran un sin numero de hojas de truco con el resumen de las principales funciones para cada paquete en particular o para procesos en particular. Una de estas hojas de truco que pueden descargar para esta primera parte, es la que dice "Base R". El link de la pagina: <https://rstudio.com/resources/cheatsheets/>
 
-
-
-
-
+Nota: Algunas de las guias se encuentran traducidas a diferentes idiomas (entre ellos el español) en la parte inferior de la pagina. 
 
 
 
