@@ -62,7 +62,7 @@ De igual manera, es importante recordar los operadores de álgebra boleana visto
 + Operador xor: xor(x,y) es la unión exclusiva, lo que no es de x ni de y
 + Operador %in% : variable almacenada en un vector
 
-### 1.1 Filtrando variables cuantitativas
+### 1.1 Filtrando variables cualitativa
 Podemos filtrar de frente sin almacenar los resultados en una nueva variable
 ```{r}
 dplyr::filter(starwars, eye_color == "blue")
