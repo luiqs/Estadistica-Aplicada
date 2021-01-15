@@ -244,14 +244,8 @@ Llamamos a la variable con combre "Seleccion_variable2":
 Seleccion_variable2
 ```
 
-## 5. Funciones de recurrentes y básicas para utilizar
 
-```{r}
-
-```
-
-
-#CONCLUSIONES
+# CONCLUSIONES
 
 Hemos visto de manera general como funciona Rstudio y como podemos utilizar el lenguaje de programación dentro de el. Existen adicionalmente otras funciones claves dentro del lenguaje de programación básico de R, pero es probable que no los necesitemos en el curso de estadistica aplicada o los veamos sutilmente en los ultimos temas. Con lo aprendido en esta primera parte introductoria basta para comenzar a aprender especificamente que hacen diferentes paquetes y para que los podemos usar. Durante el curso, veremos los principales paquetes básicos de R, pero en la actualidad existe un sin numero de paquetes almacenados en los servidores de R (repositorio CRAN) o paquetes piloto almacenados en GitHub (los que aun tienen que pasar pruebas y ensayos para ser oficiales).
 
@@ -260,9 +254,9 @@ En el siguiente link, ustedes podran encontrar todas la "hojas de trucos" o "Che
 Nota: Algunas de las guias se encuentran traducidas a diferentes idiomas (entre ellos el español) en la parte inferior de la pagina. 
 
 
-#EJERCICIOS
+## EJERCICIOS
 
-### 1. Calculadora. Realice los siguientes calculos y asignelos a una variable (con el nombre de su elección):
+#### 1. Calculadora. Realice los siguientes calculos y asignelos a una variable (con el nombre de su elección):
 
 + 5 más 4
 + 6 menos 2
@@ -271,22 +265,22 @@ Nota: Algunas de las guias se encuentran traducidas a diferentes idiomas (entre 
 + 5 multiplicado por 5
 + Halle la raiz cuadrada de 25
 
-### 2. Cree un vector de tipo texto (chr) con 5 tipos de fruta, el nombre del vector sera Fruta:
+#### 2. Cree un vector de tipo texto (chr) con 5 tipos de fruta, el nombre del vector sera Fruta:
 
-### 3. Cree un vector de tipo numero con 5 numeros del 10 al 40 y asignelo a un vector del nombre de su elección. 
+#### 3. Cree un vector de tipo numero con 5 numeros del 10 al 40 y asignelo a un vector del nombre de su elección. 
 
-### 4. Carge la base de datos "mpg" en su ambiente y diga cual es el valor maximo y el valor minimo de la variable displ (dezplazamiento del motor). Acuerdese que puede ingresar *?mpg* en su manuscrito para saber mas de la base de datos. Adicionalmente, encuentre el promedio *mean()*, desviacion estandar *sd()*, y cuantiles *quantile()*, el tipo de clase*class* de la variable **displ**. De igual manera que con las bases de datos, ustede puede colocar el signo de interrogación ? delante de cualquier función para darse una idea de como fuciona (por ejemplo: "?sd")
+#### 4. Carge la base de datos "mpg" en su ambiente y diga cual es el valor maximo y el valor minimo de la variable displ (dezplazamiento del motor). Acuerdese que puede ingresar *?mpg* en su manuscrito para saber mas de la base de datos. Adicionalmente, encuentre el promedio *mean()*, desviacion estandar *sd()*, y cuantiles *quantile()*, el tipo de clase*class* de la variable **displ**. De igual manera que con las bases de datos, ustede puede colocar el signo de interrogación ? delante de cualquier función para darse una idea de como fuciona (por ejemplo: "?sd")
 
-### 5. Obtenga los nombres de las variables de la base de datos "mpg" con la ayuda de la función *names()* 
+#### 5. Obtenga los nombres de las variables de la base de datos "mpg" con la ayuda de la función *names()* 
 
-### 6. Visualice los primeros valores de la base de datos "mpg" con ayuda de la función *head()*, asi mismo use la función *tail()* y determine para que sirve. 
+#### 6. Visualice los primeros valores de la base de datos "mpg" con ayuda de la función *head()*, asi mismo use la función *tail()* y determine para que sirve. 
 
-### 7. Podemos convertir un vector tipo texto en un vector numerico mediante la función *as.numeric()*. Compruebelo de la siguiente manera:
+#### 7. Podemos convertir un vector tipo texto en un vector numerico mediante la función *as.numeric()*. Compruebelo de la siguiente manera:
 
 + x <- c("a","b","a","c","b")
 + y <- as.numeric(x)
 
-### 8. Con los siguientes números: 7.3, 6.8, 0.005, 9, 12, 2.4, 18.9, .9
+#### 8. Con los siguientes números: 7.3, 6.8, 0.005, 9, 12, 2.4, 18.9, 0.9
 a) Calcula la media.
 b) Calcula la raíz cuadrada de los números.
 c) Obtenga los números que son mayores que su raíz cuadrada.
@@ -294,10 +288,9 @@ d) ¿Cuántos valores son mayores que 1?
 e) Obténga la raíz cuadrada de los números redondeados con dos cifras decimales.
 f) ¿Cuánto difieren los números redondeados de los originales?
 
-### 9. La función *unique(x)* devuelve un vector como x, pero con los elementos duplicados eliminados.La función *duplicated(x)* determina que elementos de un vector estan duplicados
-anteriormente y devuelve un vector logico. Utilicelas en la base de datos mpg en alguna variable de su interes. 
+#### 9. La función *unique(x)* devuelve un vector como x, pero con los elementos duplicados eliminados.La función *duplicated(x)* determina que elementos de un vector que estan duplicados anteriormente y devuelve un vector logico. Utilicelas en la base de datos mpg en alguna variable de su interes. 
 
-### 10. Corran las siguientes operaciones en su Script y analicen los resultados. 
+#### 10. Corran las siguientes operaciones en su Script y analicen los resultados. 
 
 + 2 == 1
 + 1 != 2
@@ -306,8 +299,70 @@ anteriormente y devuelve un vector logico. Utilicelas en la base de datos mpg en
 + 2 >= 1
 + 2 <= 3
 
+## SOLUCIONES
+#### 1
 
++ 5+4
++ 6-2
++ 4/2
++ 10^2
++ 5*5
++ sqrt(25)
 
+#### 2
 
++ Frutas <- c("Manzana", "Pera", "Melocoton", "Mango", "Granadilla")
 
+#### 3
 
++ Numeros <- c(11, 12, 13, 14, 15)
+
+#### 4
+
++ data("mpg")
++ p <- mpg$displ
++ max(p)
++ min(p)
++ mean(p)
++ sd(mpg$displ)
++ quantile(mpg$displ)
+
+#### 5
+
++ names(mpg)
+
+#### 6
+
++ head(mpg)
++ tail(mpg)
+
+#### 7
+
++ x <- c("a","b","a","c","b")
++ y <- as.numeric(x)
+
+#### 8
+
++ Numeros <- c(7.3, 6.8, 0.005, 9, 12, 2.4, 18.9, 0.9)
++ a)mean(Numeros)
++ b)sqrt(Numeros)
++ c)Numeros[Numeros>sqrt(Numeros)]
++ d)sum(Numeros>1)
++ e)sqrt(Numerosr<-round(Numeros,2))
++ f)Numeros-Numerosr
+
+#### 9
+
++ data(mpg)
++ unique(mpg$year)
++ duplicated(mpg$year)
+
+#### 10
+
++ 2 == 1
++ 1 != 2
++ 2 > 1
++ 1 < 2
++ 2 >= 1
++ 2 <= 3
++ Mediante este ejercicio puede comprobar como funcionan los operafores logicos, cuyo resultado sera siempre VERDADERO o FALSO.
