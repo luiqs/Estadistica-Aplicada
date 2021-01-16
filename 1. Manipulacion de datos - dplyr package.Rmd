@@ -62,7 +62,7 @@ De igual manera, es importante recordar los operadores de álgebra boleana visto
 + Operador xor: xor(x,y) es la unión exclusiva, lo que no es de x ni de y
 + Operador %in% : variable almacenada en un vector
 
-### 1.1 Filtrando variables cualitativa
+### 1.1 Filtrando variables cualitativas
 Podemos filtrar de frente sin almacenar los resultados en una nueva variable
 ```{r}
 dplyr::filter(starwars, eye_color == "blue")
@@ -206,7 +206,7 @@ Para <- dplyr::group_by(starwars,eye_color, hair_color)
 dplyr::summarise(Para, PesoP = mean(mass, na.rm=T),
                  AlturaP = mean(height, na.rm=T))
 ```
-### Nota importante.
+#### Nota importante.
 Para variables principalmente cualitativas sera muy importante tener en cuenta la función "n()" la cual contará el numero de veces (frecuencia) que se repite una variable específicamente (generalmente usado para variables cualitativas o categóricas). Ejemplo: 
 
 ```{r}
@@ -264,7 +264,7 @@ Esto eliminara todos los individuos de estudio (personajes de starwars) que no t
 
 El manejo de los "missing value" o datos perdidos, sera un tema que veremos recurrentemente a los largo del curso y se vera a mas detalle las implicancias de eliminar sujetos dentro de una base y sus consecuencias en el análisis. 
 
-# EJERCICIOS
+## EJERCICIOS
 
 + Los ejercicios están diseñados para trabajar con la base de datos de starwars, sin embargo, usted podría aprovechar para usar cualquiera de las bases de datos de cualquiera de los paquetes de R. Las puede visualizar en el link <https://vincentarelbundock.github.io/Rdatasets/datasets.html>
 
