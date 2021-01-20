@@ -206,7 +206,10 @@ Utilice la base de datos de starwars u otra base de datos de su preferencia (y d
 
 ##### 8. Intente realizar mas gráficos y práticar. Sino puede hacer alguno de los gráficos propuestos, consulte a la siguiente pagina como referencia <https://www.r-graph-gallery.com/index.html>. Sino entiende, comente en los foros de la clase o a su profesor. 
  
+Referencias: 
 
+El libro de Hadley Wickhman, creador del paquete ggplot2 en el año 2005, se puede obtener gratis en el siguiente enlace:
+<https://ggplot2-book.org/statistical-summaries.html>
 
 
 
