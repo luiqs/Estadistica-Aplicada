@@ -43,15 +43,15 @@ El "plot" o gráfico sera visualizado cuando mínimo hayamos cumplido con brinda
 
 Las geometrías definirán que tipo de gráfico estamos buscando, desde un gráfico de dispersión, de líneas, de cajas, etc. El siguiente gráfico nos brinda una lista pequeña de los principales gráficos utilizados en estadística, muchos de estos los realizaremos mas adelante con la base de datos starwars.
 
-<img src="ggplot_3.png" width="480"/>
+![](ggplot_2.PNG)
 
 Dentro de estética o la geometría, podemos personalizar cada uno de nuestros gráficos a través del uso de argumentos que modificarán la transparencia, el color de las lineas, en color interno de las barras, el tipo de linea utilizado, el tamaño, etc. Algunas de estas se pueden visualizar en la siguiente figura:
 
-<img src="ggplot_4_argumentos.png" width="494"/>
+![](ggplot_3.PNG)
 
 Adicional a las 3 partes mínimas en la gramática de ggplot2 (datos, estéticas y geometría), podemos añadir otros elementos que nos permitirán modificar las gráficas originales y personalizar nuestros gráficos de maneras únicas. Algunas de estas funciones se ven en la siguiente figura, como por ejemplo coordinate_función(), la cual cambia el sistema de coordenadas; facet_function(), la cual nos permite generar un mismo gráfico pero agrupado por una característica especifica; theme_function(), la cual nos permite cambiar el fondo de nuestro plano cartesiano; entre muchas otras. Estas no son necesarias para graficar, sin embargo permiten un nivel de personalización del gráfico únicos. El gráfico a continuación adicionalmente les da la idea exacta de como se escribe una linea de código para graficar con ggplot2, tratar de recordar y memorizar.
 
-<img src="ggplot_2.png" width="484"/>
+![](ggplot_4_argumentos.PNG)
 
 **Nota**: Si han manejado un software de fotografía, pintura o de mapas georeferenciales, se habrán percatado que conforme avanzamos en el trabajo, generamos varias capas y en cada una de las diferentes capas dibujamos algo diferente que va sobreponiéndose en la imagen inicial. Eso es precisamente lo que hacemos con ggplot2. Comenzamos con un plano cartesiano (un lienzo en blanco) sobre el cual podemos "dibujar" diferentes puntos, lineas, mapas y otros gráficos que representaran el comportamiento de la base de datos que estamos estudiando y una o dos variables especificas.
 
