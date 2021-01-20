@@ -7,7 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# A. Instalación del paquete dplyr
+# A. Instalación del paquete dplyr y sus principales funciones
 
 Instalamos el paquete dplyr a través del interfaz de RStudio o con la función install.packages(""). Luego activamos el paquete con la siguiente función:
 
@@ -227,7 +227,7 @@ dplyr::rename(starwars, Nombre = name, Peso = mass)
 ```
 Resaltar que las demás variables permanecen iguales. 
 
-# B. Utilizando pipes :  %>% (Ctrl + M)
+# B. Utilizando pipes :  %>% (Ctrl + Shifht + M)
 Después de repasar las funciones principales del paquete dplyr, llegamos a uno de sus operadores emblemas y mas importantes de estudiar. Si queremos traducirlo, lo llamaríamos el operado tubería, pero es mas conocido como el operador "pipe". Este operado, representado por el símbolo **%>%** nos permite realizar una concatenación de funciones a una misma base de datos. Para entender mejor, el siguiente ejemplo. De nuestra base de datos starwars, imaginemos que queremos seleccionar las variables de nombre, color de ojos y peso corporal e inmediatamente después realizar un filtrado de aquellos personajes con ojos de color azul. Si queremos realizarlo en una linea de código, seria de la siguiente manera:
 
 ```{r}
