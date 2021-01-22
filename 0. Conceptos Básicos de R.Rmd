@@ -9,34 +9,34 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Antes de comenzar a escribir códigos y interactuar con R, debemos de crear un nuevo proyecto. Para ello, iremos a la ventada de Archivo (File) -> Nuevo proyecto (New Project).
 
-![](NewProject.PNG)
-![](NewProject2.PNG)
-![](NewProject3.PNG)
+![](Figuras/NewProject.PNG)
+![](Figuras/NewProject2.PNG)
+![](Figuras/NewProject3.PNG)
 
 Si seguimos correctamente la correlación de figuras y creamos sin problemas un nuevo proyecto, tendremos como resultado la siguiente figura (quizá con otros colores de fondo y letras):
 
-![](NuevoProyecto.PNG)
+![](Figuras/NuevoProyecto.PNG)
 
 Sin bien, pueden comenzar a escribir en la consola, no es lo normal, ni recomendable. Normalmente cuando aprendemos a usar el lenguaje de programación R, utilizando Rstudio, escribimos todo nuestro código en un formato especial llamado "script" el cual es un tipo de archivo ".R". Por muchos años este tipo de archivo ha sido usado en el software Rstudio para escribir nuestros códigos y tiene sus características. Sin embargo, en los últimos años, una actualización de este "script" (manuscrito) esta tomando relevancia y apunta a reemplazar la manera en que trabajamos. Este nuevo tipo de formato se llama Rmarkdown y es el que se ha usado para esta clase. 
 
 Repasemos algunos concepto básicos de un script. Para su creación vamos a la opción Archivo (File) del programa y colocamos nuevo archivo -> Script. 
 
-![](Script.PNG)
+![](Figuras/Script.PNG)
 
 Esto abrirá un script en blanco sin nombre y sin guardarse automáticamente, tendremos que seleccionarlo e ir a archivo -> Guardar como (colocamos el nombre de nuestro archivo y la terminación .R). Cuando guardemos, este nuevo archivo aparecerá en nuestra pestaña de Archivos donde antes solo estaba el proyecto. 
 
-![](SinNombre.PNG)
-![](GuardaComo1.PNG)
-![](GuardaComo2.PNG)
-![](GuardaComo3.PNG)
+![](Figuras/SinNombre.PNG)
+![](Figuras/GuardaComo1.PNG)
+![](Figuras/GuardaComo2.PNG)
+![](Figuras/GuardaComo3.PNG)
 
 Una vez creado el script y guardado, podemos comenzar a codificar y obtener resultados fantásticos con nuestras bases de datos.
 
 Por otro lado, para crear un archivo Rmarkdown, los pasos son muy parecidos. Vamos a Archivo -> Nuevo archivo -> 
 
-![](Markdown1.PNG)
-![](Markdown2.PNG)
-![](Markdown3.PNG)
+![](Figuras/Markdown1.PNG)
+![](Figuras/Markdown2.PNG)
+![](Figuras/Markdown3.PNG)
 
 Para guardar el archivo Rmarkdown, se deben realizar los mismos pasos. Archivo -> Guardar como. Colocaremos el nombre y le daremos guardar. Nota: el tipo de archivo ya no es un archivo ".R", es en cambio un tipo de archivo ".Rmd".
 
@@ -53,8 +53,8 @@ print("Esto es un ejemplo")
 ```
 Cuando escriban esto en su script y le den al botón de Correr o "Run" en la parte superior del Script, después de unos segundos de carga, lo verán aparecer como resultado en la consola. Podemos escribir mucho código en nuestros scripts pero si no damos click en "Run", este código nunca se ejecutará y nunca veremos el resultado. En la figura se puede ver el botón de Run resaltado. 
 
-![](Run.PNG)
-![](Run2.PNG)
+![](Figuras/Run.PNG)
+![](Figuras/Run2.PNG)
 
 Como se puede ver, para correr un "pedazo" de código especifico tenemos dos opciones, sombrear todo lo que queremos "Correr" o colocar el cursor del "mouse" en alguna parte de la linea de código que queramos correr (que es quizá lo mas práctico, solo asegurémonos que el curso del texto esta en alguna parte de la linea de código). Para trabajar de manera práctica, sin depender del mouse, podemos utilizar el comando rápido para "Correr" códigos, este es usando las teclas *Ctrl + Enter*. De esta manera no tendremos que recurrir a apretar siempre el botón de "Run". 
 
@@ -72,11 +72,11 @@ Trabajaremos con dos bases de datos para aprender los conceptos básico su manej
 
 Las bases de datos generalmente se importan de nuestra computadora o web (formatos csv, xlsx, github, otros). Sin embargo, para facilitar el aprendizaje y enseñanza muchos de los paquetes de R ya vienen con bases de datos pre instaladas a las que podemos ingresar rápidamente, luego de instalar y activar el paquete (o librería). Para instalar un paquete podemos utilizar el interfaz de Rstudio. 
 
-![](VentanaInstalacion.PNG)
+![](Figuras/VentanaInstalacion.PNG)
 
 En la pestaña de paquetes ("Packages") damos click. En esta aparecerá un botón de instalación ("Install") al cual daremos click. Esto abrirá una nueva pestaña en la que podemos colocar el nombre del paquete que queramos instalar. Los nombres de los paquetes son únicos y se tienen que saber de antemano para poder buscarlos. Es por tal motivo importante familiarizarse con los principales paquetes de R e ir adicionando mas conforme nuestros objetivos específicos. 
 
-![](InstalacionPaquete.PNG)
+![](Figuras/InstalacionPaquete.PNG)
 
 De igual manera, podemos instalar cualquier paquete mediante código, para esto se coloca dentro de la función install.packages() el nombre del paquete entre comillas. Por ejemplo, si quisiéramos instalar el paquete llamado "ggplot2" utilizaríamos el siguiente código:
 
@@ -93,7 +93,7 @@ library(ggplot2)
 ```
 Una vez activado, podemos verificarlo que la pestaña de paquetes. Si el nombre del paquete aparece con un check, significa que esta activado, como se puede visualizar en la siguiente figura: 
 
-![](ActivacionPaquete.PNG)
+![](Figuras/ActivacionPaquete.PNG)
 
 # C. Cargando bases de datos provenientes de paquetes de R
 
@@ -105,7 +105,7 @@ data(mpg)
 
 Podrá visualizar que en la pestaña de ambiente, apareció la nueva base de datos llamada mpg. Si le damos click encima, podemos visualizar en que consiste esta base. Recordar que solo hace falta llamar una vez la base de datos, luego permanecerá disponible para su uso. 
 
-![](AmbienteData.PNG)
+![](Figuras/AmbienteData.PNG)
 
 Podemos visualizar la data con tan solo llamarla por su nombre:
 
@@ -118,11 +118,11 @@ Todas las bases de datos guardadas en cualquier paquete de R, siempre tiene una 
 + ?mpg
 
 Lo cual cargará y nos dará como resultado en que consiste la base de datos, como observamos en la figura:
-![](HelpPestaña.PNG)
+![](Figuras/HelpPestaña.PNG)
 
 Regresando a la base de datos mpg, pudimos observar que al cargarla nos ofrece información general, como el numero de filas (individuos) y columnas (variables). 
 
-![](BaseDatos.PNG)
+![](Figuras/BaseDatos.PNG)
 
 En la figura observamos por ejemplo que tiene 234 filas y 11 columnas (rojo). También podemos observar que cada una de las variables tiene una etiqueta de tres letras, por ejemplo <chr>, <dbl>, <int>, etc. Las cuales hemos visto en clase y nos da la información de que tipo de variables tenemos en nuestra base de datos (aunque a veces hay que modificar la interpretación del software ya que se puede equivocar o tener objetivos diferentes a los del investigador).
 
@@ -143,7 +143,7 @@ Ya hemos visto como cargar bases de datos a nuestro ambiente con la función(dat
 ```
 Una vez corramos este código (no aparecerá ningún resultado en la consola), verán que después de uno segundo, aparecerá en nuestra ventana de "Environment" en valor de X y se le asignará el numero 3. 
 
-![](Variable1.PNG)
+![](Figuras/Variable1.PNG)
 
 Nota: Es importante reconocer desde ya, que el lenguaje R es super susceptible a los caracteres y diferencia entre mayúsculas y minúsculas, espacios, etc. Por ejemplo si ahora queremos asignarla a una nueva variable "x" (**minúscula**) el valore de 5, podremos hacerlo de la siguiente manera:
 
@@ -153,7 +153,7 @@ x <- 5
 
 Podremos ver que efectivamente hay un nuevo valor llamado x (minúscula) y que se le asigno el valore de 5. 
 
-![](Variable2.PNG)
+![](Figuras/Variable2.PNG)
 
 ¿Qué pasa si le asignamos un nuevo valor a la variable X o x? Lo que ocurrirá es que el nuevo valor que le asignamos reemplazará al anterior y esto lo podremos ver en la ventana de "Ambiente" una vez corramos el siguiente código (donde asignamos el valore de 6 a X: 
 
@@ -161,7 +161,7 @@ Podremos ver que efectivamente hay un nuevo valor llamado x (minúscula) y que s
 X <-6
 ```
 
-![](Variable3.PNG)
+![](Figuras/Variable3.PNG)
 
 De esta manera sencilla hemos aprendido como asignar valores a las variables. Los valores que podemos asignar a una variable son diversos y de gran numero. Podemos asignar a una variable un gráfico, un modelo, una base de datos, un vector, etc. ¿Qué es precisamente un vector?. Un vector es un conjunto de datos para una sola variable, de una longitud determinada por el investigador o la base de datos evaluada. Para crear un vector de valores (sean cualitativos o cuantitativos) debemos de usar el comando **c()** y dentro de este, colocaremos el conjunto de valores que tiene el vector. Por ejemplo, si queremos crear un vector llamado "Vector_Ejemplo" lo haremos de la siguiente manera: 
 
@@ -186,7 +186,7 @@ Este tipo de vector, tiene variables del tipo *logi* (lógicos), los cuales nos 
 
 Como vimos en clases, existen otros tipos de variables que iremos usando durante el curso. A manera de repaso se enseñan a continuación:
 
-![](TiposdeData1.PNG)
+![](Figuras/TiposdeData1.PNG)
 
 Nota: Al momento de crear una variable es una buena práctica utilizar nombres cortos de una sola palabra. En caso sea necesario usar mas de 1 palabra, se estila utilizar guion bajo para unirlas, ya que el lenguaje R considera a los espacios en blanco como errores si es que no son dentro de una función. Los estilos para crear una variable compuesta pueden ser los siguientes: 
 
@@ -201,17 +201,17 @@ Vemos sutiles diferencias, trabajar con la forma que le parezca mas práctica o 
 
 Para recordar, tenemos operadores aritméticos en lenguaje R:
 
-![](OperacionesAritmeticas.PNG)
+![](Figuras/OperacionesAritmeticas.PNG)
 
 Como también operadores lógicos o de relación: 
 
-![](OperacionesLogicas.PNG)
+![](Figuras/OperacionesLogicas.PNG)
 
 ## 3. Operaciones entre unidades, vectores, matrices, listas y bases de datos
 
 Las operaciones tanto aritméticas, como lógicas se pueden realizar en los diferentes tipos de bases de datos, en R, podemos tener unidades, vectores, matrices, listas y bases de datos. A continuación un resumen: 
 
-![](BaseDatos.PNG)
+![](Figuras/BaseDatos.PNG)
 
 Trabajaremos principalmente con bases de datos de tipo dataframe o tibbles. En algunos casos utilizaremos también vectores, por lo cual es importante manejarlos correctamente. 
 

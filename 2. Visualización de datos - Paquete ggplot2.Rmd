@@ -29,11 +29,11 @@ Antes de aprender la gramática de ggplot2 tenemos que tener muy en claro como f
 
 En este sentido, es primordial siempre conocer nuestra base de datos, conocer cuantas variables y observaciones contiene. Conocer cada uno de los tipos de variable con los que vamos a trabajar. Reconocer cualquier tipo de error antes de visualizarla o hacer algún análisis estadístico. Una vez tengamos esta base de datos, podemos visualizarla y es para ellos que el paquete ggplot2 nos ayudará. La siguiente figura traslada esta dinámica entre bases de datos y visualización de datos.
 
-<img src="ggplot_0.PNG" width="369"/>
+![](Figuras/ggplot_0.PNG)
 
 El lenguaje utilizado por el ggplot2 es muy parecido al sistema de "pipes" ( %\>% ) aprendido y utilizado en el paquete *dplyr*. Sin embargo, al contrario de utilizar el operador **%\>%** utilizaremos solamente el símbolo **+** para concatenar diferentes "planos". Como se puede observar en la siguiente figura, la gramática de ggplot2 puede parecer difícil y confusa, pero les aseguro que una vez la dominen sera 100% intuitiva:
 
-<img src="ggplot_1.PNG" width="499"/>
+![](Figuras/ggplot_1.PNG)
 
 El "plot" o gráfico sera visualizado cuando mínimo hayamos cumplido con brindarle a nuestro código:
 
@@ -43,15 +43,15 @@ El "plot" o gráfico sera visualizado cuando mínimo hayamos cumplido con brinda
 
 Las geometrías definirán que tipo de gráfico estamos buscando, desde un gráfico de dispersión, de líneas, de cajas, etc. El siguiente gráfico nos brinda una lista pequeña de los principales gráficos utilizados en estadística, muchos de estos los realizaremos mas adelante con la base de datos starwars.
 
-![](ggplot_2.PNG)
+![](Figuras/ggplot_2.PNG)
 
 Dentro de estética o la geometría, podemos personalizar cada uno de nuestros gráficos a través del uso de argumentos que modificarán la transparencia, el color de las lineas, en color interno de las barras, el tipo de linea utilizado, el tamaño, etc. Algunas de estas se pueden visualizar en la siguiente figura:
 
-![](ggplot_3.PNG)
+![](Figuras/ggplot_3.PNG)
 
 Adicional a las 3 partes mínimas en la gramática de ggplot2 (datos, estéticas y geometría), podemos añadir otros elementos que nos permitirán modificar las gráficas originales y personalizar nuestros gráficos de maneras únicas. Algunas de estas funciones se ven en la siguiente figura, como por ejemplo coordinate_función(), la cual cambia el sistema de coordenadas; facet_function(), la cual nos permite generar un mismo gráfico pero agrupado por una característica especifica; theme_function(), la cual nos permite cambiar el fondo de nuestro plano cartesiano; entre muchas otras. Estas no son necesarias para graficar, sin embargo permiten un nivel de personalización del gráfico únicos. El gráfico a continuación adicionalmente les da la idea exacta de como se escribe una linea de código para graficar con ggplot2, tratar de recordar y memorizar.
 
-![](ggplot_4_argumentos.PNG)
+![](Figuras/ggplot_4_argumentos.PNG)
 
 **Nota**: Si han manejado un software de fotografía, pintura o de mapas georeferenciales, se habrán percatado que conforme avanzamos en el trabajo, generamos varias capas y en cada una de las diferentes capas dibujamos algo diferente que va sobreponiéndose en la imagen inicial. Eso es precisamente lo que hacemos con ggplot2. Comenzamos con un plano cartesiano (un lienzo en blanco) sobre el cual podemos "dibujar" diferentes puntos, lineas, mapas y otros gráficos que representaran el comportamiento de la base de datos que estamos estudiando y una o dos variables especificas.
 
