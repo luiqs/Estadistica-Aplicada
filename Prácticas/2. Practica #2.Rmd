@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Preguntas: 
 
-##### 1. La poblacion de la ciudad de Tantan tiene un total de 120 000 habitantes divididos en 5 regiones(Norte, Sur, Centro, Este y Oeste).En la siguiente base de datos llamada "Tantan" se puede observar el numero de habitantes por region. Un muestreo aleatorio simple se realizará para estimar la media de edad de los habitantes de la ciudad. Calcule:
+##### 1. La poblacion de la ciudad de Tantan tiene un total de 120 000 habitantes divididos en 5 regiones(Norte, Sur, Centro, Este y Oeste).En la siguiente base de datos llamada "Tantan" se puede observar el numero de habitantes por region. Un muestreo aleatorio simple se realizará para estimar la media de edad de los habitantes de la ciudad. Asuma que se obtuvo de la muestra un error de estimacion (error estandar) de 0.6 y que la varianza de la muestra es igual a 64. Calcule:
 
 + El tamaño muestral para determinar la media de edad de los habitantes de Tantan (muestreo aleatorio simple).
 + El tamaño muestral por cada región de estudio, asumiendo que estas sean proporcionales a sus cantidades (muestreo aleatorio estratificado proporcional). Para este caso, asuma las varianzas de las regiones Norte = 44.5, Sur = 59.3 , Centro = 82.4, Este = 66.2 y Oeste = 69.5. **Para resolver la parte b. deberá de crear su propia función para muestreo aleatorio estratificado proporcional, el esfuerzo para realizarla será calificado, la primera persona que presente la función funcional tendrá 3 puntos adicionales en el examen parcial**. La data es la siguiente (carguen el paquete tidyverse y actívenlo para reproducir la data):
