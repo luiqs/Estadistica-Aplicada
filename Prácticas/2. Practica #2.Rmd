@@ -31,6 +31,8 @@ Tantan <- tibble(Region = c("Norte", "Sur", "Centro", "Este", "Oeste"),
                  Habitantes = c(14060, 19477, 36564, 26424, 23475))
 ```
 
+#### **IMPORTANTE** 
+Para la primera parte de esta pregunta sugiero utilizar la función que cree despues de la clase. En github, clase 4, encontraran una nueva seccion 1.3, guiense de ella para calcular el tamaño muestral de una muestra.
 
 ##### 2. En una fabrica en la China se fabrican procesadores Intel. Sin embargo, muchos de ellos han resultado ser defectuosos. Se necesita saber el tamaño muestral necesario para inferir la proporcion poblacional de piezas defectuosas. Asuma que el error de estimacion es del 4% y el nivel de significancia del 5% (consejo, utilizar la función sample.size.prop() del paquete "samplingbook" o crear su propia función).   
 
