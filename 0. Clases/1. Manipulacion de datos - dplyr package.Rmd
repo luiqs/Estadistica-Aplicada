@@ -96,7 +96,7 @@ Las variables cuantitativas nos permiten hacer filtrados mas avanzados ya que no
 filter(starwars, mass > 80)
 ```
 
-![](JabbaPromo.png)
+![](Figuras/JabbaPromo.png)
 Podemos ser mas específicos en nuestro filtrado, por ejemplo si queremos seleccionar un intervalo de pesos. Seleccionando los personajes que se encuentran entre los pesos de 60 a 80 kilogramos. 
 
 ```{r}
