@@ -36,8 +36,8 @@ los resultados obtenidos a las siguientes preguntas:
 
 ##### 1. Calcule la media, mediana y desviacion estandar de emisiones de Toneladas de CO2 equivalente anuales (HuellaCarbono) para cada uno de los tipos de empresa segun su tamaño. Luego, realice un grafico de barras para comparar los 3 tipos de empresa. **Interprete los resultados**.
 
-##### 2. Realice, con las pruebas aprendidas hasta el momento para evidenciar o no, la relacion entre las variables “CalidadAire” y “Temperatura”. Calcule y gráfique para evidenciar la potencial relación entre las variables o la ausencia de relación. **Interprete los resultados**.
+##### 2. Calcule la media, mediana y desviacion estandar ddel cosumo de energia expresado en MegaWatts anuales (ConsumoEnergia) para cada uno de los tipos de empresa segun su tamaño. Grafique las diferencias o similitudes con un grafico de BoxPlot o Grafico de Cajas. **Interprete los resultados**.
 
-##### 3. Con las pruebas aprendidas hasta el momento (semana 3), evidenciar o no, si existe alguna relacion entre las variables “HuellaCarbono” y “ConsumoEnergia”. Calcule y gráfique para evidenciar la potencial relación entre las variables o la ausencia de relación. **Interprete los resultados**.
+##### 3. Con las pruebas aprendidas hasta el momento (semana 3) evidenciar o no, si existe alguna relacion entre las variables “HuellaCarbono” y “ConsumoEnergia”. Calcule y gráfique para evidenciar la potencial relación entre las variables o la ausencia de relación. **Interprete los resultados**.
 
 ##### 4. Estime la media poblacional para la variable “ConsumoEnergia” y obtenga adicionalmente sus intervalos de confianza a un nivel de significancia del 5%. Consejo: Utilice paquete DescTools. **Interprete los resultados**.
