@@ -1,5 +1,5 @@
 ---
-title: "Pruebas de hipotesis"
+title: "5. Pruebas de hipotesis"
 output: github_document
 ---
 
@@ -16,23 +16,23 @@ hsb2 <- within(read.csv("https://stats.idre.ucla.edu/stat/data/hsb2.csv"), {
 })
 ```
 
-La base de datos llamada hsb2, es una base de datos de 200 observaciones (filas) y 11 variables de estudio. Representa a una muestra aleatoria a estudiantes de secundario de colegios, realizada por el centro nacional de estadisticas para la educacion (USA). 
-
+La base de datos llamada hsb2, es una base de datos de 200 observaciones (filas) y 11 variables de estudio. Representa a una muestra aleatoria a estudiantes de secundario de colegios, realizada por el centro nacional de estadísticas para la educación (USA). 
+                                    
 Las variables son las siguientes:
-
-+ id: Identificacion del alumno.
+                                                           
++ id: Identificación del alumno.
 + female: Genero del alumno (si es igual a 1 es female, si es igual a 0, es male).
 + race: Raza del alumno (african american, asian, hispanic, and white).
-+ ses: Nivel socioeconomico del alumno (low, middle, y high).
++ ses: Nivel socioeconómico del alumno (low, middle, y high).
 + schtyp: Tipo de escuela (private o public).
 + prog: Tipo de programa (general, academic y vocational).
 + read: Notas de lectura.
 + write: Notas de escritura.
-+ math: Notas de matematica.
++ math: Notas de matemática.
 + science: Notas de ciencias.
 + socst: Notas de Sociales.
 
-Activemos el paquete de tidyverse (activa en conjunto ggplot2 y dplyr al mismo tiempo). Generalmente las pruebas de hipotesis se pueden realizar con las pruebas basicas del paquete stats de R, salvo algunas excepciones donde se detallará que paquete se necesita:
+Activemos el paquete de tidyverse (activa en conjunto ggplot2 y dplyr al mismo tiempo). Generalmente las pruebas de hipótesis se pueden realizar con las pruebas básicas del paquete stats de R, salvo algunas excepciones donde se detallará que paquete se necesita:
 
 ```{r}
 library(tidyverse)
@@ -44,32 +44,32 @@ library(tidyverse)
 
 ### A.1. La prueba de Shapiro Wilk
 
-Vamos a evaluar si es que la variable "notas de escritura" tiene o no una distribución normal. Para ello, utilizamos la funcion "shapiro.test()" del paquete "stats". Antes de realizar la prueba, recordar y revisar que nos dice la hipotesis nula y la hipotesis alterna para la prueba de shapiro. Establescan tambien el nivel de significancia (en este caso tomaremos 5%, como es la costumbre). Los que hara la funcion, es calcular el estadistico de la muestra obtenida y determinará el valor de p-value.
+Vamos a evaluar si es que la variable "notas de escritura" tiene o no una distribución normal. Para ello, utilizamos la función "shapiro.test()" del paquete "stats". Antes de realizar la prueba, recordar y revisar que nos dice la hipótesis nula y la hipótesis alterna para la prueba de shapiro. Establezcan también el nivel de significancia (en este caso tomaremos 5%, como es la costumbre). Los que hará la función, es calcular el estadístico de la muestra obtenida y determinará el valor de p-value.
 
 ```{r}
 shapiro.test(hsb2$write)
 ```
-Obtenemos como resultado que el valor de p-valor (p-value) es menor a 0.05. Del resultado, rechazamos Ho, es decir, la variable nota de escritura no sigue una distribucion normal. Esto lo podemos complementar graficando la distribucion de las notas de escritura.
+Obtenemos como resultado que el valor de p-valor (p-value) es menor a 0.05. Del resultado, rechazamos Ho, es decir, la variable nota de escritura no sigue una distribución normal. Esto lo podemos complementar graficando la distribución de las notas de escritura.
 
 ```{r}
 hsb2 %>% ggplot(aes(x=write))+
   geom_density()
 ```
 
-Podemos realizar el mismo ejercicio para las demas variables (cuantitativas) de los datos de la muestra "hsb2".
+Podemos realizar el mismo ejercicio para las demás variables (cuantitativas) de los datos de la muestra "hsb2".
 
-Para la variable notas de matematicas:
+Para la variable notas de matemáticas:
 
 ```{r}
 shapiro.test(hsb2$math)
 ```
-Aprovechamos para gráficar su distribución:
+Aprovechamos para graficar su distribución:
 ```{r}
 hsb2 %>% ggplot(aes(x=math))+
   geom_density()
 ```
 
-A pesar de que la gráfica es tentativamente "mas similar" a una distribucion normal, la prueba de shapiro nos casa de dudas, ya que rechazamos nuevamente Ho. 
+A pesar de que la gráfica es tentativamente "mas similar" a una distribución normal, la prueba de shapiro nos casa de dudas, ya que rechazamos nuevamente Ho. 
 
 ##### Haremos la prueba una vez mas para la variable notas de ciencias:
 
@@ -95,45 +95,45 @@ x %>% ggplot(aes(x=x))+
 
 ```
 
-En este caso, la prueba de shapiro Wilk nos dio un p-value por encima de 0.05, lo cual indica que aceptamos Ho, y concluimos que la variable "x" de la base de datos "x", tiene una distribucion normal. 
+En este caso, la prueba de shapiro Wilk nos dio un p-value por encima de 0.05, lo cual indica que aceptamos Ho, y concluimos que la variable "x" de la base de datos "x", tiene una distribución normal. 
 
 ## B. Pruebas de homogeneidad de Varianzas
 
 ### B.1. Prueba de Levene
-Para la prueba de Levene, necesitaremos un paquete especial, llamado "car", luego de instalarlo y activarlo, utilizarmoes la función "leveneTest()" del paquete:
+Para la prueba de Levene, necesitaremos un paquete especial, llamado "car", luego de instalarlo y activarlo, utilizaremos la función "leveneTest()" del paquete:
 
 ```{r}
 library(car)
 
 leveneTest(hsb2$write, hsb2$math)
 ```
-Al igual que la prueba de Shapiro Wilk y como en otras pruebas que veremos, concentremosnos en interpretar el p-value y utilzarlo en nuestro contrate de hipotesis. Acordemosnos que la Ho de la prueba de Levene nos dice "que la varianza de los grupos estudiados (write y math) nos son diferentes". La H1 por su parte, nos dice que " la varianza de los grupos son diferentes". El valor de p-vaue obtenido en la prueba de es 0.35, el cual es mayor nuestro nivel de significancia de 0.05 (nivel de confianza al 95%). De esto concluimos que aceptamos la hipotesis nula o rechazamos la hipotesis alterna. Es decir, que las varianzas para las dos muestras aleatorias analizadas no son diferentes. 
+Al igual que la prueba de Shapiro Wilk y como en otras pruebas que veremos, concentremonos en interpretar el p-value y utilizarlo en nuestro contrate de hipótesis. Acordemonos que la Ho de la prueba de Levene nos dice "que la varianza de los grupos estudiados (write y math) nos son diferentes". La H1 por su parte, nos dice que " la varianza de los grupos son diferentes". El valor de p-value obtenido en la prueba de es 0.35, el cual es mayor nuestro nivel de significancia de 0.05 (nivel de confianza al 95%). De esto concluimos que aceptamos la hipótesis nula o rechazamos la hipótesis alterna. Es decir, que las varianzas para las dos muestras aleatorias analizadas no son diferentes. 
 
 
 ## C. Prueba de hipotesis con una media poblacional (mu) para una variable
 
 ### C.1. Prueba de Z (varianza conocida)
-En esta ocasion, es necesario utilizar el paque "BSDA", instalarlo y activarlo. Utilizaremos la función z.test() del paquete BSDA. Acordemosnos que la estas pruebas se aplican a una sola variable. En este caso la aplicaremos al la variable, notas de escritura (write). Acordase que la prueba de Z, la utilizamos cuando conocemos la desviacion estandar poblacional (en este caso la asumiremos como 1, en el argumento "sigma.x="). De igual manera, en este ejemplo, estableceremos que la hipotesis Ho como el valor de la media muestral igual a 53 (mu= 53), 
+En esta ocasión, es necesario utilizar el paquete "BSDA", instalarlo y activarlo. Utilizaremos la función z.test() del paquete BSDA. Acordémonos que la estas pruebas se aplican a una sola variable. En este caso la aplicaremos al la variable, notas de escritura (write). Acordase que la prueba de Z, la utilizamos cuando conocemos la desviación estándar poblacional (en este caso la asumiremos como 1, en el argumento "sigma.x="). De igual manera, en este ejemplo, estableceremos que la hipótesis Ho como el valor de la media muestral igual a 53 (mu= 53), 
 
-Para este tipo de pruebas, no olvidar que tenemos que establecer nuestras hipotesis, tenemos 3 opciones, que la media muestral es igual a la poblacional, que es menor o que es mayor, esto tambien podemos delimitarlo en la formula (esto lo haremos modificando el argumento **alternative** = ("greater", "less" or "two.sided")).
+Para este tipo de pruebas, no olvidar que tenemos que establecer nuestras hipótesis, tenemos 3 opciones, que la media muestral es igual a la poblacional, que es menor o que es mayor, esto también podemos delimitarlo en la formula (esto lo haremos modificando el argumento **alternative** = ("greater", "less" or "two.sided")).
 ```{r}
 library(BSDA)
 z.test(hsb2$write,sigma.x = 1, mu = 53, alternative = "two.sided")
 ```
 Mayor información acerca de la función: <https://www.rdocumentation.org/packages/BSDA/versions/1.2.0/topics/z.test>
 
-Del resultado, obtenemos un p-value menor a 0.05 (si no determinamos el nivel de confianza, este se asume como 95%,el nivel de confianza tambien podemos modificarlo mediante el argumento, conf.level = (valores del 0 al 1)). Del resultado podemos concluir que rechazamos Ho, es decir que la media poblacional no es igual a 53 (aceptamos la hipotesis alterna). El resultado de la funcion "z.test()", no solo nos brinda el p-valor, sino que tambien ofrence el valor de la media poblacional y los intervalos de confianza de la estimación. Aunque al rechazar la Ho, estos ya pierden su utilidad para generar conclusiones. Notese que si los intervamos de confianza hubiesen contemplado el valor 53, hubiesemos aceptado Ho. 
+Del resultado, obtenemos un p-value menor a 0.05 (si no determinamos el nivel de confianza, este se asume como 95%,el nivel de confianza también podemos modificarlo mediante el argumento, conf.level = (valores del 0 al 1)). Del resultado podemos concluir que rechazamos Ho, es decir que la media poblacional no es igual a 53 (aceptamos la hipótesis alterna). El resultado de la función "z.test()", no solo nos brinda el p-valor, sino que también ofrece el valor de la media poblacional y los intervalos de confianza de la estimación. Aunque al rechazar la Ho, estos ya pierden su utilidad para generar conclusiones. Nótese que si los intervalos de confianza hubiesen contemplado el valor 53, hubiésemos aceptado Ho. 
 
 ### C.2. Prueba t de Student (varianza desconocida)
-Seguimos evaluando la variable "notas de escritura". Pero ahora utilizaremos la t de Student (no conocemos la desviacion estandar de la población). 
+Seguimos evaluando la variable "notas de escritura". Pero ahora utilizaremos la t de Student (no conocemos la desviación estándar de la población). 
 
 ```{r}
 t.test(hsb2$write, mu = 53, alternative = "two.sided", conf.level = 0.95)
 ```
-Al correr la prueba t de Student (con los mismo valores que la prueba de Z anterior), podemos observar que en este caso, los intervalos de confianza se ensanchan un poco mas. Lo cual nos permite aceptar Ho, es decir, que la media muestral proviene de una poblacion con un valor de mu igual a 53 (esto se comprueba tambien con el p-value). Comparando esta prueba con la prueba Z, podemos evidenciar que la segunda tiene mayor precision en el constraste te hipotesis (sin embargo, no siempre se cuenta con el valor poblacional de la desviacion estandar).
+Al correr la prueba t de Student (con los mismo valores que la prueba de Z anterior), podemos observar que en este caso, los intervalos de confianza se ensanchan un poco mas. Lo cual nos permite aceptar Ho, es decir, que la media muestral proviene de una población con un valor de mu igual a 53 (esto se comprueba también con el p-value). Comparando esta prueba con la prueba Z, podemos evidenciar que la segunda tiene mayor precisión en el contraste te hipótesis (sin embargo, no siempre se cuenta con el valor poblacional de la desviación estándar).
 
 ## D. Prueba t de Student para comparar dos medias de dos variables aleatorias independientes
-Dejamos de realizar pruebas parametricas para una sola variable, para dedicarnos ahora al analisis de dos variables (pertenescan a una poblacion o sean idependientes). En este caso, utilizaremos la prueba t de Student para dos poblaciones de independientes (masculina y femenina). Los casos masculinos y femeninos seran separados internamente por la funcion t.test(), establecer la relacion entre las variables "write" y "female". En este caso estamos separando los valores de "notas de escritura", en dos grupos, los que son femeninos y los que son masculinos. De estos dos grupos comparamos sus medias, mediante:
+Dejamos de realizar pruebas paramétricas para una sola variable, para dedicarnos ahora al análisis de dos variables (pertenezcan a una población o sean independientes). En este caso, utilizaremos la prueba t de Student para dos poblaciones de independientes (masculina y femenina). Los casos masculinos y femeninos serán separados internamente por la función t.test(), establecer la relación entre las variables "write" y "female". En este caso estamos separando los valores de "notas de escritura", en dos grupos, los que son femeninos y los que son masculinos. De estos dos grupos comparamos sus medias, mediante:
 
 ```{r}
 t.test(hsb2$write ~ hsb2$female )
@@ -141,12 +141,12 @@ t.test(hsb2$write ~ hsb2$female )
 
 
 ## E. Prueba t de Student para compara 2 medias poblacionales de dos muestras aleatorias relacionadas
-En este caso, utilizamos la misma funcion anterior. Sin embargo, dos principales cambios se tiene que dar. 
+En este caso, utilizamos la misma función anterior. Sin embargo, dos principales cambios se tiene que dar. 
 
-+ Las variables de estudio ahora son dos poblaciones relacionadas. Es decir, que comparten los mismos elementos observacionales (p.ej. estas dos prueba tienen todos los alumnos del genero masculino y todas las alumnas del genero femenino). Bajo esta premisa, a la funcion original tendremos que suministrarle el argumente paired igual a verdadero (TRUE), el cual por defecto se encuentra en falso (FALSE)
-+ De los explicado, ya no vamos a brindarle a la funcion una relacion entre variables (~), sino que establecemos dos variables de la data que queramos comparar.
++ Las variables de estudio ahora son dos poblaciones relacionadas. Es decir, que comparten los mismos elementos observacionales (p.ej. estas dos prueba tienen todos los alumnos del genero masculino y todas las alumnas del genero femenino). Bajo esta premisa, a la función original tendremos que suministrarle el argumente *paired* igual a verdadero (TRUE), el cual por defecto se encuentra en falso (FALSE)
++ De los explicado, ya no vamos a brindarle a la función una relación entre variables (~), sino que establecemos dos variables de la data que queramos comparar.
 
-Teniendo en cuenta lo explicad, calculamos el p-valor, mediante el siguiente codigo:
+Teniendo en cuenta lo explicad, calculamos el p-valor, mediante el siguiente código:
 ```{r}
 t.test(hsb2$write, hsb2$read, paired = TRUE)
 ```
@@ -154,31 +154,62 @@ t.test(hsb2$write, hsb2$read, paired = TRUE)
 
 ## F. ANOVA (Analisis de la Varianza)
 
-### F.1 ANOVA de 1 factor
-El anova se basa en la construccion de un modelo. En este sentido, este es el primer modelo del curso de estadistica aplicada que vamos a utilizar. Para crear un modelo, debemos usar una funcion especifica de ese modelo, para luego definir las variables de la ecuacion. Para crear un modelo ANOVA, utilizamos la funcion *aov()*. Esta funcion, espera que nos brinden 2 variables (para el ANOVA de un factor), la variable independiente y la dependiente. La variable independiente generalmente va a corresponder a una variable categorica (nominal, ordinal o discreta), y la variable dependiente es aquella que estamos evaluando en razon a su respuesta a la variable independiente. De esta manera, para la base de datos ** ** construimos un modelo anova, para la variable dependiente ** ** y la variable independiente ** ** de la siguiente manera:
+### F.1 Los supuestos del ANOVA
+Para la prueba del ANOVA (y otras pruebas paramétricas) debemos de cumplir varios requisitos, dentro de ellos, los dos que debemos verificar estadisticamente son la normalidad y la homogeneidad de varianzas. Para la normalidad, debemos probar estadisticamente si distribución de las *k* muestras siguen una distribución normal, esto podemos realizarlo a través de la prueba de Shapiro Wilk para muestras, que no es recomendable de usarlo para muestras mayores a 50 (en esos casos podemos usar Kolgomorov Smirnov).Las funciones para la prueba de shapiro, las hemos visto con anterioridad:
+```{r eval=FALSE, include=FALSE}
+shapiro.test()
+```
+
+Para probar si existen o no homogeneidad de varianzas, podemos correr en test de Barttlet para ANOVA de 1 vía o 1 factor. La prueba de Levene la usaríamos para cuando hablamos de pruebas ANOVA de 2 vías o 2 factores.La prueba de Levene, se puede utilizar así mismo para pruebas ANOVA de k factores. Así mismo, también nos permite elegir diferentes estadístico de centralidad (por defecto elige la mediana, pero podemos elegir la media o moda, dependiendo si sabemos si nuestras muestras de estudio sean o no normales).
+
+El test de Bartlett por su parte, es mas sensible (en comparación con el de Levene) a los grupos que no presentan una distribución normal. Es decir, que no es bueno usarlo cuando la normalidad no se cumple. Para realizar la prueba de Barttlet, podemos utilizar la siguiente función:
+
+```{r eval=FALSE, include=FALSE}
+bartlett.test(X~F)
+```
+En donde X es la variable de estudio y F, son los tratamientos de factor de estudio. En caso de que queramos correr un test de Levene para un ANOVA de 2 factores (o mas), usaremos las siguiente formula del paquete **car**:
+
+```{r eval=FALSE, include=FALSE}
+library(car)
+levene.test(X ~ Y + Z, data = )
+```
+
+Donde X, es la variable de estudio, tanto **Y** como **Z** son los factores (también podemos utilizarla de frente para ANOVA de *k* factores). Esta función nos permite especificar la data de donde provienen las variables de estudio (no necesitamos utilizar **$** para ingresar a la variable).
+
+### F.2 ANOVA de 1 factor
+El anova se basa en la construcción de un modelo. En este sentido, este es el primer modelo del curso de estadística aplicada que vamos a utilizar. Para crear un modelo, debemos usar una función especifica de ese modelo, para luego definir las variables de la ecuación. Para crear un modelo ANOVA, utilizamos la función *aov()*. Esta función, espera que nos brinden 2 variables (para el ANOVA de un factor), la variable independiente y la dependiente. La variable independiente generalmente va a corresponder a una variable categórica (nominal, ordinal o discreta), y la variable dependiente es aquella que estamos evaluando en razón a su respuesta a la variable independiente. De esta manera, para la base de datos ** ** construimos un modelo anova, para la variable dependiente ** ** y la variable independiente ** ** de la siguiente manera: 
 
 ```{r}
 Modelo.ANOVA <- aov(write~race, data =hsb2)
 ```
-Luego, para obtener los resultados de la prueba de ANOVA, solo debemos llamar al resumen (con funcion, **summary()**) del modelo que acabamos de construir: 
+Luego, para obtener los resultados de la prueba de ANOVA, solo debemos llamar al resumen (con función, **summary()**) del modelo que acabamos de construir: 
 ```{r}
 summary(Modelo.ANOVA)
 ```
 
-Del resultado identificaremos el p-valor y lo interpretaremos a través del contraste de hipotesis de la prueba ANOVA. .....
+Del resultado identificaremos el p-valor y lo interpretaremos a través del contraste de hipótesis de la prueba ANOVA. .....
 
 
-El diagrama de cajas (Box Plot) es tipicamente utilizado para gráficar las diferencias que una prueba de ANOVA nos brinda. Esto lo podemos realizar a través del paquete ggplot2, de la siguiente manera:
+El diagrama de cajas (Box Plot) es tipicamente utilizado para graficar las diferencias que una prueba de ANOVA nos brinda. Esto lo podemos realizar a través del paquete ggplot2, de la siguiente manera:
 
 ```{r}
-ggplot(data = hsb2, aes(x=race, y=write))+
-  geom_boxplot(fill = "pink")+
+ggplot(data = hsb2, aes(x=race, y=write, fill = race),)+
+  geom_boxplot()+
   geom_point(color = "blue")
 ```
+Algunas variaciones de nuestro gráfico, utilizando ggplot2:
 
-### F.2 Prueba de Tukey para ANOVA de 1 factor
+```{r}
+ggplot(data = hsb2, aes(x=race, y=write, fill = race),)+
+  geom_boxplot()+
+  geom_point(color = "blue")+
+  scale_fill_discrete(name = "Razas", labels = c("african american", "asian", "hispanic", "white"))
+```
+Si gustas hacer modificaciones adicionales a la leyenda, revisar: <https://www.datanovia.com/en/blog/ggplot-legend-title-position-and-labels/>.
 
-Del ejemplo anterior, podemos realizar una prueba de Tukey para identificar las diferencias especificas entre cada uno de los tratamientos en el estudio. Para ello realizamos la prueba de Tukey en el modelo ANOVA ya creado con la funcion *TukeyHSD()*. 
+### F.3 Prueba de Tukey para ANOVA de 1 factor
+
+Del ejemplo anterior, podemos realizar una prueba de Tukey para identificar las diferencias especificas entre cada uno de los tratamientos en el estudio. Para ello realizamos la prueba de Tukey en el modelo ANOVA ya creado con la función *TukeyHSD()*. 
 
 ```{r}
 TukeyHSD(Modelo.ANOVA)
@@ -188,10 +219,11 @@ Una manera practica de plotear las diferencias es:
 
 ```{r}
 Prueba_tukey_C <- TukeyHSD(Modelo.ANOVA)
-plot(Prueba_tukey_C, las = 1)
+plot(Prueba_tukey_C, las = 1, col = "blue")
 ```
+Desafió R en clase: Si queremos algo mucho mas avanzado y profesional para graficar el test de Tukey, utilizaremos en paquete ggplot2, con la ayuda de la siguiente pagina <https://www.r-graph-gallery.com/84-tukey-test.html>.
 
-### F.2 ANOVA de 2 factores
+### F.3 ANOVA de 2 factores
 
 
 ```{r}
@@ -208,3 +240,11 @@ ggplot(aes(y=write, x=race, fill = prog), data = hsb2)+
   theme_bw()
 ```
 
+Podemos correr un test de Tukey al modelo ANOVA de 2 factores o mas, de la siguiente manera:
+
+```{r}
+TukeyHSD(Modelo.ANOVA.2)
+```
+Se visualiza que nos dará el test de cada variable de manera individual para cada factor de estudio.
+
+Desafió R.2: Realizar la prueba de ANOVA de 2 factores, considerando la interactivo entre factores. Realizar la prueba, las gráficas de boxplot y prueba de tukey. Para generar un modelo de interacción, tenemos que multiplicar las variables que representan a los factores en la construcción del modelo, no sumarlas. 
