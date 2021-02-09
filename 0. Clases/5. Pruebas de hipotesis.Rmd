@@ -208,15 +208,8 @@ ggplot(data = hsb2, aes(x=race, y=write, fill = race),)+
   geom_point(color = "blue")+
   scale_fill_discrete(name = "Razas", labels = c("african american", "asian", "hispanic", "white"))
 ```
+
 Si gustas hacer modificaciones adicionales a la leyenda, revisar: <https://www.datanovia.com/en/blog/ggplot-legend-title-position-and-labels/>.
-
-Si gustan, tambien pueden basarse en otras paginas que tienen otra manera de llegar a un resultado parecido al buscado (buscar dentro de las paginas siguientes lo que se busca), estas son complementarias, si buscan hacerlo de otra manera:
-
-+ <https://biol607.github.io/lab/10_anova.html>
-+ <https://rstudio-pubs-static.s3.amazonaws.com/47829_90657f52d9b7483b8ec502ef87f98dc9.html>
-+ <https://stackoverflow.com/questions/18771516/is-there-a-function-to-add-aov-post-hoc-testing-results-to-ggplot2-boxplot>
-
-Son libres de usar el internet, google u otra fuente para encontrar otras maneras de dibujar el desafio. 
 
 ### F.3 Prueba de Tukey para ANOVA de 1 factor
 
@@ -233,7 +226,15 @@ Prueba_tukey_C <- TukeyHSD(Modelo.ANOVA)
 plot(Prueba_tukey_C, las = 1, col = "blue")
 ```
 
-**Desafió R en clase**: Si queremos algo mucho mas avanzado y profesional para graficar el test de Tukey, utilizaremos en paquete ggplot2, con la ayuda de la siguiente pagina <https://www.r-graph-gallery.com/84-tukey-test.html>.
+**Desafió R.1**: Si queremos algo mucho mas avanzado y profesional para graficar el test de Tukey, utilizaremos en paquete ggplot2, con la ayuda de la siguiente pagina <https://www.r-graph-gallery.com/84-tukey-test.html>.
+
+Si gustan, tambien pueden basarse en otras paginas que tienen otra manera de llegar a un resultado parecido al buscado (buscar dentro de las paginas siguientes lo que se busca), estas son complementarias, si buscan hacerlo de otra manera:
+
++ <https://biol607.github.io/lab/10_anova.html>
++ <https://rstudio-pubs-static.s3.amazonaws.com/47829_90657f52d9b7483b8ec502ef87f98dc9.html>
++ <https://stackoverflow.com/questions/18771516/is-there-a-function-to-add-aov-post-hoc-testing-results-to-ggplot2-boxplot>
+
+Son libres de usar el internet, google u otra fuente para encontrar otras maneras de dibujar el desafio. 
 
 ### F.3 ANOVA de 2 factores
 
