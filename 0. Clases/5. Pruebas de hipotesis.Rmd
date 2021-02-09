@@ -1,5 +1,5 @@
 ---
-title: "5. Pruebas de hipotesis"
+title: "Pruebas de hipotesis"
 output: github_document
 ---
 
@@ -179,7 +179,8 @@ levene.test(X ~ Y + Z, data = )
 Donde X, es la variable de estudio, tanto **Y** como **Z** son los factores (también podemos utilizarla de frente para ANOVA de *k* factores). Esta función nos permite especificar la data de donde provienen las variables de estudio (no necesitamos utilizar **$** para ingresar a la variable).
 
 ### F.2 ANOVA de 1 factor
-El anova se basa en la construcción de un modelo. En este sentido, este es el primer modelo del curso de estadística aplicada que vamos a utilizar. Para crear un modelo, debemos usar una función especifica de ese modelo, para luego definir las variables de la ecuación. Para crear un modelo ANOVA, utilizamos la función *aov()*. Esta función, espera que nos brinden 2 variables (para el ANOVA de un factor), la variable independiente y la dependiente. La variable independiente generalmente va a corresponder a una variable categórica (nominal, ordinal o discreta), y la variable dependiente es aquella que estamos evaluando en razón a su respuesta a la variable independiente. De esta manera, para la base de datos ** ** construimos un modelo anova, para la variable dependiente ** ** y la variable independiente ** ** de la siguiente manera: 
+
+El anova se basa en la construcción de un modelo. En este sentido, este es el primer modelo del curso de estadística aplicada que vamos a utilizar. Para crear un modelo, debemos usar una función especifica de ese modelo, para luego definir las variables de la ecuación. Para crear un modelo ANOVA, utilizamos la función *aov()*. Esta función, espera que nos brinden 2 variables (para el ANOVA de un factor), la variable independiente y la dependiente. La variable independiente generalmente va a corresponder a una variable categórica (nominal, ordinal o discreta), y la variable dependiente es aquella que estamos evaluando en razón a su respuesta a la variable independiente (cuantitativa generalmente). De esta manera, para la base de datos **hsb2** construimos un modelo ANOVA, para la variable dependiente **write** y la variable independiente **race** de la siguiente manera: 
 
 ```{r}
 Modelo.ANOVA <- aov(write~race, data =hsb2)
@@ -209,6 +210,14 @@ ggplot(data = hsb2, aes(x=race, y=write, fill = race),)+
 ```
 Si gustas hacer modificaciones adicionales a la leyenda, revisar: <https://www.datanovia.com/en/blog/ggplot-legend-title-position-and-labels/>.
 
+Si gustan, tambien pueden basarse en otras paginas que tienen otra manera de llegar a un resultado parecido al buscado (buscar dentro de las paginas siguientes lo que se busca), estas son complementarias, si buscan hacerlo de otra manera:
+
++ <https://biol607.github.io/lab/10_anova.html>
++ <https://rstudio-pubs-static.s3.amazonaws.com/47829_90657f52d9b7483b8ec502ef87f98dc9.html>
++ <https://stackoverflow.com/questions/18771516/is-there-a-function-to-add-aov-post-hoc-testing-results-to-ggplot2-boxplot>
+
+Son libres de usar el internet, google u otra fuente para encontrar otras maneras de dibujar el desafio. 
+
 ### F.3 Prueba de Tukey para ANOVA de 1 factor
 
 Del ejemplo anterior, podemos realizar una prueba de Tukey para identificar las diferencias especificas entre cada uno de los tratamientos en el estudio. Para ello realizamos la prueba de Tukey en el modelo ANOVA ya creado con la función *TukeyHSD()*. 
@@ -223,7 +232,8 @@ Una manera practica de plotear las diferencias es:
 Prueba_tukey_C <- TukeyHSD(Modelo.ANOVA)
 plot(Prueba_tukey_C, las = 1, col = "blue")
 ```
-Desafió R en clase: Si queremos algo mucho mas avanzado y profesional para graficar el test de Tukey, utilizaremos en paquete ggplot2, con la ayuda de la siguiente pagina <https://www.r-graph-gallery.com/84-tukey-test.html>.
+
+**Desafió R en clase**: Si queremos algo mucho mas avanzado y profesional para graficar el test de Tukey, utilizaremos en paquete ggplot2, con la ayuda de la siguiente pagina <https://www.r-graph-gallery.com/84-tukey-test.html>.
 
 ### F.3 ANOVA de 2 factores
 
