@@ -13,6 +13,8 @@ hsb2 <- within(read.csv("https://stats.idre.ucla.edu/stat/data/hsb2.csv"), {
   race <- as.factor(race)
   schtyp <- as.factor(schtyp)
   prog <- as.factor(prog)
+  female <- as.factor(female)
+  ses <- as.factor(ses)
 })
 ```
 
