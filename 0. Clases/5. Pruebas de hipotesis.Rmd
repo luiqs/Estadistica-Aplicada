@@ -13,8 +13,6 @@ hsb2 <- within(read.csv("https://stats.idre.ucla.edu/stat/data/hsb2.csv"), {
   race <- as.factor(race)
   schtyp <- as.factor(schtyp)
   prog <- as.factor(prog)
-  female <- as.factor(female)
-  ses <- as.factor(ses)
 })
 ```
 
@@ -228,13 +226,13 @@ plot(Prueba_tukey_C, las = 1, col = "blue")
 
 **Desafió R.1**: Si queremos algo mucho mas avanzado y profesional para graficar el test de Tukey, utilizaremos en paquete ggplot2, con la ayuda de la siguiente pagina <https://www.r-graph-gallery.com/84-tukey-test.html>.
 
-Si gustan, tambien pueden basarse en otras paginas que tienen otra manera de llegar a un resultado parecido al buscado (buscar dentro de las paginas siguientes lo que se busca), estas son complementarias, si buscan hacerlo de otra manera:
+Si gustan, también pueden basarse en otras paginas que tienen otra manera de llegar a un resultado parecido al buscado (buscar dentro de las paginas siguientes lo que se busca), estas son complementarias, si buscan hacerlo de otra manera:
 
 + <https://biol607.github.io/lab/10_anova.html>
 + <https://rstudio-pubs-static.s3.amazonaws.com/47829_90657f52d9b7483b8ec502ef87f98dc9.html>
 + <https://stackoverflow.com/questions/18771516/is-there-a-function-to-add-aov-post-hoc-testing-results-to-ggplot2-boxplot>
 
-Son libres de usar el internet, google u otra fuente para encontrar otras maneras de dibujar el desafio. 
+Son libres de usar el Internet, google u otra fuente para encontrar otras maneras de dibujar el desafió. 
 
 ### F.3 ANOVA de 2 factores
 
@@ -261,3 +259,116 @@ TukeyHSD(Modelo.ANOVA.2)
 Se visualiza que nos dará el test de cada variable de manera individual para cada factor de estudio.
 
 Desafió R.2: Realizar la prueba de ANOVA de 2 factores, considerando la interactivo entre factores. Realizar la prueba, las gráficas de boxplot y prueba de tukey. Para generar un modelo de interacción, tenemos que multiplicar las variables que representan a los factores en la construcción del modelo, no sumarlas. 
+
+
+# 2. Pruebas NO paramétricas
+
+Sabemos que estas pruebas pueden ser aplicadas a una gran variedad de situaciones, ya que no requieren premisas o supuestos estrictos acerca de la población de estudio (generalmente no nos exige que la población tenga una distribución normal). Así mismo, pueden ser aplicadas a variables de tipo cualitativas (sean nominales o ordinales).
+
+## A. Pruebas para una sola muestra (o variable)
+En este caso, una muestra aleatoria es tomada de la población y probamos si se cumple, para la muestra que estamos realizando, una determinada característica o distribución
+
+### A.1. Prueba Binomial
+Es aplicado cuando la variable de interés es de tipo binaria o dicotómica (éxito o fracaso). En el caso de la base de datos hsb2, vamos a poner a prueba si es que la proporción de estudiantes del genero femenino es igual a 0.5 ($$H_0$$). Acordarse que la variable female son 0 y 1. Para que la función de **prop.test()**, que es la prueba binomial funcione, el tipo de variable debe ser entero (no categórico, ni factor). La función **prop.test()** nos pedirá como mínimo en su función el numero de eventos exitosos de la muestra, la longitud de la muestra y el valor de *p* que queramos contrastar. La prueba binomial ser corre entonces de la siguiente manera:
+
+```{r}
+prop.test(sum(hsb2$female), length(hsb2$female), p = 0.5)
+```
+
+Podemos observar que la prueba binomial nos permite determinar con un nivel de confianza al 95% si la proporción poblacional de estudiantes de genero femenino es igual o diferente de 0.5. Al igual que las demás funciones de R que hemos observado con anterioridad para las pruebas paramétricas, para la función prop.test() también podemos cambiar el contraste de hipótesis de bilateral a que probemos si es mayor o menor que la proporción elegida. Esto lo realizaremos con el argumento **alternative**. Ejemplo, si nuestra $$H_1$$ es igual a que el valor de la proporción poblacional es mayor a 0.5:
+
+```{r}
+prop.test(sum(hsb2$female), length(hsb2$female), p = 0.5, alternative = "greater")
+```
+
+Analice los resultados.
+
+### A.2. Prueba de Chi cuadrado para una sola muestra (o variable)
+Esta prueba en especial es una extensión de la prueba binomial y es también aplicada a una sola variable. Al contrario de la binomial, puede aceptar mas de dos valores cualitativos (nominal o ordinal).La prueba compara las frecuencias observadas versus las frecuencias esperadas para cada categoría.
+
+Recordemos que la hipótesis alterna de esta prueba nos dice $$H_1:$$ No hay diferencia significativa entre las frecuencias observadas y las esperadas. Para este caso utilizaremos la función **chisq.test()**, la cual espera un tabla de frecuencias y las proporciones esperadas (contrastadas), las cuales las define el investigador. Para realizar una tabla de frecuencias rápida, utilizaremos siempre la función **table()**, asignándole la variable de estudio especifica. Antes de hacer la prueba de chi cuadrado para una sola muestra, haremos uso de la función **table()** para la variable raza de la base de datos hsb2:
+
+```{r}
+table(hsb2$race)
+```
+
+Se observa que nos ha brindado una tabla de frecuencias básica, contando el numero de individuos para la raza 1 (african american), 2 (asian), 3 (hispanic) y 4 (white). Ahora que sabemos como funciona table (la cual utilizaremos en varias funciones mas en el futuro), corremos el test de chi cuadrado para una muestra con la función **chisq.test()**:
+```{r}
+chisq.test(table(hsb2$race), p = c(10, 10, 10, 70)/100)
+```
+
+En el caso de la prueba de chi cuadrado para una sola muestra, solo podemos contratarla para la prueba de hipótesis única que se ha establecido. Es decir, solo nos asegura si es que existe o no diferencias entre lo observado y lo esperado. 
+
+## B. Pruebas para 2 muestras dependientes (dos variables dependientes).
+### B.1. Prueba de McNemar
+Para fines de este curso y en relación con su carrera, este test no lo vamos a ver mucho, les dejo la función por si realizan en el futuro un estudio en el que puedan implementar esta prueba no paramétrica. 
+```{r eval=FALSE, include=FALSE}
+mcnemar.test(X)
+```
+Donde **X** espera una matriz del experimento realizado. 
+
+## C. Pruebas para 2 muestras independientes (dos variables independientes)
+En estos test, intentamos comparar 2 variables de 2 poblaciones distintas representadas por sus muestras respectivas.A diferencia de las pruebas dependientes, aquí las muestras no tienen necesariamente el mismo tamaño.
+
+### C.1. Prueba de chi cuadrado de independencia
+Aplicamos la prueba de chi cuadrado para una sola muestra, el donde la variable de estudio era cualitativa. Aquí utilizaremos la prueba para dos muestras independientes (también cualitativas). Esto lo realizamos para comprobar si existe o no alguna asociación significativa entre dos variables cualitativas.El test compara las frecuencias observadas en cada una de las celdas de una tabla de contingencia con las frecuencias esperadas, siendo su $$H_1:$$ Hay diferencias significativas entre las frecuencias observadas y esperadas. 
+
+Siguiendo el trabajo con nuestra base de datos **hsb2** vamos a comparar precisamente dos muestras independientes (o dos variables que provienen de 2 muestras independientes). En este caso en particular, compararemos si existe asociación entre las variable de genero (**female:** femenino o masculino) y el tipo de escuela (**schtyp:** publica o privada). Para ello, utilizaremos nuevamente la función **chisq.test**, sin embargo en este caso, solo debemos brindarle la tabla de frecuencias de doble entrada (2 variables). La función, calculará automáticamente las frecuencias esperadas, obteniendo el estadístico y el calculo de p-valor:
+```{r}
+chisq.test(table(hsb2$female, hsb2$schtyp))
+```
+A partir de los resultados, podemos analizar el p-valor en base a las hipótesis establecidas para este test. Analice y discuta en clase.
+
+### C.2. Prueba de Wilcoxon-Mann-Whitney
+
+El es test mas poderoso de todas las pruebas NO paramétricas, aplicado para variables cuantitativas o cualitativas (ordinales). Tiene el objetivo de verificar si dos muestras independientes son tomadas de la misma población. Es la alternativa a la prueba t de Student, cuando la normalidad no se cumple o la muestra es muy pequeña. Cuando usamos data de tipo cuantitativas, debemos transformarla, perdiendo información en el proceso. Para probar si dos muestras provienen de la misma población, la prueba de Wilcoxon-Mann-Whitney tiene como $$H_1:$$ que las medias de las dos muestras son diferentes. 
+
+De cuerdo a lo explicado, tenemos entonces que para nuestra base de datos **hsb2**, probaremos si las muestras de alumnos del genero masculino y femenino (nuestras dos muestras), provienen o no de la misma población. Para ello utilizaremos la variable de estudio (cuantitativa), notas de escritura (**write**). Para probar esto con el test de Wilcoxon-Mann-Whitney, utilizaremos la función **wilcox.test()**, la cual espera que le brindemos la variable cuantitativa y la dividamos a razón de la variable cualitativa (que divide a los dos grupos de estudio). Esto lo realizaremos de la siguiente manera:
+```{r}
+wilcox.test(hsb2$write ~ hsb2$female)
+```
+Analizar en clase el test y concluir. 
+
+## D. Pruebas para *k* muestras dependientes (*k* variables dependientes)
+Estos test analizan las diferencias entre k muestras relacionadas.
+
+### D.1. Prueba de Cochran (Q)
++ No realizaremos la prueba de Cochran para este curso. Sin embargo, si esta interesado es conocer como pueden realizarla en R, revisar el siguiente enlace: <https://rpubs.com/Joaquin_AR/220579>
+
+### D.2. Prueba de Friedman
+Es aplicado a variables de tipo cualitativa (ordinal) y cuantitativa. Tiene como objetivo de verificar si es que k muestras dependientes son sacadas de una misma población. **Es una alternativa al ANOVA de muestras dependientes** cuando la normalidad y homogeneidad de varianzas no se cumplen o las muestras son muy pequeñas.
+
+En este caso, probaremos si existen diferencias significativas entre los diferentes niveles socioeconomicos (variable **ses**) en relación con las notas de matemática. Para ello, utilizaremos la función **friedman.test()**. Esta función espera solo las variables que se quieren estudiar y que esta se encuentre en formato tipo matriz. Para ello usaremos el paquete dplyr y luego correremos la prueba de Friedam:
+
+```{r}
+Prueba.Friedman <- hsb2 %>% select(math, ses) %>% as.matrix()
+friedman.test(Prueba.Friedman)
+```
+
+Evalué y concluya en clase.
+
+## E. Pruebas para *k* muestras independientes (*k* variables independientes)
+Estos test analizan las diferencias entre k muestras independientes. La hipótesis nula $$H_0:$$ a ser probada intenta demostrar que las k muestras independientes han sido tomadas de la misma población (para muestras independientes). 
+
+### E.1. Prueba de chi cuadrado para *k* muestras independientes
+No la veremos desde R. Principalmente utilizaremos la siguiente técnica para evidenciar diferencia entre *k* muestras independientes (Kruskall Wallis).
+
+### E.2. Prueba de Kruskall Wallis
+Busca verificar si k muestras independientes (k > 2) provienen de la misma población. Es una alternativa al ANOVA para muestras independientes. Para el valor de K = 2, Kruskal Wallis es equivalente al test de Wilconxon-Mann-Whitney. Comparte las mismas hipótesis que la prueba de ANOVA (aunque se llega a rechazar o aceptar las mismas, calculando diferentes estadísticos de contraste).
+
+De nuestra base de datos **hsb2**, queremos probar si existen diferencias significativas entre los estudiantes en razón al tipo de programa que están tomando (**prog**, tipo de programa: general, academic y vocational). Demostraremos esto a razón de la variable cuantitativa "notas de escritura" (**write**). Para este objetivo, utilizaremos la función **Kruskal.test()**. Esta función nos pedirá que le entreguemos las dos variables de estudio (una cuantitativa y otra cualitativa (con diferentes niveles)). Se realizara la prueba de Kruskal Wallis de la siguiente manera:
+
+```{r}
+kruskal.test(hsb2$write, hsb2$prog)
+```
+Evaluar y concluir. 
+
+
+
+
+
+
+
+
+
+
