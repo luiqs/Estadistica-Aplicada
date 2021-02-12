@@ -37,10 +37,7 @@ Cafe <- tibble(Eleccion = c("A","A","A","A","A","A","A","A","B","B","B","B","B",
 Sucursales <- tibble(Sucursal_A = c(6.24, 8.47, 6.54, 6.87, 2.24, 5.36, 7.09, 7.56, 6.88, 8.04, 7.05, 6.58, 8.14, 8.30, 2.69, 6.14, 7.14, 7.22, 7.58, 6.11, 7.25, 7.5),
                      Sucursal_B = c(8.14, 6.54, 6.66, 7.85, 8.03, 5.68, 3.05, 5.78, 6.43, 6.39, 7.64, 6.97, 8.07, 8.33, 7.14, 6.58, 5.98, 6.22, 7.08, 7.62, 5.69, 8.04))
 
-Administracion <- tibble(Estudiante = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20),
-                         Materia_A = c(0,1,0,0,0,1,1,0,0,0,1,0,1,0,0,1,0,1,0,1),
-                         Materia_B = c(1,1,0,1,1,1,0,1,0,0,1,0,0,1,0,1,0,1,1,1),
-                         Materia_C = c(1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1))
+Libros <- tibble(Liro_Elegido = c("Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_A","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_B","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C","Libro_C"))
 
 Consumidor <- tibble(Conmidor = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15),
                      Banco_teRobamos = c(3,2,1,3,1,3,3,2,3,2,1,3,3,2,3),
@@ -62,20 +59,20 @@ Probar si la variable temperatura se sigue una distribución normal (alfa = 5%)
 La base de datos "Estudiantes" muestra las notas finales de 2 estudiantes en 9 materias academicas. Probar y analizar si es que existe homogeneidad de varianzas entre los estudiantes (alfa = 5%).
 
 #### Ejercicio 4. 
-Nos gustaría comparar el tiempo medio de espera antes de ser atendido por un médico (en minutos) en dos hospitales (son diferentes o iguales, significativamente). En Para ello, recolectamos una muestra con 20 pacientes de cada hospital. Los datos están disponibles en la base de datos "Hospital". Probar si hay diferencias entre los tiempos de espera promedio en ambos hospitales. Considere alfa igual al 5%.
+Nos gustaría comparar el tiempo medio de espera antes de ser atendido por un médico (en minutos) en dos hospitales (son diferentes o iguales, significativamente). En Para ello, recolectamos una muestra con 20 pacientes de cada hospital. Los datos están disponibles en la base de datos "Hospital". Probar si hay diferencias entre los tiempos de espera promedio en ambos hospitales. Considere alfa igual al 5% (Consejo, utilize la prueba *t* de Student).
 
 #### Ejercicio 5. 
-Una empresa aeroespacial produce helicópteros civiles y militares en sus tres fábricas. Las tablas muestran la producción mensual de helicópteros en los últimos 12 meses en cada fábrica (base de datos "Helicopteros"). Compruebe si hay una diferencia entre las medias de la población. Considere un alfa igual al 5%. Interprete los resultados. 
+Una empresa aeroespacial produce helicópteros civiles y militares en sus tres fábricas. Las tablas muestran la producción mensual de helicópteros en los últimos 12 meses en cada fábrica (base de datos "Helicopteros"). Compruebe si hay una diferencia entre las medias de la población. Considere un alfa igual al 5%. Interprete los resultados (Consejo, utilize la prueba ANOVA). 
 
 #### Ejercicio 6. 
-Un grupo de 20 consumidores prueban dos tipos de cafe (A y B, base de datos "cafe"). Al final, ellos eligen una de las marcas, como se ven en la base de datos "cafe". Probar si la hipotesis nula, no hay diferencias en la preferencia de los consumidores, con un nivel de significancia del 5%.
+Un grupo de 20 consumidores prueban dos tipos de cafe (A y B, base de datos "cafe"). Al final, ellos eligen una de las marcas, como se ven en la base de datos "cafe". Probar si la hipotesis nula, no hay diferencias en la preferencia de los consumidores, con un nivel de significancia del 5% (Puede usted usar la prueba Binomial).
 
 #### Ejercicio 7. 
-Con el objetivo de comparar los tiempos de servicio promedio en dos sucursales bancarias, se recopilaron datos de 22 clientes de cada sucursal bancaria, como se muestra en la tabla. Utilice la prueba más adecuada (asuma que no se cumple normalidad, ni homogeneidad de varianzas), con un nivel de significancia del 5%, para probar si ambas muestras provienen o no de poblaciones con las mismas medianas. Utilice la base de datos "Sucursales". 
+Con el objetivo de comparar los tiempos de servicio promedio en dos sucursales bancarias, se recopilaron datos de 22 clientes de cada sucursal bancaria, como se muestra en la tabla. Utilice la prueba más adecuada (asuma que no se cumple normalidad, ni homogeneidad de varianzas), con un nivel de significancia del 5%, para probar si ambas muestras provienen o no de poblaciones con las mismas medianas. Utilice la base de datos "Sucursales" (Consejo: use usted la prueba de Wilcoxon-Mann-Whitney). 
 
 #### Ejercicio 8. 
-Un grupo de 20 estudiantes de Administración de Empresas evaluó su nivel de aprendizaje en base a tres asignaturas cursadas en el campo de Métodos Cuantitativos Aplicados, respondiendo si su **nivel de aprendizaje** era alto (1) o bajo (0). Los resultados se pueden ver en la tabla. Verifique y pruebe si la proporción de estudiantes con un alto nivel de aprendizaje es la misma para cada materia. Considere un nivel de significancia del 5%. Use la base de datos "Administracion".
+Un grupo de 60 lectores evaluan tres novelas. Al final, ellos escojen uno de los 3 libros, como se muestra en la base de datos "Libros". Pruebe la hipotesis nula de que no existen diferencias entre la preferencia de los lectores, con un alfa igual al 5% (Consejo: Utilice una chi cuadrado para *k* muestras). 
 
 #### Ejercicio 9. 
-Un grupo de 15 consumidores evaluó su nivel de satisfacción (1 — algo insatisfecho, 2 — algo satisfecho y 3 — muy satisfecho) con tres servicios bancarios diferentes. Los resultados se pueden ver en la base de datos "Consumidor". Verifique si hay una diferencia entre los tres servicios. Suponga un nivel de significancia del 5%.
+Un grupo de 15 consumidores evaluó su nivel de satisfacción (1 — algo insatisfecho, 2 — algo satisfecho y 3 — muy satisfecho) con tres servicios bancarios diferentes. Los resultados se pueden ver en la base de datos "Consumidor". Verifique si hay una diferencia entre los tres servicios. Suponga un nivel de significancia del 5% (Consejo: Utilice la prueba de Friedman).
 
