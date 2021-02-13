@@ -32,7 +32,7 @@ Helicopteros <- tibble(Fabrica_1 = c(24, 26, 28, 22, 31, 25, 27, 28, 30, 21, 20,
                        Fabrica_2 = c(28, 26, 24, 30, 24, 27, 25, 29, 30, 27, 26, 25),
                        Fabrica_3 = c(29, 25, 24, 26, 20, 22, 22, 27, 20, 26, 24, 25))
 
-Cafe <- tibble(Eleccion = c("A","A","A","A","A","A","A","A","B","B","B","B","B","B","B","B","B","B","B","B"))
+Cafe <- tibble(Eleccion_A = c(1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0))
 
 Sucursales <- tibble(Sucursal_A = c(6.24, 8.47, 6.54, 6.87, 2.24, 5.36, 7.09, 7.56, 6.88, 8.04, 7.05, 6.58, 8.14, 8.30, 2.69, 6.14, 7.14, 7.22, 7.58, 6.11, 7.25, 7.5),
                      Sucursal_B = c(8.14, 6.54, 6.66, 7.85, 8.03, 5.68, 3.05, 5.78, 6.43, 6.39, 7.64, 6.97, 8.07, 8.33, 7.14, 6.58, 5.98, 6.22, 7.08, 7.62, 5.69, 8.04))
@@ -65,7 +65,7 @@ Nos gustaría comparar el tiempo medio de espera antes de ser atendido por un m�
 Una empresa aeroespacial produce helicópteros civiles y militares en sus tres fábricas. Las tablas muestran la producción mensual de helicópteros en los últimos 12 meses en cada fábrica (base de datos "Helicopteros"). Compruebe si hay una diferencia entre las medias de la población. Considere un alfa igual al 5%. Interprete los resultados (Consejo, utilize la prueba ANOVA). 
 
 #### Ejercicio 6. 
-Un grupo de 20 consumidores prueban dos tipos de cafe (A y B, base de datos "cafe"). Al final, ellos eligen una de las marcas, como se ven en la base de datos "cafe". Probar si la hipotesis nula, no hay diferencias en la preferencia de los consumidores, con un nivel de significancia del 5% (Puede usted usar la prueba Binomial).
+Un grupo de 20 consumidores prueban dos tipos de cafe (A y B, base de datos "cafe", en donde la variable Eleccion_A es 1 para las personas que eligieron el cafe A y 0 para los que eligieron el cafe B). Al final, ellos eligen una de las marcas, como se ven en la base de datos "cafe". Probar si la hipotesis nula, no hay diferencias en la preferencia de los consumidores, con un nivel de significancia del 5% (Puede usted usar la prueba Binomial).
 
 #### Ejercicio 7. 
 Con el objetivo de comparar los tiempos de servicio promedio en dos sucursales bancarias, se recopilaron datos de 22 clientes de cada sucursal bancaria, como se muestra en la tabla. Utilice la prueba más adecuada (asuma que no se cumple normalidad, ni homogeneidad de varianzas), con un nivel de significancia del 5%, para probar si ambas muestras provienen o no de poblaciones con las mismas medianas. Utilice la base de datos "Sucursales" (Consejo: use usted la prueba de Wilcoxon-Mann-Whitney). 
