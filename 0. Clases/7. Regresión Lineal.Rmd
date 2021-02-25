@@ -1,0 +1,337 @@
+---
+title: "Modelos de regresión Lineal - Simple y múltiple"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# 1. Modelo de regresión lineal simple
+
+## A. Creando el modelo de regresión lineal
+
+En un experimento donde se quería estudiar la asociación entre consumo de sal y presión arterial, se asignó aleatoriamente a algunos individuos una cantidad diaria constante de sal en su dieta, y al cabo de un mes se les midio la presión arterial media. Los resultados fueron:
+
+```{r}
+library(tidyverse)
+
+Presión.Arterial <- tibble( sal = c(1.8, 2.2, 3.5, 4.0, 4.3, 5.0),
+                            presión = c(100,98,110, 110, 112, 120))
+```
+
+Como clases previas, para la creación de modelos, tenemos funciones especializadas, las cuales generalmente estan ya dentro de nuetro paquete básico de "stats". Como es el caso de la función lm(), para crear modelos de regresión lineal. Para utilizar **lm()** en nuestro problema:
+
+```{r}
+lm(Presión.Arterial$presión ~ Presión.Arterial$sal)
+```
+
+En los resultados, veremos que hemos hayado el intercepto (valor de alfa).
+
+Para visualizar los detalles del modelo, podemos optar por la función **summary()**, pero antes, asignemosle un nombre a nuestro modelo.
+
+```{r}
+Modelo.Lineal.Simple <- lm(data=Presión.Arterial, formula = presión ~ sal )
+```
+
+```{r}
+summary(Modelo.Lineal.Simple)
+```
+
+De esta manera podemos ver de manera general alguno de los detalles de nuestro modelo. Por el momento, observemos que el coeficiente de determinación se puede observar en la parte inferior y tiene un valor de 0.9344.
+
+## B. El cuarteto de **anscombe**: Cuando el R2 no es suficiente.
+
+Carguemos la base de datos **anscombe**
+
+```{r}
+data("anscombe")
+```
+
+Hallemos la relacion entre cada xi con su yi, y calculemos su R2:
+
+```{r}
+summary(lm(y1~x1, data = anscombe))$r.squared
+summary(lm(y2~x2, data = anscombe))$r.squared
+summary(lm(y3~x3, data = anscombe))$r.squared
+summary(lm(y4~x4, data = anscombe))$r.squared
+```
+
+Nos daremos cuenta que los valores del coeficiente de correlación son muy similares. Pero, que pasa ahora si evaluamos lo que serian sus gráficas:
+
+```{r}
+par(mfrow =c(2,2))
+plot(y1~x1, data = anscombe)
+abline(lm(y1~x1, data = anscombe), col=2)
+plot(y2~x2, data = anscombe)
+abline(lm(y2~x2, data = anscombe), col=2)
+plot(y3~x3, data = anscombe)
+abline(lm(y3~x3, data = anscombe), col=2)
+plot(y4~x4, data = anscombe)
+abline(lm(y4~x4, data = anscombe), col=2)
+```
+
+Evalue y discuta los que observa. Y responda si es suficiente el R2 para saber si nuestro modelo lineal es el correcto.
+
+## C. Intervalos de confianza
+
+Para hallar los intervalos de confianza de los estimadores de una regresion lineal en R, utilizaremos la siguiente función **confint()** de la siguiente manera:
+
+```{r}
+confint(Modelo.Lineal.Simple, level = 0.95)
+```
+
+Para hallar el intervalo de confianza de un determinado valor de X (sal = 4.5):
+
+```{r}
+predict(object = Modelo.Lineal.Simple, newdata = data.frame(sal = c(4.5)),
+        interval = "confidence", level = 0.95)
+```
+
+Para hallar el intervalo de predicción de un determinado valor de X (sal = 4.5):
+
+```{r}
+predict(object = Modelo.Lineal.Simple, newdata = data.frame(sal = c(4.5)),
+        interval = "prediction", level = 0.95)
+```
+
+## D. Contraste de hipótesis sobre la pendiente de la recta Beta
+
+Para analizar el contraste de hipotesis, podemos evaluar los intervalos de confianza o podemos evaluar los resultados de p-valor en el resumen de nuestro modelo:
+
+```{r}
+summary(Modelo.Lineal.Simple)
+```
+
+Los valores Pr(>|t|), son los p-value, y nos indican en ambos casos (aunque solo en B1 tiene sentido) que se rechaza Ho (es decir, que B1 es diferente de 0). 
+
+## E. Representación gráfica del modelo lineal:
+
+La creación de un modelo de regresión lineal simple suele acompañarse de una representación gráfica superponiendo las observaciones con el modelo. Además de ayudar a la interpretación, es el primer paso para identificar posibles violaciones de las condiciones de la regresión lineal.
+
+Una manera simple de realizarlo con el paquete ggplot2, seria:
+
+```{r}
+Presión.Arterial %>% ggplot(aes(x=sal, y=presión))+
+  geom_point()+
+  geom_smooth(method="lm")
+```
+
+Sin embargo, no solo el gráfico de la recta nos ayuda a interpretar nuestro modelo. Tambien podemos visualizar la distribución de los errores o residuos del modelo. Estos se almacenan como *residuals* en nuestro modelo. Podemos gráficar la distribucion de los residuos, mediante:
+
+```{r}
+plot(Modelo.Lineal.Simple)
+```
+
+Los residuos confirman que los datos no se distribuyen de forma lineal, ni su varianza constante (plot1). Además se observa que la distribución de los residuos se aleja de la normalidad debido a algunos de los puntos (plot2). Solo nos concentraremos en evaluar el plot 1 y 2. Todo este analisis reduce en gran medida la robustez de la estimación del error estándar de los coeficientes de correlación estimados y con ello la del modelo es su conjunto.
+
+
+## F. Ejercicios de regresión lineal simple:
+
+##### 1. Para este ejercicio, trabajaremos con la base de datos "Boston" del paquete MASS. Aqui la descripción de las variables:
+
++ crim: ratio de criminalidad per cápita de cada ciudad.
++ zn: Proporción de zonas residenciales con edificaciones de más de 25.000 pies cuadrados.
++ indus: proporción de zona industrializada.
++ chas: Si hay río en la ciudad (= 1 si hay río; 0 no hay).
++ nox: Concentración de óxidos de nitrógeno (partes per 10 millón).
++ rm: promedio de habitaciones por vivienda.
++ age: Proporción de viviendas ocupadas por el propietario construidas antes de 1940.
++ dis: Media ponderada de la distancias a cinco centros de empleo de Boston.
++ rad: Índice de accesibilidad a las autopistas radiales.
++ tax: Tasa de impuesto a la propiedad en unidades de $10,000.
++ ptratio: ratio de alumnos/profesor por ciudad.
++ black: 1000(Bk - 0.63)^2 donde Bk es la proporción de gente de color por ciudad.
++ lstat: porcentaje de población en condición de pobreza.
++ medv: Valor mediano de las casas ocupadas por el dueño en unidades de $1000s.
+
+Realice lo siguiente:
+
+a. Analice la base y luego realice un modelo de regresión para predecir el valor de la vivienda en función del porcentaje de la población. Empleando la funcion **lm()** se generará un modelo por minimos cuadrados donde la variable respuesta sera *medv* y el predictor *lstat*.
+
+b. Evalue el modelo creado con las funciones: **names()** y **summary()**. ¿Qué valores de importancia encuentra y como los interpreta?
+
+c. Calcule usted el los intervalos de confianza para los estimadores con la función **confint()** a un nivel de confianza del 95%.
+
+d. Prediga el valor de la vivienda sabiendo el estatus de la población en la que se encuetra. Toda predicción tiene asociado un error y por lo tanto un intervalo. Analice e interprete los resultados. 
+e. Gráficar la relacion de las variables mediante una regresión lineal. Adicionalmente analizar los residuos del modelo. 
+
+
+# 2. Analisis de Regresión Lineal Múltiple
+
+Para el analisis de la regresión lineal múltiple, utilizaremos la base de datos "softdrink" del paquete "MPV"
+
+```{r}
+library(MPV)
+data("softdrink")
+```
+
+En el ejemplo los autores ajustaron un modelo de regresión lineal múltiple para explicar el Tiempo necesario para que un trabajador haga el mantenimiento y surta una máquina dispensadora de refrescos en función de las variables Número de Cajas y Distancia.
+
+![](Figuras/RegresionMultiple1.PNG)
+
+Antes de trabajar con la data, vamos a modificar su nombre, para tener un mejor manejo:
+
+```{r}
+library(tidyverse)
+softdrink <- softdrink %>% rename(tiempo = y, cantidad = x1, distancia = x2)
+```
+
+## A. Creamos el mejor modelo lineal multiple con el metodo de los minimos cuadrados
+
+```{r}
+mod <- lm(tiempo ~ cantidad + distancia, data=softdrink)
+```
+
+Al igual que con el modelo lineal simple, utilizamos summary() para ver los resultados principales del modelo:
+
+```{r}
+summary(mod)
+```
+
+## B. Comparacion de modelos: AIC y BIC
+Para calcular el AIC y BIC de un modelos, utilizamos las funciones **AIC()** o **BIC()**
+
+```{r}
+AIC(mod)
+BIC(mod)
+```
+
+Sin embargo, no nos brindan mucha información si es que solo tenemos un modelo. Tenemos que comparar diferentes modelos (que difieran en el numero de variables independientes).
+
+## C. Intervalos de confianza de los estimadores
+
+Al igual que en la regresion lineal simple, podemos hayar los intervalos de confianza de los estimadores del modelo. 
+
+```{r}
+confint(mod, level = 0.95)
+```
+
+Y también los intervalos de confianza de los valores medios y los valores predecidos:
+
+```{r eval=FALSE, include=FALSE}
+newdata = data.frame(x1 = , x2 = , x3 = ,...)
+predict(modelo, data.frame, interval = "confidence", level = 0.95)
+predict(modelo, data.frame, interval = "prediction", level = 0.95)
+```
+
+## D. Contraste de hipotesis
+Como hemos observado, la prueba de ANOVA del modelo, nos permite determinar si es que el modelo en si, tiene significancia o no (evalua a todas las variables independientes). Por otro lado, podemos ver especificamente el efecto de cada una de las variables independientes en el modelo creado.Ambas evaluaciones se pueden observar mediante el resumen ofrecido por la función **summary()**
+
+```{r}
+summary(mod)
+```
+
+## E. Diagnostico de los residuos
+
+#### E.1. Diagnostico de homocedasticidad de residuos: Test de White
+
+*queda pendiente como realizar este analisis*
+
+```{r eval=FALSE, include=FALSE}
+library(lmtest)
+bptest()
+```
+
+Un p-valor pequeño nos indica que tenemos evidencias suficientes para rechazar que las varianzas de los residuos no son iguales para cualquier valor de X. Dicho en otras palabras, el modelo no es homocedastico, es heterocedástico. 
+
+#### E.2. Diagnostico de homocedasticidad de residuos: Test de Breusch-Pagan
+
+Realizamos este test con la funcion **bptest()**, pero sin especificar argumentos. 
+
+```{r}
+library(lmtest)
+bptest(mod)
+```
+
+Con un p-valor mayor a el nivel de significancia, concluimos consecuentemente que no tenemos indicios suficientes para rechazar la homocedasticidad de los errores en este caso. 
+
+#### E.3. Diagnostico de normalidad de residuos: Test de Shapiro Wilk + Q-Qplot
+Para ellos, aplicamos el test de Shapiro-Wilk a los residuos de nuestro modelo:
+
+```{r}
+shapiro.test(mod$residuals)
+```
+
+En este caso particular, podemos observar que los residuos del modelo se distribuyen normalmente, ya que el p-valor es mayor al nivel de significancia y se acepta la Ho. Gráficamente lo podemos observar de la siguiente manera:
+
+```{r}
+plot(mod, 2)
+```
+Fijenseque a pesar de que existen desviaciones respecto a la distribución normal, el test de Shapiro-wilk nos ha brindado los resultados para evidenciar que los residuos se distribuyen normalmente. Es importante por eso siempre, no solo analizar los gráficos. 
+
+
+#### E.4. Correlacion de residuos: Test de Durbin-Watson
+
+Para este test, utilizaremos la función **dwtest()**:
+
+```{r}
+library(lmtest)
+dwtest(mod, alternative = "greater")
+```
+En donde el parametro alternative= nos indica si se testea que la autocorrelación es positiva (greater) o negativa (less). El parametro que tenemos que brindar a la funcion **dwtest()**, es nuestro modelo.
+
+```{r}
+dwtest(mod, alternative = "less")
+```
+
+Al obtener un p-valor mayor a alfa, podemos concluir que no hay autocorrelacion positiva (negativa)en los residuos. 
+
+### F. Aditividad y linealidad: Prueba de Tukey
+
+
+```{r}
+library(car)
+residualPlots(mod, plot=FALSE)
+```
+
+#### F.1. Aditividad y linealidad: Gráfico de los residuos parciales
+
+```{r}
+library(car)
+crPlots(mod)
+```
+
+
+### G. Analisis de valores atípicos o "outliers" en la regresión lineal
+
+#### G.1. Cálculo de leverages:
+
+```{r eval=FALSE, include=FALSE}
+D.L <- hatvalues(mod)
+k=
+n=
+which(D.L > 2*(k+1)/n)
+```
+
+#### G.2. Cálculo de outliers
+
+```{r}
+library(car)
+outlierTest(mod)
+```
+
+En este test, observamos el p-valor, si es menor a nuestro alfa (0.05) podemos concluir que no existen outliers. Adicionalmente, tambien nos brinda aquel individuo con el residuo estandarizado mas alto. 
+
+#### G.3. Cálculo de observaciones influyentes: Distancia de Cook
+
+```{r eval=FALSE, include=FALSE}
+D.C <- cooks.distance(mod)
+which(D.C > 4/(n-k-1))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
