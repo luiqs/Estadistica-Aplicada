@@ -35,3 +35,4 @@ De la base de datos "Huella" y del enunciado anterior, calcule y discuta los res
 ##### 3.  Con las pruebas aprendidas hasta el momento (semana 3), evidenciar o no, si existe alguna relacion entre las variables "HuellaCarbono" y "ConsumoEnergia". Calcule y gráfique para evidenciar la potencial relación entre las variables o la ausencia de relación. **Interprete los resultados**.
 
 ##### 4. Estime la media poblacional para la variable "HuellaCarbono" y obtenga adicionalmente sus intervalos de confianza a un nivel de significancia del 5%. Consejo: Utilice paquete DescTools. **Interprete los resultados**.
+

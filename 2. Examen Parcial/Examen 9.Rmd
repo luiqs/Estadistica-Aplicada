@@ -29,10 +29,10 @@ Tener en consideración que la desviación estándar poblacional de la concentra
 
 De la base de datos Incendios y los datos brindados en el enunciado anterior, calcule y discuta los resultados obtenidos a las siguientes preguntas:
 
-##### 1. Estime la proporcion poblacional de ocurrencia de incendios de la poblacion de estudio (Consejo: Utilice paquete DescTools). Adicionalmente, calcule los intervalos de confianza (asuma un nivel de confianza del 95%). **Interprete los resultados**.
+##### 1. Estime la proporcion poblacional de ocurrencia de incendios de la población de estudio (Consejo: Utilice paquete DescTools). Adicionalmente, calcule los intervalos de confianza (asuma un nivel de confianza del 95%). **Interprete los resultados**.
 
-##### 2 Estime la temperatura media poblacional y sus intervalos de confianza (asuma un nivel de confianza del 95%. (Consejo: Utilice paquete DescTools). Interprete los resultados
+##### 2. Calcule la media, mediana y desviación estandar la calidad del aire expresado en material particulado (CalidadAire) para los lugares donde hubo incendios y aquellos donde no ocurrio incendios respectivamente. Grafique las diferencias o similitudes con un grafico de BoxPlot o Grafico de Cajas. **Interprete los resultados**.
 
-##### 3. Con las pruebas aprendidas hasta el momento (semana 3), evidenciar o no, si existe alguna relacion entre las variables "CalidadAire" y "Temperatura". Calcule y gráfique para evidenciar la potencial relación entre las variables o la ausencia de relación. **Interprete los resultados**.
+##### 3. Con las pruebas aprendidas hasta la semana 4 de clases, evidenciar o no, si existe alguna relacion entre las variables "CalidadAire" y "Temperatura". Calcule y gráfique para evidenciar la potencial relación entre las variables o la ausencia de relación. **Interprete los resultados**.
 
 ##### 4. Realice un diagrama de cajas para el evaluar el comportamiento de la variable temperatura en las zonas donde ocurren incendios y aquellas zonas donde no ocurren incendios (Consejo: Grafique como minimo un boxplot, utilice tanto la variable "Estado" como "Temperatura"). Calcule la media, mediana y desviacion estandar de la temperatura para cada uno de los grupos por separado.**Interprete los resultados**.
