@@ -19,7 +19,7 @@ library(tidyverse)
 Huella <- read.csv("https://raw.githubusercontent.com/luiqs/Estadistica-Aplicada/main/PDB/Huella.csv")
 ```
 
-La base de datos “Huella”, tiene 4 variables de estudio. A continuación
+Laa base de datos “Huella”, tiene 4 variables de estudio. A continuación
 se describen cada una de ellas:
 
 -   Nombre: Variable de tipo nominal que representa el nombre de la
