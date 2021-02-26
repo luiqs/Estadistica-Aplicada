@@ -202,22 +202,27 @@ Sin embargo, no nos brindan mucha información si es que solo tenemos un modelo.
 
 ## C. Intervalos de confianza de los estimadores
 
-Al igual que en la regresion lineal simple, podemos hayar los intervalos de confianza de los estimadores del modelo. 
+Al igual que en la regresión lineal simple, podemos hallar los intervalos de confianza de los estimadores del modelo. 
 
 ```{r}
 confint(mod, level = 0.95)
 ```
 
-Y también los intervalos de confianza de los valores medios y los valores predecidos:
+Y también los intervalos de confianza de los valores medios :
 
-```{r eval=FALSE, include=FALSE}
-newdata = data.frame(x1 = , x2 = , x3 = ,...)
-predict(modelo, data.frame, interval = "confidence", level = 0.95)
-predict(modelo, data.frame, interval = "prediction", level = 0.95)
+```{r echo=TRUE}
+predict(mod, data= softdrink, interval = "confidence", level = 0.95)
 ```
 
+Y por ultimo los intervalos de confianza de los valores predecidos:
+
+```{r}
+predict(mod, data= softdrink, interval = "prediction", level = 0.95)
+```
+
+
 ## D. Contraste de hipotesis
-Como hemos observado, la prueba de ANOVA del modelo, nos permite determinar si es que el modelo en si, tiene significancia o no (evalua a todas las variables independientes). Por otro lado, podemos ver especificamente el efecto de cada una de las variables independientes en el modelo creado.Ambas evaluaciones se pueden observar mediante el resumen ofrecido por la función **summary()**
+Como hemos observado, la prueba de ANOVA del modelo, nos permite determinar si es que el modelo en si, tiene significancia o no (evalúa a todas las variables independientes). Por otro lado, podemos ver específicamente el efecto de cada una de las variables independientes en el modelo creado.Ambas evaluaciones se pueden observar mediante el resumen ofrecido por la función **summary()**
 
 ```{r}
 summary(mod)
@@ -227,25 +232,32 @@ summary(mod)
 
 #### E.1. Diagnostico de homocedasticidad de residuos: Test de White
 
-*queda pendiente como realizar este analisis*
-
-```{r eval=FALSE, include=FALSE}
+```{r echo=TRUE}
 library(lmtest)
-bptest()
+bptest(mod, varformula = ~ cantidad+tiempo+I(cantidad^2)+I(tiempo^2)+cantidad*tiempo, data = softdrink)
 ```
 
-Un p-valor pequeño nos indica que tenemos evidencias suficientes para rechazar que las varianzas de los residuos no son iguales para cualquier valor de X. Dicho en otras palabras, el modelo no es homocedastico, es heterocedástico. 
+Teniendo como hipótesis:
+
++ $$H_0$$: Las varianzas de los residuos son iguales (homocedasticidad)
++ $$H_1$$: Las varianzas de los residuos no son iguales (heterocedasticidad)
+
+Con un p-valor mayor a el nivel de significancia, concluimos consecuentemente que no tenemos indicios suficientes para rechazar la homocedasticidad de los errores en este caso. Lo cual, no es lo que ocurre para nuestro ejemplo. 
+
+Adicionalmente, al aplicar el test de White, podemos observar que la regresión de análisis contiene 5 variables. Es importante saber que el numero de variables total no puede exceder la muestra **"n"** de nuestra base de datos. Siendo 5 < 25 (n de softdrink igual a 25), no hay problema con usar este test. Sin embargo, en caso de muestras pequeñas lo recomendable seria utilizar el test de Breusch-Pagan.
 
 #### E.2. Diagnostico de homocedasticidad de residuos: Test de Breusch-Pagan
 
-Realizamos este test con la funcion **bptest()**, pero sin especificar argumentos. 
+En el caso de nuestro ejemplo, no es necesario realizar este Test, ya que el los supuestos se cumplen para el Test de White, sin embargo, a manera de ejemplo se presenta a continuación. Realizamos este test con la funcion **bptest()**, pero sin especificar la formula (como sí lo hicimos en el test de White). 
 
-```{r}
+```{r echo=TRUE}
 library(lmtest)
 bptest(mod)
 ```
+Teniendo como hipotesis:
 
-Con un p-valor mayor a el nivel de significancia, concluimos consecuentemente que no tenemos indicios suficientes para rechazar la homocedasticidad de los errores en este caso. 
++ $$H_0$$: Las varianzas de los residuos son iguales (homocedasticidad)
++ $$H_1$$: Las varianzas de los residuos no son iguales (heterocedasticidad)
 
 #### E.3. Diagnostico de normalidad de residuos: Test de Shapiro Wilk + Q-Qplot
 Para ellos, aplicamos el test de Shapiro-Wilk a los residuos de nuestro modelo:
@@ -261,10 +273,13 @@ plot(mod, 2)
 ```
 Fijenseque a pesar de que existen desviaciones respecto a la distribución normal, el test de Shapiro-wilk nos ha brindado los resultados para evidenciar que los residuos se distribuyen normalmente. Es importante por eso siempre, no solo analizar los gráficos. 
 
+#### E.4. Correlación de residuos: Test de Durbin-Watson
 
-#### E.4. Correlacion de residuos: Test de Durbin-Watson
+Este test nos permite saber si existe o no correlación entre los errores. Es preciso saber si existen correlacion positiva o negativa, por lo que los dos test se deben de correr para contrastar las siguientes hipotesis:
++ $$H_0$$: No existe correlacion entre los residuos ($$Beta_1 = 0$$)
++ $$H_1$$: Exixte correlacion entre los residuos
 
-Para este test, utilizaremos la función **dwtest()**:
+En este test, para cumplir nuestros supuestos de regresion, esperamos que se rechaze $$H_1$$. Para este test, utilizaremos la función **dwtest()**:
 
 ```{r}
 library(lmtest)
@@ -276,38 +291,45 @@ En donde el parametro alternative= nos indica si se testea que la autocorrelaci�
 dwtest(mod, alternative = "less")
 ```
 
-Al obtener un p-valor mayor a alfa, podemos concluir que no hay autocorrelacion positiva (negativa)en los residuos. 
+Al obtener un p-valor mayor a alfa, podemos concluir que no hay autocorrelacion positiva (negativa)en los residuos.
+
+Apesar de no existir correlacion negativa en nuestros datos, si existen una correlación positiva. Bajo este escenario, concluimos que los residuos no son incorrelacionados, faltando al supuesto de la regresion lineal. 
 
 ### F. Aditividad y linealidad: Prueba de Tukey
-
+Si bien nuestro modelo ya nos brinda la linealidad de las variables de estudio. Esta prueba responde a el analisis de linealidida y aditividad del modelo de regresión que realizamos entre los residuos. De esta manera, se evalua:
 
 ```{r}
 library(car)
 residualPlots(mod, plot=FALSE)
 ```
 
-#### F.1. Aditividad y linealidad: Gráfico de los residuos parciales
+Evaluaremos el valor de Tukey test para tomar una decisión. Con un p-valor pequeño, no podemos aceptar la aditividad. Como era de esperarse (debido a los analisis de correlación realizados previamente), los residuos estan afectandose unos con otros para este ejemplo. Esto impide concluir que el modelo es lineal o aditivo.
+
+Tambien podemos utilizar la función **crPlots()** para gráficar los residuos parciales:
 
 ```{r}
 library(car)
 crPlots(mod)
 ```
 
-
 ### G. Analisis de valores atípicos o "outliers" en la regresión lineal
 
 #### G.1. Cálculo de leverages:
 
-```{r eval=FALSE, include=FALSE}
+```{r echo=TRUE}
 D.L <- hatvalues(mod)
-k=
-n=
+k=2
+n=25
 which(D.L > 2*(k+1)/n)
 ```
 
 #### G.2. Cálculo de outliers
 
-```{r}
+Teniendo como hipotesis (tomar la decisión en base a el p-valor ajustado de Bonferroni):
++ $$H_0$$: No hay outliers
++ $$H_1$$: Hay outliers
+
+```{r echo=TRUE}
 library(car)
 outlierTest(mod)
 ```
@@ -316,13 +338,24 @@ En este test, observamos el p-valor, si es menor a nuestro alfa (0.05) podemos c
 
 #### G.3. Cálculo de observaciones influyentes: Distancia de Cook
 
-```{r eval=FALSE, include=FALSE}
+```{r echo=TRUE}
 D.C <- cooks.distance(mod)
+k=2
+n=25
 which(D.C > 4/(n-k-1))
 ```
 
+Gráficos de apoyo (sin embargo, lo ideal seria visualizarlo en 3D par ver efectivamente los outliers):
 
+```{r}
+softdrink %>% ggplot(aes(y=tiempo, x=cantidad))+
+  geom_point()
+```
 
+```{r}
+softdrink %>% ggplot(aes(y=tiempo, x=distancia))+
+  geom_point()
+```
 
 
 
