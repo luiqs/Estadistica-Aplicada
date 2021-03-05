@@ -1,4 +1,4 @@
-"Incendio1","Incendio2","CalidadAire","Temperatura","Precipitacion.Anual","Velocidad.Viento","Humedad.Relativa","Extracion.Oro1","Extracion.Oro2"
+"Incendio1","Incendio2","CalidadAire","Temperatura","Precipitacion.Anual","Velocidad.Viento","Humedad.Relativa","Extraccion.Oro1","Extraccion.Oro2"
 1,"Incendio",110.4,10,10,10,81,"Si",1
 1,"Incendio",150.4,15,0,20,81,"Si",1
 1,"Incendio",234.1,15,0.2,10,82,"Si",1
