@@ -1,4 +1,4 @@
-Instrucciones examen final de Estadística Aplicada a la Ingenieria
+Instrucciones examen final de Estadística Aplicada a la Ingeniería
 ================
 
 El examen final del curso Estadística aplicada a la Ingeniería se
