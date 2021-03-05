@@ -1,31 +1,31 @@
 "Nombre","Huella.Carbono","Consumo.Energia","Consumo.Agua","Ganancias.Anuales","Tamaño.Empresa1","Tamaño.Empresa2"
-"Morochita",400,50,0.5,10,"Chica",1
-"La Laguna",120,23,0.1,15,"Mediana",2
+"Morochita",400,50,0.5,10,"Mediana",1
+"La Laguna",120,23,0.1,15,"Chica",2
 "Roncha",600,16,0.5,20,"Grande",3
 "El gaton",500,65,0.5,14,"Mediana",2
-"San Judas",100,48,0.3,16,"Grande",3
-"Tecnopor",4000,21,1,24,"Chica",1
-"La Lucrativa",20000,700,2,36,"Chica",1
+"San Judas",100,48,0.3,16,"Chica",3
+"Tecnopor",4000,21,1,24,"Grande",1
+"La Lucrativa",20000,700,2,36,"Grande",1
 "Pedrito S.A.",644,164,0.4,19,"Mediana",2
 "Tinte",91,135,0.1,8,"Grande",3
-"La Familia",645,254,0.3,25,"Chica",1
-"Sabor",5000,645,1.5,30,"Chica",1
+"La Familia",645,254,0.3,25,"Mediana",1
+"Sabor",5000,645,1.5,30,"Grande",1
 "La Caja",644,3649,0.4,14,"Mediana",2
-"Tamarindo",3054,359,0.9,15,"Grande",3
-"El Agro",9563,500,1.8,17,"Mediana",2
+"Tamarindo",3054,359,0.9,15,"Mediana",3
+"El Agro",9563,500,1.8,17,"Grande",2
 "Sofisticada",15000,946,1.3,34,"Grande",3
-"Latencia",6458,946,1.5,8,"Chica",1
-"Pinturas",3491,764,1.1,5,"Mediana",2
-"Soledad",2549,914,1.1,15,"Grande",3
+"Latencia",6458,946,1.5,8,"Grande",1
+"Pinturas",3491,764,1.1,5,"Grande",2
+"Soledad",2549,914,1.1,15,"Mediana",3
 "Riqueza",156,364,0.2,16,"Chica",1
 "Vitamina",304,99,0.3,14,"Chica",1
 "Soltura",1784,975,1,15,"Mediana",2
-"Encuentro",1364,315,1,16,"Grande",3
-"LugarX",3648,346,1.2,35,"Chica",1
+"Encuentro",1364,315,1,16,"Mediana",3
+"LugarX",3648,346,1.2,35,"Grande",1
 "Tu Lugar",10456,926,1.5,27,"Mediana",2
-"El Sacrificio",94,468,0.1,2,"Grande",3
-"Fantasia",163,564,0.14,24,"Mediana",2
-"Euforia",3084,364,0.6,15,"Grande",3
-"Diversion",21000,846,2.1,34,"Chica",1
+"El Sacrificio",94,468,0.1,2,"Chica",3
+"Fantasia",163,564,0.14,24,"Chica",2
+"Euforia",3084,364,0.6,15,"Mediana",3
+"Diversion",21000,846,2.1,34,"Grande",1
 "Suspiro",9485,643,1.5,31,"Mediana",2
 "Rendidor",16000,1000,1.3,35,"Grande",3
