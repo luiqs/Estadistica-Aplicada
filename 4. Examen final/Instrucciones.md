@@ -4,8 +4,10 @@ Instrucciones examen final de Estadística Aplicada a la Ingenieria
 El examen final del curso Estadística aplicada a la Ingenieria se
 realizará el 05/03/2021. La duración del examen sera de 1 hora con 45
 minutos, comenzando a las 14:15 hrs hasta las 16:00hrs. El examen lo
-podran encontrar en el siguiente enlace &lt;&gt;. A cada estudiante se
-les asigna un examen específico, detallado en la siguiente tabla:
+podran encontrar en el siguiente enlace
+<https://github.com/luiqs/Estadistica-Aplicada/tree/main/4.%20Examen%20final>.
+A cada estudiante se les asigna un examen específico, detallado en la
+siguiente tabla:
 
 | Nombre                       | Estación |
 |:-----------------------------|:---------|
