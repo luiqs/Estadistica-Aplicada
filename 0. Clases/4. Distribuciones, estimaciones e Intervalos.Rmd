@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 1. Muestreo: Aprendiendo a escribir funciones
 
-Lamentablemente no he podido encontrar un paquete especifico para el calculo de muestras, sin embargo encontré una pagina web con el mismo problema con el que me encontré. En ves de seguir buscando por el paquete ideal, en esta pagina, se plantea solucionar el problema escribiendo su propia función para calcular el tamaño muestral (<http://news.mrdwab.com/post/sample-size-calculator/>). Esta situación me pareció ideal para explicarles que en R ustedes también pueden crear sus propias funciones, que quien sabe, puede ser el comienzo para que algún día creen sus propios paquetes para la comunidad R. 
+Siendo esta area de la estadística pocas veces contemplada, es difícil encontrar paquetes específicos que realicen el muestro facilmente en cada uno de los tipos de muestreo. Sin embargo encontré una pagina web con el mismo problema con el que me encontré. En ves de seguir buscando por el paquete ideal, en esta pagina, se plantea solucionar el problema escribiendo su propia función para calcular el tamaño muestral (<http://news.mrdwab.com/post/sample-size-calculator/>). Esta situación me pareció ideal para explicarles que en R ustedes también pueden crear sus propias funciones, que quien sabe, puede ser el comienzo para que algún día creen sus propios paquetes para la comunidad R. 
 
 Una función esta definida por 4 zonas generales, tales como se puede observar el la siguiente figura:
 ![](Figuras/Funciones1.PNG)
@@ -60,13 +60,14 @@ En cuanto a como calcular el tamaño muestral para un estimado cuantitativo como
 
 ## 1.2 Paquete samplingbook, funciones para muestreo aleatorio simple:
 
-Terminando esta sesión logre encontrar una librería o paquete llamado "samplingbook". En esta hay dos funciones interesantes que nos permiten calcular el tamaño muestral para muestreos aleatorios simples para la media y proporciones. Estas funciones son: 
+Esta librería o paquete llamado "samplingbook" presenta dos funciones interesantes que nos permiten calcular el tamaño muestral para muestreos aleatorios para la media y proporciones. Estas funciones son: 
 
  + sample.size.mean()
  + sample.size.prop()
  
 Dejo así mismo la documentación del paquete <https://www.rdocumentation.org/packages/samplingbook/versions/1.2.2>
-Al parecer estas formulas serian muy parecidas a la creada anteriormente. Sin embargo, estas son solo para aquellos casos donde se trata de un muestreo aleatorio simple(MAS). En el caso de muestreos aleatorios sistemáticos, estratificado o por conglomerados, se tendrían que crear nuevas funciones en función a la teoría aprendida en clase. Adicional mente, estas funciones si consideran en su formula, si conocemos inicialmente la varianza (siendo parte de los argumentos). 
+
+Tener en consideración que estas dos funciónes solo serviran para un muestreo aleatorio simple (MAS) y muestreo aleatorio sistemáticos. En el caso de muestreo aleatorio estratificado o por conglomerados, se tendrían que crear nuevas funciones en base a las formulas aprendidas en clase. Estas funciones consideran si conocemos inicialmente la varianza (siendo parte de los argumentos). 
 
 
 ## 1.3 Funciones creadas por el Profesor LR (bajo construción...)
@@ -92,8 +93,8 @@ De la pregunta 1, de la práctica #2, seria utilizarlo de la siguiente manera:
 Tamaño.muestra.media(120000, VP = 60, B = 0.6, c = 95)
 ```
 
-
 ....continuará
+
 
 # 2. Estimaciones: Paquete MASS, funcion fitdistr()
 
@@ -122,9 +123,7 @@ Tenemos una muestra de tamaño 50, de una variable de Poisson de **parámetro** 
 ```{r}
 set.seed(1)
 muestra.poisson <- rpois(50, lambda = 5)
-
 muestra.poisson
-
 ```
 Observamos que se ha creado un conjunto de 50 valores que se distribuyen a través de una distribución de Poisson con valor de lambda igual a 5. 
 
@@ -143,10 +142,12 @@ set.seed(1)
 muestra.normal <- rnorm(50, mean=0, sd = 1)
 muestra.normal
 ```
+
 Utilizamos la función fitdistr() para estimar el valor de la media.
 ```{r}
 fitdistr(muestra.normal, densfun = "normal")
 ```
+
 Vemos que la media estimada tiene un valor de 0.1004 y la desviación estándar 0.82, ambos con sus respectivos errores. 
 
 La función fitdistr() del paquete MASS, sirve para calcular los estimadores máximo verosímiles (puntuales) de los parámetros de una distribución a partir de una muestra. 
@@ -173,18 +174,19 @@ En el problema nos brindan el valor de la media muestral. Sin embargo, en la vid
 ```{r}
 Piezas.Automovil <- rnorm(1:400, mean = 5.40, sd = 1.2)
 ```
+
 Hemos creado una muestra de 400 elemento (n), con una media de 5.4 (mean) y una desviación estándar de 1.2 (sd). Ahora calcularemos con la ayuda de MedianCI(), los intervalos de confianza:
 ```{r}
 library(DescTools)
 mean(Piezas.Automovil)
 MedianCI(Piezas.Automovil, conf.level = 0.95, sides = "two.sided", method = "exact")
 ```
+
 Esta función no solo nos brinda los intervalos de confianza de la media, sino que así mismo nos brinda la estimación puntual del valor de la media poblacional.
 
 La documentación de la función MedianCI() la pueden encontrar en el siguiente link: <https://www.rdocumentation.org/packages/DescTools/versions/0.99.39/topics/MeanCI>
 
 ##### **Nota**: Existen pequeñas diferencias con el ejemplo realizado en clase debido a un componente de aleatoridad al momento de crear la data. No considerar estas diferencias como un error en la funcion. 
-
 
 ## 3.2 Intervalos de confianza para la proporción poblacional
 Para este caso utilizaremos la función binomCI() del paquete "DescTools". Pasamos inmediatamente al ejemplo.
