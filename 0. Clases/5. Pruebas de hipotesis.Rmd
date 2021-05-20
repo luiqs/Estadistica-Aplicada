@@ -97,6 +97,36 @@ x %>% ggplot(aes(x=x))+
 
 En este caso, la prueba de shapiro Wilk nos dio un p-value por encima de 0.05, lo cual indica que aceptamos Ho, y concluimos que la variable "x" de la base de datos "x", tiene una distribución normal. 
 
+### A.2 Prueba de kolmogorov-Smirnov-Lillefors - Paquete **nortest**
+
+Esta variante de la prueba de kolmogorov-Smirnov mas robusta, la cual ajusta la distribucion de los datos para la prueba a una distribución de Lillefors. Para realizar una prueba de Kolmogorov-Smirnov, utilizaremos la función **lillie.test()** del paquete de R **nortest**.  
+
+```{r}
+library(nortest)
+```
+
+Aplicamos la función tal cual la hemos aplicado en la funcion de shapiro.test(), a continuación para la variable notas de escritura:
+
+```{r}
+lillie.test(hsb2$write)
+```
+
+* Nota: El test K-S-L tiene un inconveniente, es muy sensible a las diferencias entre la muestra y la distribución teórica alrededor de sus valores medios, le cuesta detectar diferencias prominentes en un extremo y otro de la distribución. Ejemplo: 
+
+```{r}
+set.seed(100)
+y <- rt(50,3)
+lillie.test(y)
+```
+
+Si la gráficamos: 
+
+```{r}
+ggplot()+
+  geom_density(aes(x=y))
+```
+
+
 ## B. Pruebas de homogeneidad de Varianzas
 
 ### B.1. Prueba de Levene
@@ -106,6 +136,7 @@ Para la prueba de Levene, necesitaremos un paquete especial, llamado "car", lueg
 library(car)
 
 leveneTest(hsb2$write, hsb2$math)
+
 ```
 Al igual que la prueba de Shapiro Wilk y como en otras pruebas que veremos, concentremonos en interpretar el p-value y utilizarlo en nuestro contrate de hipótesis. Acordemonos que la Ho de la prueba de Levene nos dice "que la varianza de los grupos estudiados (write y math) nos son diferentes". La H1 por su parte, nos dice que " la varianza de los grupos son diferentes". El valor de p-value obtenido en la prueba de es 0.35, el cual es mayor nuestro nivel de significancia de 0.05 (nivel de confianza al 95%). De esto concluimos que aceptamos la hipótesis nula o rechazamos la hipótesis alterna. Es decir, que las varianzas para las dos muestras aleatorias analizadas no son diferentes. 
 
@@ -286,7 +317,7 @@ Analice los resultados.
 ### A.2. Prueba de Chi cuadrado para una sola muestra (o variable)
 Esta prueba en especial es una extensión de la prueba binomial y es también aplicada a una sola variable. Al contrario de la binomial, puede aceptar mas de dos valores cualitativos (nominal o ordinal).La prueba compara las frecuencias observadas versus las frecuencias esperadas para cada categoría.
 
-Recordemos que la hipótesis alterna de esta prueba nos dice $$H_1:$$ No hay diferencia significativa entre las frecuencias observadas y las esperadas. Para este caso utilizaremos la función **chisq.test()**, la cual espera un tabla de frecuencias y las proporciones esperadas (contrastadas), las cuales las define el investigador. Para realizar una tabla de frecuencias rápida, utilizaremos siempre la función **table()**, asignándole la variable de estudio especifica. Antes de hacer la prueba de chi cuadrado para una sola muestra, haremos uso de la función **table()** para la variable raza de la base de datos hsb2:
+Recordemos que la hipótesis alterna de esta prueba nos dice $$H_1:$$ Hay diferencia significativa entre las frecuencias observadas y las esperadas. Para este caso utilizaremos la función **chisq.test()**, la cual espera un tabla de frecuencias y las proporciones esperadas (contrastadas), las cuales las define el investigador. Para realizar una tabla de frecuencias rápida, utilizaremos siempre la función **table()**, asignándole la variable de estudio especifica. Antes de hacer la prueba de chi cuadrado para una sola muestra, haremos uso de la función **table()** para la variable raza de la base de datos hsb2:
 
 ```{r}
 table(hsb2$race)
