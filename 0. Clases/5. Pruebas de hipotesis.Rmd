@@ -84,6 +84,7 @@ shapiro.test(hsb2$science)
 hsb2 %>% ggplot(aes(x=science))+
   geom_density()
 ```
+
 Analice y exponga sus conclusiones.
 
 ##### Creamos una distribucion normal adrede para observar que pasaria. La llamaremos x:
@@ -133,15 +134,20 @@ ggplot()+
 ## B. Pruebas de homogeneidad de Varianzas
 
 ### B.1. Prueba de Levene
-Para la prueba de Levene, necesitaremos un paquete especial, llamado "car", luego de instalarlo y activarlo, utilizaremos la función "leveneTest()" del paquete:
+Para la prueba de Levene, necesitaremos un paquete especial, llamado "car", luego de instalarlo y activarlo, utilizaremos la función "leveneTest()" del paquete. Para utilizar la función de leveneTest(), tenemos 2 opciones, que nos van a dar el mismo resultado. Siempre el segundo arumento va a corresponder a las categorias en las cuales vamos a repartir al primer argumento que nosotros le brindemos. En la opción 1, va a tomar las notas de escritura y repartirlas en cuantos diferentes valores encuentre en la cariable dos (female). En la opción 2, va a pasar lo mismo, sin embargo, al utilizar la virgulitta (~) estamos indicando exactamente que la variable que vamos a utilizar para repartir los datos de notas de escritura (write) van a ser dividios en todas las categorias (factores en R) encontradas en la variable female. **Esto se cumple solo para la función de leveneTest del paquete car**. 
 
 ```{r}
 library(car)
 
-leveneTest(hsb2$write, hsb2$math)
+leveneTest(hsb2$write, hsb2$female) # Opción 1
+leveneTest(hsb2$write ~ as.factor(hsb2$female)) # Opción 2
 
 ```
-Al igual que la prueba de Shapiro Wilk y como en otras pruebas que veremos, concentremonos en interpretar el p-value y utilizarlo en nuestro contrate de hipótesis. Acordemonos que la Ho de la prueba de Levene nos dice "que la varianza de los grupos estudiados (write y math) nos son diferentes". La H1 por su parte, nos dice que " la varianza de los grupos son diferentes". El valor de p-value obtenido en la prueba de es 0.35, el cual es mayor nuestro nivel de significancia de 0.05 (nivel de confianza al 95%). De esto concluimos que aceptamos la hipótesis nula o rechazamos la hipótesis alterna. Es decir, que las varianzas para las dos muestras aleatorias analizadas no son diferentes. 
+Al igual que la prueba de Shapiro Wilk y como en otras pruebas que veremos, concentremonos en interpretar el p-value y utilizarlo en nuestro contrate de hipótesis. Acordemonos que:
+* Ho: La varianza de los grupos estudiados (write y math) nos son diferentes". 
+* H1: por su parte, nos dice que " la varianza de los grupos son diferentes".
+
+El valor de p-value obtenido en la prueba de es 0.002206, el cual es menor a nuestro nivel de significancia de 0.05 (nivel de confianza al 95%). De esto rechazamos la hipótesis nula. Es decir, que las varianzas para las dos muestras aleatorias (las notas de escritura para las mujeres y las notas de escritura para los hombres) analizadas son diferentes. 
 
 
 ## C. Prueba de hipotesis con una media poblacional (mu) para una variable
