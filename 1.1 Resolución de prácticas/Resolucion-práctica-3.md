@@ -13,7 +13,7 @@ Bases de datos
 
 ``` r
 Ventas.Aviones <- tibble(Mes = c("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"),
-                         Ventas = c(48, 52, 50, 49, 47, 50, 51, 54, 54, 56, 52, 55))
+                         Ventas = c(48, 52, 50, 49, 47, 50, 51, 54, 35, 56, 52, 55))
 
 Temperatura <- tibble(Temp = c(12.5,14.2,13.4, 14.6, 12.7, 10.9, 16.5, 14.7, 11.2, 10.9, 12.1, 12.8, 13.8, 13.5, 13.2, 14.1, 15.5, 16.2, 10.8, 14.3, 12.8, 12.4, 11.4, 16.2, 14.3, 14.8, 14.6, 13.7, 13.5, 10.8, 10.4, 11.5, 11.9, 11.3, 14.2, 11.2, 13.4, 16.1, 13.5, 17.5, 16.2, 15.0, 14.2, 13.2, 12.4, 13.4, 12.7, 11.2))
 
@@ -28,7 +28,7 @@ Hospital <- tibble(Hospital1 = c(72, 58, 91, 88, 70, 76, 98, 101, 65, 73, 79, 82
 Resolución:
 
 Ejercicio 1. La ventas de aviones del año pasado se puede obtener en la
-base de datos “Ventas.Aviones”. Comprobar y analizar si los dato de
+base de datos “Ventas.Aviones”. Comprobar y analizar si los datos de
 ventas siguen una distribución normal. Considera un nivel de confianza
 del 95%. Realizar un gráfico (s) para interpretar los resultados de ser
 posible para complementar sus resultados.
@@ -41,7 +41,9 @@ shapiro.test(Ventas.Aviones$Ventas)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  Ventas.Aviones$Ventas
-    ## W = 0.96726, p-value = 0.8801
+    ## W = 0.81328, p-value = 0.01332
+
+Test de kolmogorov Smirnov Lilliefors
 
 ``` r
 lillie.test(Ventas.Aviones$Ventas)
@@ -51,7 +53,7 @@ lillie.test(Ventas.Aviones$Ventas)
     ##  Lilliefors (Kolmogorov-Smirnov) normality test
     ## 
     ## data:  Ventas.Aviones$Ventas
-    ## D = 0.14361, p-value = 0.7075
+    ## D = 0.21242, p-value = 0.1413
 
 Aplicando DAgostino normality test:
 
@@ -116,7 +118,8 @@ data("starwars")
 
 starwars_1 <-
   starwars %>% 
-  select(mass, height) 
+  select(mass, height) %>% 
+  drop_na(mass, height)
 
 Peso <- starwars_1 %>% 
   select(mass) %>% 
@@ -143,7 +146,45 @@ shapiro.test(Altura$height)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  Altura$height
-    ## W = 0.8782, p-value = 1.446e-06
+    ## W = 0.83169, p-value = 1.08e-06
+
+Graficando:
+
+``` r
+ggplot(Peso)+
+  geom_density(aes(x=mass))
+```
+
+![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
+Si eliminamos a Jabba del la base de datos:
+
+``` r
+Peso_1 <- 
+  Peso %>% 
+  filter(mass < 1000)
+```
+
+Probar Shapiro:
+
+``` r
+shapiro.test(Peso_1$mass)
+```
+
+    ## 
+    ##  Shapiro-Wilk normality test
+    ## 
+    ## data:  Peso_1$mass
+    ## W = 0.94726, p-value = 0.01365
+
+Graficando:
+
+``` r
+ggplot(Peso_1)+
+  geom_density(aes(x=mass))
+```
+
+![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 Ejercicio 4 La base de datos “Estudiantes” muestra las notas finales de
 2 estudiantes en 9 materias academicas. Probar y analizar si es que
@@ -151,35 +192,12 @@ existe homogeneidad de varianzas entre los estudiantes (alfa = 5%).
 Realizar un gráfico (s) para interpretar los resultados de ser posible
 para complementar sus resultados.
 
-``` r
-leveneTest(Estudiantes$Estudiante1, Estudiantes$Estudiante2)
-```
-
-    ## Warning in leveneTest.default(Estudiantes$Estudiante1, Estudiantes$Estudiante2):
-    ## Estudiantes$Estudiante2 coerced to factor.
-
-    ## Levene's Test for Homogeneity of Variance (center = median)
-    ##       Df F value Pr(>F)
-    ## group  5  0.3616 0.8491
-    ##        3
-
-Graficando un gráfico de densidad para visualizar la distribución de los
-datos:
-
-``` r
-ggplot(Estudiantes)+
-  geom_density(aes(x=Estudiante1))+
-  geom_density(aes(x=Estudiante2))
-```
-
-![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
-
 En este caso particular hay que realizar un cambio en la base de datos
 original para poder utilizar el boxplot de manera sencilla, eso usando
 la función **pivot\_longer()**:
 
 ``` r
-Estudiantes_1 <- 
+Estudiantes_X<- 
   Estudiantes %>% 
   pivot_longer(
     cols = Estudiante1:Estudiante2,
@@ -189,14 +207,36 @@ Estudiantes_1 <-
   arrange(Estudiante)
 ```
 
+``` r
+leveneTest(Estudiantes_X$Notas, Estudiantes_X$Estudiante)
+```
+
+    ## Warning in leveneTest.default(Estudiantes_X$Notas, Estudiantes_X$Estudiante):
+    ## Estudiantes_X$Estudiante coerced to factor.
+
+    ## Levene's Test for Homogeneity of Variance (center = median)
+    ##       Df F value Pr(>F)
+    ## group  1   0.013 0.9107
+    ##       16
+
+Graficando un gráfico de densidad para visualizar la distribución de los
+datos:
+
+``` r
+ggplot(Estudiantes_X)+
+  geom_density(aes(x=Notas, fill = Estudiante), alpha =0.5)
+```
+
+![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+
 Ahora si podemos dibujar el boxplot:
 
 ``` r
-ggplot(Estudiantes_1)+
+ggplot(Estudiantes_X)+
   geom_boxplot(aes(x=Estudiante, y = Notas))
 ```
 
-![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 Ejercicio 5 Del paquete datasets utilice la base de datos iris y
 corrobore si existen o no homogeneidad de varianzas para todas las
@@ -291,7 +331,7 @@ ggplot(Virginica_Setosa)+
   geom_boxplot(aes(x=Species, y = Sepal.Length))
 ```
 
-![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](Resolucion-práctica-3_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 Ejercicio 6 Se quiere comparar el tiempo medio de espera para ser
 atendido por un médico (en minutos) en dos hospitales diferentes. Para
