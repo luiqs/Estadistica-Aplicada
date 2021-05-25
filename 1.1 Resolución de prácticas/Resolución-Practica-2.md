@@ -8,9 +8,10 @@ Resolución Práctica 2
     para estimar la media poblacional de la edad de los habitantes de la
     ciudad. Asumir que se obtuvo de la muestra un error de estimacion
     (error estandar) de 0.6 y que la varianza de poblacional es igual
-    a 64. De los datos suministrados calcule: El tamaño muestral para
-    determinar la media de edad de los habitantes de Tantan (muestreo
-    aleatorio simple).
+    a 64. De los datos suministrados calcule:
+
+El tamaño muestral para determinar la media de edad de los habitantes de
+Tantan (muestreo aleatorio simple).
 
 ``` r
 Tantan <- tibble(Region = c("Norte", "Sur", "Centro", "Este", "Oeste"),
@@ -20,7 +21,7 @@ Tantan <- tibble(Region = c("Norte", "Sur", "Centro", "Este", "Oeste"),
 Resolución:
 
 ``` r
-sample.size.mean(e=0.6, S=sqrt(64), N=120000, level = 0.95)
+sample.size.mean(e=0.6, S=sqrt(64), N= 120000, level = 0.95)
 ```
 
     ## 
@@ -66,21 +67,21 @@ confianza del 95% y un error máximo del 0.04.
 
 ``` r
 set.seed(100)
-Edad <- rnorm(120, mean = 51, sd =18)
+Edad <- rnorm(120, mean = 51, sd = 18)
 ```
 
 Aplicando MeanCI():
 
 ``` r
-MeanCI(Edad, conf.level = 0.95)
+MeanCI(Edad, conf.level = 0.90)
 ```
 
     ##     mean   lwr.ci   upr.ci 
-    ## 51.01198 47.78496 54.23900
+    ## 51.01198 48.31029 53.71368
 
 De la muestra de 120 individuos se estima que la edad media poblacional
-es de 53 años a un nivel de confianza del 95% y con intervalos de
-confianzas igual a \[50.10;55.84\]
+es de 49.52 años a un nivel de confianza del 90% y con intervalos de
+confianzas igual a \[46.81;52.23\]
 
 1.  Se requiere estimar la ganancia media de la ciudad Chenchen. Asuma
     que la población sigue una distribución normal y una varianza
@@ -109,10 +110,10 @@ Interpretación:
 
 1.  Se requiere estimar la tasa de analfabetismo en la ciudad de Tenten.
     Para ello, se ha realizado un muestreo aleatorio simple de 500
-    habitantes en la ciudad. Se obtuvo de la muestra que 120 indivuos
-    son analfabetos. Estime la proporcion poblacional del anafalbetismos
-    para la ciudad de Tenten. De igual manera, contruya los intervalos
-    de confianza (alfa = 5%).
+    habitantes en la ciudad. Se obtuvo que el 24% de los habitantes de
+    la muestra era analfabeto. Estime la proporcion poblacional del
+    anafalbetismos para la ciudad de Tenten. De igual manera, contruya
+    los intervalos de confianza (alfa = 5%).
 
 ``` r
 BinomCI(x=120, n=500, conf.level = 0.95)
@@ -130,7 +131,7 @@ BinomCI(x=120, n=500, conf.level = 0.95)
     estime su valor puntual. Muestra para la variable de estudio:
 
 ``` r
-set.seed(10)
+set.seed(1)
 Tiempo.servicios <- rnorm(61, sd = 8)
 ```
 
@@ -141,4 +142,4 @@ VarCI(Tiempo.servicios, conf.level = 0.95, method = "norm")
 ```
 
     ##      var   lwr.ci   upr.ci 
-    ## 52.96555 37.39717 71.34287
+    ## 51.54526 33.05077 71.28668
