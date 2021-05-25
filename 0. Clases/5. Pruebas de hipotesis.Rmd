@@ -180,19 +180,26 @@ Dejamos de realizar pruebas paramétricas para una sola variable, para dedicarno
 En este caso, utilizaremos la prueba t de Student para dos muestras independientes (masculina y femenina). Los casos masculinos y femeninos serán separados internamente por la función t.test(), establecer la relación entre las variables "write" y "female". En este caso estamos separando los valores de "notas de escritura", en dos grupos, los que son femeninos y los que son masculinos. De estos dos grupos comparamos sus medias, mediante:
 
 ```{r}
-t.test(hsb2$write ~ hsb2$female )
+t.test(hsb2$write ~ hsb2$female, paired = FALSE)
 ```
 
+Si usted tuviera por ejemplo las notas de escritura femenidas en una sola variable (o vector) y las notas de escritura masculinas en otra variable (o vector), entonces usted debe de utilizar la siguiente forma (la base de datos no existe, es imaginaria): 
+
+```{r}
+# t.tes(hsb2$Notas.Femeninas, hsb2$NotasMasculinas, paired = FALSE)
+```
+
+En este caso particular, la unica diferencia es que se separará las variables cuantitativas por una **","**. En el caso de separarlo por grupos, siempre se usará para la función de t.test() la **"~"** (virgulilla). **ADVERTENCIA** esto no aplica para la función de LeveneTest() del paquete **car**.
 
 ## E. Prueba t de Student para compara 2 medias poblacionales de dos muestras aleatorias relacionadas (o dependientes)
 
 En este caso, utilizamos la misma función anterior. Sin embargo, dos principales cambios se tiene que dar. 
 
-+ Las variables de estudio ahora provienen de dos muestras dependientes. Es decir, que comparten los mismos elementos observacionales (p.ej. las muestras seleccionadas contienen tanto alumnos del genero masculino y del genero femenino). Bajo esta premisa, a la función original tendremos que suministrarle el argumente *paired* igual a verdadero (TRUE), el cual por defecto se encuentra en falso (FALSE)
++ Las variables de estudio ahora provienen de dos muestras dependientes. Es decir, que comparten los mismos elementos observacionales (p.ej. las muestras seleccionadas contienen los mismos individuos (relacionada), ya no importa si son masculinos o femeninos, solo si son o no los mismos individuos). Bajo esta premisa, a la función original tendremos que suministrarle el argumente *paired* igual a verdadero (TRUE), el cual por defecto se encuentra siempre en falso (FALSE)
 
-+ De los explicado, ya no vamos a brindarle a la función una relación entre variables (~), sino que establecemos dos variables de la data que queramos comparar.
++ Al igual que el caso de las muestras indipendientes, podemos usar el simbolo **"~"** si queremos relacionar una variable en razon a un grupo (**IMPORTANTE**: en caso de muestras dependientes, los dos grupos tienen que tener el mismo número de unidades ya que son los mismos individuos). Y también podemos utilizar **","** para brindar a la función t.test() de frente los vectores cuantitativos a comparar. 
 
-Teniendo en cuenta lo explicado, calculamos el p-valor, mediante el siguiente código:
+Teniendo en cuenta lo explicado, calculamos el p-valor, mediante el siguiente código y luego lo interpreta (en este caso utilizaremos la ","):
 
 ```{r}
 t.test(hsb2$write, hsb2$read, paired = TRUE)
