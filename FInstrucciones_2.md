@@ -9,27 +9,27 @@ A cada estudiante se le ha asignado un examen específico, detallado en
 la siguiente tabla (si realiza otro examen que no le ha tocado, no sera
 evaluado):
 
-| Nombre          | Apellido            | Enlace                                                                                  |
-|:----------------|:--------------------|:----------------------------------------------------------------------------------------|
-| María Graciela  | Alvarez Espinosa    | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md> |
-| Gladis Liliana  | Atoxa Panuera       | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/4.-Examen-Final-4.md> |
-| Diego Alonso    | Bocanegra Olavarria | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md> |
-| Connie Alyssa   | Cespedes Caceres    | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md> |
-| Angel           | Cuya                | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| Richard         | Flores Rua          | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md> |
-| Ronaldo Alonso  | Galdo Lavado        | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md> |
-| Isabel          | Gonzalez Caro       | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md> |
-| Daniela Alicia  | Huaman Olarte       | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| Katherine       | Jaulis              | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| Antony          | Leon                | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md> |
-| Yeison Yamir    | Medina Castro       | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| Shantall        | Moquillaza Flores   | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/4.-Examen-Final-4.md> |
-| Adriana         | Morales             | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| Luis Enrique    | Paredez Yallico     | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| Rudy Manuel     | Pineda Quispe       | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md> |
-| Ana Lucia       | Ramon               | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md> |
-| Jefferson Harry | Vásquez Sánchez     | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md> |
-| SHINTIA YANETH  | ORE TELLO           | NA                                                                                      |
+| Nombre          | Apellido            | Enlace                                                                                          |
+|:----------------|:--------------------|:------------------------------------------------------------------------------------------------|
+| María Graciela  | Alvarez Espinosa    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md) |
+| Gladis Liliana  | Atoxa Panuera       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/4.-Examen-Final-4.md) |
+| Diego Alonso    | Bocanegra Olavarria | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md) |
+| Connie Alyssa   | Cespedes Caceres    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md) |
+| Angel           | Cuya                | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| Richard         | Flores Rua          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md) |
+| Ronaldo Alonso  | Galdo Lavado        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/1.-Examen-Final-1.md) |
+| Isabel          | Gonzalez Caro       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md) |
+| Daniela Alicia  | Huaman Olarte       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| Katherine       | Jaulis              | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| Antony          | Leon                | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md) |
+| Yeison Yamir    | Medina Castro       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| Shantall        | Moquillaza Flores   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/4.-Examen-Final-4.md) |
+| Adriana         | Morales             | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| Luis Enrique    | Paredez Yallico     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| Rudy Manuel     | Pineda Quispe       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md) |
+| Ana Lucia       | Ramon               | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/3.-Examen-Final-3.md) |
+| Jefferson Harry | Vásquez Sánchez     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Discover/2.-Examen-Final-2.md) |
+| SHINTIA YANETH  | ORE TELLO           | NA                                                                                              |
 
 Instrucciones:
 
