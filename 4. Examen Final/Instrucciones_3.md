@@ -9,50 +9,27 @@ A cada estudiante se le ha asignado un examen específico, detallado en
 la siguiente tabla (si realiza otro examen que no le ha tocado, no sera
 evaluado):
 
-| Nombre             | Apellido              | Enlace                                                                                            |
-|:-------------------|:----------------------|:--------------------------------------------------------------------------------------------------|
-| Ayrton             | Álvarez               | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| Valeria            | Callupe               | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| Sandra             | Campos                | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| Gabriela           | Carrillo              | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| Kelly Wendy        | Castro Garcia         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/5.-Examen-Final-5.md) |
-| Benjamín           | Céspedes              | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| Enrique            | Contreras Barrenechea | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| Sofía              | Cordero Santos        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| Karla              | Fernández             | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| Gianna             | González              | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| Mary Luz           | Huaranga Malaver      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| Mariana            | Huarca                | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/5.-Examen-Final-5.md) |
-| Luz Clarita        | Huari Antonio         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| Salvador           | Inzua Nuñez           | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| Alessandra         | Laurente              | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| Maria Claudia      | Lorenzo Hilario       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| Edith Fany         | Ludeña Azorza         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| Sandro             | Lukuy                 | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| Adan               | Marina                | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/5.-Examen-Final-5.md) |
-| Mery               | Meza Puma             | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| Anali Karen        | Milla Since           | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| Jesús              | Monge                 | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| Caroline           | Monrroy               | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| Débora             | Monteagudo            | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| Adriana            | Monterola             | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| Akemy              | Obregon Rondon        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/5.-Examen-Final-5.md) |
-| Jose               | Palomino Montoya      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| Luis Angel         | Peña Asmat            | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| Janela             | Pizarro Mayta         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| Lucero Estefany    | Pomasoncco Garcia     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| Giovana Yessica    | Pongo Jaimes          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| Edy Lizandro       | Quispe Hugo           | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| Jimena             | Rojas Palacios        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/5.-Examen-Final-5.md) |
-| Valeria            | Romero Espinoza       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| Yumar              | Salas Camacho         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| Alexia             | Seminario             | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| Alejandra Mercedes | Tupac Palacios        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| Jazmín             | Tupac Perez           | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| Rosa Maria         | Valero Chilcon        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| Renzo              | Yahuana               | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/5.-Examen-Final-5.md) |
-| Claudia            | Yaya Chileno          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| Valeria            | Yon Leiva             | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
+| Nombre              | Apellido            | Enlace                                                                                            |
+|:--------------------|:--------------------|:--------------------------------------------------------------------------------------------------|
+| Brigitte Joya       | BLANCO ROSELLO      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
+| RASHELL KATE        | CHIRINOS ACOSTA     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
+| SEBASTIAN DANIEL    | COROMINAS SANCHEZ   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
+| KAROL MARYORI       | CORRALES VASQUEZ    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
+| DEYCK OMAR          | COTILLO COX         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/8.-Examen-Final-8.md) |
+| ANDREA NICOLLE      | ESTELA YACOLCA      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
+| SOL SINAI           | ESTRADA GUTIERREZ   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
+| KATHERINNE JASMIN   | GOMEZ CRISTOBAL     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
+| KAREN RAQUEL        | HUAMANI RÍOS        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
+| ANAHI CRISTINA      | LARICO HUERTA       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
+| KIARA ELENA         | MAURTUA ROSADIO     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
+| DIEGO ALEXIS        | QUINTANA CASTRO     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/8.-Examen-Final-8.md) |
+| SANTIAGO JOSE       | RIVERA FERREYROS    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
+| SEBASTIAN ALONSO    | ROJAS CASTILLO      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
+| ADELINA ELSA SAMIHA | SARMIENTO SARMIENTO | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
+| ZAHIRA XIMENA       | TAMAYO CENTURION    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
+| ALEXIA NASMMIN      | VALENTIN ANDRES     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
+| FABRIZIO            | VENEROS LESCANO     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
+| PIERO ALEXANDER     | ZEVALLOS AGUILAR    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/8.-Examen-Final-8.md) |
 
 Instrucciones:
 
