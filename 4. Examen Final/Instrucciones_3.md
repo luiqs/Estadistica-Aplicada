@@ -2,7 +2,7 @@ Instrucciones examen Final de estadística aplicada
 ================
 
 La duración del examen sera de 1 hora con 50 minutos (a partir de las
-14:20 hasta la 16:10 hrs) y se darán 5 minutos de gracia para entregar
+08:10 hasta la 10:00 hrs) y se darán 5 minutos de gracia para entregar
 el documento en el Aula Virtual.
 
 A cada estudiante se le ha asignado un examen específico, detallado en
