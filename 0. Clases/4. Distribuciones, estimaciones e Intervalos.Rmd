@@ -2,7 +2,21 @@
 title: "Distribuciones, estimaciones e intervalos"
 output: github_document
 ---
-# 1. Muestreo: Aprendiendo a escribir funciones
+## 1.Paquete samplingbook, funciones para muestreo aleatorio simple:
+
+Esta librería o paquete llamado "samplingbook" presenta dos funciones interesantes que nos permiten calcular el tamaño muestral para muestreos aleatorios para la media y proporciones. Estas funciones son: 
+
+ + sample.size.mean()
+ + sample.size.prop()
+ 
+Dejo así mismo la documentación de cada función:
+
+ + <https://www.rdocumentation.org/packages/samplingbook/versions/1.2.4/topics/sample.size.mean>
+ + <https://www.rdocumentation.org/packages/samplingbook/versions/1.2.4/topics/sample.size.prop>
+
+Tener en consideración que estas dos funciónes solo serviran para un muestreo aleatorio simple (MAS) y muestreo aleatorio sistemáticos. En el caso de muestreo aleatorio estratificado o por conglomerados, se tendrían que crear nuevas funciones en base a las formulas aprendidas en clase. Estas funciones consideran si conocemos inicialmente la varianza (siendo parte de los argumentos). 
+
+# 2. Muestreo estratificado o por conglomerados: Aprendiendo a escribir funciones
 
 Siendo esta area de la estadística pocas veces contemplada, es difícil encontrar paquetes específicos que realicen el muestro facilmente en cada uno de los tipos de muestreo. Sin embargo encontré una pagina web con el mismo problema con el que me encontré. En ves de seguir buscando por el paquete ideal, en esta pagina, se plantea solucionar el problema escribiendo su propia función para calcular el tamaño muestral (<http://news.mrdwab.com/post/sample-size-calculator/>). Esta situación me pareció ideal para explicarles que en R ustedes también pueden crear sus propias funciones, que quien sabe, puede ser el comienzo para que algún día creen sus propios paquetes para la comunidad R. 
 
@@ -27,7 +41,7 @@ Si corremos esta función, veremos que efectivamente nuestra nueva función suma
 
 Saber crear una función en R, abre posibilidades inimaginables, ustedes pueden crear un paquete para un análisis especifico o un nuevo modelo que quieran crear. En este caso, pararemos en este punto para proseguir con copiar las funciones que crearon en la pagina web compartida y ver como podríamos crear nuestras funciones para todos los casos de tamaño muestral aprendidas en clase. 
 
-## 1.1. Ejemplo: Funcion para un muestreo simple de una proporcion con poblacion infinita (o finita)
+## 2.1. Ejemplo: Funcion para un muestreo simple de una proporcion con poblacion infinita (o finita)
 
 La función que se creo es la siguiente:
 
@@ -53,23 +67,9 @@ En cuanto a como calcular el tamaño muestral para un estimado cuantitativo como
 
 + <https://www.checkmarket.com/sample-size-calculator/>
 
-## 1.2 Paquete samplingbook, funciones para muestreo aleatorio simple:
+## 2.2 Funciones creadas por el Profesor LR (bajo construción...)
 
-Esta librería o paquete llamado "samplingbook" presenta dos funciones interesantes que nos permiten calcular el tamaño muestral para muestreos aleatorios para la media y proporciones. Estas funciones son: 
-
- + sample.size.mean()
- + sample.size.prop()
- 
-Dejo así mismo la documentación de cada función:
-
- + <https://www.rdocumentation.org/packages/samplingbook/versions/1.2.4/topics/sample.size.mean>
- + <https://www.rdocumentation.org/packages/samplingbook/versions/1.2.4/topics/sample.size.prop>
-
-Tener en consideración que estas dos funciónes solo serviran para un muestreo aleatorio simple (MAS) y muestreo aleatorio sistemáticos. En el caso de muestreo aleatorio estratificado o por conglomerados, se tendrían que crear nuevas funciones en base a las formulas aprendidas en clase. Estas funciones consideran si conocemos inicialmente la varianza (siendo parte de los argumentos). 
-
-## 1.3 Funciones creadas por el Profesor LR (bajo construción...)
-
-### 1.3.1 Para calcular el tamaño muestral de la media (sea poblacion finita o infinita)
+### 2.2.1 Para calcular el tamaño muestral de la media (sea poblacion finita o infinita)
 
 ```{r}
 Tamaño.muestra.media <- function(N, VP, B, co){
@@ -93,7 +93,7 @@ Tamaño.muestra.media(120000, VP = 60, B = 0.6, c = 95)
 ....continuará
 
 
-# 2. Estimaciones: Paquete MASS, funcion fitdistr()
+## 3. Estimaciones: Paquete MASS, funcion fitdistr()
 
 Comience siempre por instalar el paquete MASS y luego activarlo (si ya lo tiene instalado, solo actívelo)
 
@@ -156,9 +156,9 @@ vector <- c(5.4, 9.8, 6.3, 7.9, 9.2, 10.7, 12.5, 15.0, 13.9, 17.2)
 fitdistr(vector, densfun = "exponential")
 ```
 
-# 3. Intervalos de confianza: Paquete DescTools
+# 4. Intervalos de confianza: Paquete DescTools
 
-## 3.1 Intervalos de confianza para la media poblacional
+## 4.1 Intervalos de confianza para la media poblacional
 Para hallar los intervalos de confianza para la media utilizaremos la función MeanCI() del paquete DescTools.
 
 ##### Ejemplo:
@@ -184,7 +184,7 @@ La documentación de la función MeanCI la pueden encontrar en el siguiente link
 
 ##### **Nota**: Existen pequeñas diferencias con el ejemplo realizado en clase debido a un componente de aleatoridad al momento de crear la data. No considerar estas diferencias como un error en la funcion. 
 
-## 3.2 Intervalos de confianza para la proporción poblacional
+## 4.2 Intervalos de confianza para la proporción poblacional
 Para este caso utilizaremos la función binomCI() del paquete "DescTools". Pasamos inmediatamente al ejemplo.
 
 ##### Ejemplo: 
@@ -200,7 +200,7 @@ Como el ejemplo anterior, el resultado no solo nos brindara los intervalos de co
 La documentación de la función VarCI() la pueden encontrar en el siguiente link:
 <https://www.rdocumentation.org/packages/DescTools/versions/0.99.39/topics/BinomCI>
 
-## 3.3 Intervalos de confianza para la varianza poblacional
+## 4.3 Intervalos de confianza para la varianza poblacional
 En este caso utilizaremos la función VarCI() del paquete "DescTools". Pasamos inmediatamente al ejemplo. 
 
 ##### Ejemplo:
@@ -226,7 +226,7 @@ La documentación de la función VarCI() la pueden encontrar en el siguiente lin
 
 Recordar que para realizar una gráfica de distribuciones de variables continuas, necesitamos utilizar un gráfico de tipo histograma. Para graficar un histograma, fabricamos una base de datos de tipo tibble con 400 unidades observacionales (filas), 200 de ellas de tipo A y 200 de ellas tipo B. Así mismo nos aseguramos que ambas categorías tengan una distribución normal, pero con una pequeña diferencia en sus medias. Llamaremos a esta base de datos, "Data" (establecemos una semilla para que nos salga siempre el mismo resultado a todos, ya que al crear una distribución normal, esta se crea aleatoriamente):
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 set.seed(1234)
 Data <- tibble(cond = factor(rep(c("A","B"), each=200)), 
