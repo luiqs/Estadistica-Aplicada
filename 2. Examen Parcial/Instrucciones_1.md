@@ -11,19 +11,19 @@ A cada estudiante se le ha asignado un examen específico, detallado en
 la siguiente tabla (si realiza otro examen que no le ha tocado, no sera
 evaluado):
 
-| Nombre           | Apellido           | Enlace                                                                                      |
-|:-----------------|:-------------------|:--------------------------------------------------------------------------------------------|
-| MARIA FERNANDA   | BARDALES MARTINEZ  | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_1.md> |
-| NAILEA YAMILETH  | BRAVO PORTOCARRERO | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_2.md> |
-| KELLY WENDY      | CASTRO GARCIA      | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_3.md> |
-| HEYDY JACQUELINE | CHIRINOS MEDINA    | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_4.md> |
-| JEANPOOL RICARDO | DE LA CRUZ PEÑA    | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_5.md> |
-| WENDY JULISSA    | CUENCA ALDUNATI    | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_6.md> |
-| ESTEFANY CIELO   | GUTIERREZ CORDOVA  | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_7.md> |
-| EVERTH JOSEPH    | HUAMAN LOAYZA      | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md> |
-| KATHERINE        | JAULIS CUBA        | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_9.md> |
-| ALVARO DAVID     | PARHUANA GASPAR    | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md> |
-| YEN              | VILA HUAMAN        | <https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_9.md> |
+| Nombre           | Apellido           | Enlace                                                                                                 |
+|:-----------------|:-------------------|:-------------------------------------------------------------------------------------------------------|
+| MARIA FERNANDA   | BARDALES MARTINEZ  | [Examen 1](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_1.md)  |
+| NAILEA YAMILETH  | BRAVO PORTOCARRERO | [Examen 2](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_2.md)  |
+| KELLY WENDY      | CASTRO GARCIA      | [Examen 3](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_3.md)  |
+| HEYDY JACQUELINE | CHIRINOS MEDINA    | [Examen 4](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_4.md)  |
+| JEANPOOL RICARDO | DE LA CRUZ PEÑA    | [Examen 5](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_5.md)  |
+| WENDY JULISSA    | CUENCA ALDUNATI    | [Examen 6](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_6.md)  |
+| ESTEFANY CIELO   | GUTIERREZ CORDOVA  | [Examen 7](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_7.md)  |
+| EVERTH JOSEPH    | HUAMAN LOAYZA      | [Examen 8](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md)  |
+| KATHERINE        | JAULIS CUBA        | [Examen 9](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_9.md)  |
+| ALVARO DAVID     | PARHUANA GASPAR    | [Examen 10](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md) |
+| YEN              | VILA HUAMAN        | [Examen 11](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_9.md) |
 
 Recordar que el examen es totalmente individual, cualquier sospecha de
 copia sera evaluado. Por otro lado, usted puede hacer uso de sus apuntes
