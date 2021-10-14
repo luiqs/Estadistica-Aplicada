@@ -45,4 +45,4 @@ discuta los resultados obtenidos a las siguientes preguntas:
 
 ##### 3. Estime la media poblacional para la variable “GananciasMinera” y obtenga adicionalmente sus intervalos de confianza a un nivel de significancia del 5%. Adicionalmente, estime la concentración media poblacional de mercurio en peces y obtenga adicionalmente sus intervalos de confianza a un nivel de significancia del 5%. Consejo: Utilice paquete DescTools. **Discuta e interprete los resultados. Asi mismo genere una conclusión final**.
 
-##### 5. Realizar la prueba de hipotesis para verificar si la variable concentración de mercurio en peces sigue o no una distrinución normal. Complemente los resultados del contraste de hipotesis con el gráfico correspondiente **Discuta e interprete los resultados. Asi mismo genere una conclusión final**.
+##### 4. Realizar la prueba de hipotesis para verificar si la variable concentración de mercurio en peces sigue o no una distrinución normal. Complemente los resultados del contraste de hipotesis con el gráfico correspondiente **Discuta e interprete los resultados. Asi mismo genere una conclusión final**.
