@@ -1,41 +1,41 @@
-"Inunanciones","Temperatura","Precipitacion","Velocidad.Viento","Zona.Sismica1","Zona.Sismica2","CercaniaMar","Altitud"
-1,5,11,10,"Si",1,"Cercano",65
-3,6,8,20,"Si",1,"Lejano",50
-2,7,0,10,"Si",1,"Cercano",51
-3,1,20,10,"Si",1,"Lejano",54
-4,15,21,15,"Si",1,"Cercano",11
+"N°Inund","Temp","Precipitacion","Velocidad.Viento","Zona.Sismica1","Zona.Sismica2","Lejano","Altitud"
+1,5,11,10,"Si",1,"Muy cerca",65
+1,15,150,15,"No",0,"Muy cerca",51
+1,3,48,6,"No",0,"Muy cerca",48
+1,15,100,11,"Si",1,"Muy cerca",39
+1,21,60,13,"Si",1,"Cerca",47
+1,31,80,6,"No",0,"Muy cerca",37
+2,7,0,10,"Si",1,"Muy cerca",51
+2,18,70,30,"Si",1,"Muy cerca",7
+2,0,80,35,"Si",1,"Muy cerca",6
+2,2,120,15,"Si",1,"Cerca",20
+2,13,170,12,"No",0,"Cerca",21
+3,6,8,20,"Si",1,"Muy cerca",50
+3,1,20,10,"Si",1,"Cerca",54
+3,13,28,15,"Si",1,"Muy cerca",15
+3,26,51,29,"No",0,"Cerca",7
+3,35,28,5,"No",0,"Cerca",8
+3,25,100,8,"No",0,"Cerca",43
+3,19,40,10,"Si",1,"Cerca",20
+4,15,21,15,"Si",1,"Cerca",11
+4,29,80,31,"Si",1,"Lejano",15
+4,10,20,60,"Si",1,"Cerca",11
+4,12,40,14,"Si",1,"Cerca",10
 5,14,70,20,"No",0,"Lejano",7
-6,13,100,25,"No",0,"Lejano",10
-1,15,150,15,"No",0,"Cercano",51
-2,18,70,30,"Si",1,"Cercano",7
-2,0,80,35,"Si",1,"Lejano",6
-3,13,28,15,"Si",1,"Lejano",15
-5,25,50,24,"No",0,"Cercano",5
-3,26,51,29,"No",0,"Lejano",7
-4,29,80,31,"Si",1,"Cercano",15
-5,31,60,14,"Si",1,"Lejano",15
+5,25,50,24,"No",0,"Cerca",5
+5,31,60,14,"Si",1,"Cerca",15
 5,34,31,10,"No",0,"Lejano",16
-3,35,28,5,"No",0,"Cercano",8
-4,10,20,60,"Si",1,"Cercano",11
-4,12,40,14,"Si",1,"Lejano",10
-7,15,41,35,"No",0,"Cercano",14
-5,9,90,10,"Si",1,"Cercano",6
-2,2,120,15,"Si",1,"Lejano",20
-2,13,170,12,"No",0,"Cercano",21
-8,15,90,10,"No",0,"Lejano",15
-3,25,100,8,"No",0,"Cercano",43
-1,3,48,6,"No",0,"Cercano",48
-9,4,70,14,"No",0,"Lejano",4
+5,9,90,10,"Si",1,"Lejano",6
+6,13,100,25,"No",0,"Cerca",10
+7,15,41,35,"No",0,"Lejano",14
 7,10,71,13,"Si",1,"Lejano",5
-1,15,100,11,"Si",1,"Lejano",39
-3,19,40,10,"Si",1,"Cercano",20
-7,34,80,8,"No",0,"Cercano",10
-8,4,180,6,"No",0,"Cercano",8
-9,25,50,14,"No",0,"Lejano",4
-1,21,60,13,"Si",1,"Lejano",47
-8,19,44,11,"Si",1,"Cercano",5
-7,26,64,11,"Si",1,"Cercano",5
-8,24,36,14,"Si",1,"Cercano",6
-9,33,70,18,"Si",1,"Lejano",5
-1,31,80,6,"No",0,"Cercano",37
+7,34,80,8,"No",0,"Cerca",10
+7,26,64,11,"Si",1,"Lejano",5
 7,15,28,11,"No",0,"Lejano",5
+8,15,90,10,"No",0,"Lejano",15
+8,4,180,6,"No",0,"Lejano",8
+8,19,44,11,"Si",1,"Lejano",5
+8,24,36,14,"Si",1,"Lejano",6
+9,4,70,14,"No",0,"Lejano",4
+9,25,50,14,"No",0,"Lejano",4
+9,33,70,18,"Si",1,"Lejano",5
