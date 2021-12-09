@@ -1,53 +1,62 @@
 Instrucciones examen Final de estadística aplicada
 ================
 
-La duración del examen sera de 1 hora con 50 minutos (a partir de las
-08:10 hasta la 10:00 hrs) y se darán 5 minutos de gracia para entregar
+La duración del examen sera de 1 hora con 30 minutos (a partir de las
+14:15 hasta las 16:45 hrs) y se darán 5 minutos de gracia para entregar
 el documento en el Aula Virtual.
 
 A cada estudiante se le ha asignado un examen específico, detallado en
-la siguiente tabla (si realiza otro examen que no le ha tocado, no sera
-evaluado):
+la siguiente tabla (si realiza otro examen que no le ha tocado, sera
+evaluado con 0):
 
-| Nombre              | Apellido            | Enlace                                                                                            |
-|:--------------------|:--------------------|:--------------------------------------------------------------------------------------------------|
-| Brigitte Joya       | BLANCO ROSELLO      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| RASHELL KATE        | CHIRINOS ACOSTA     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| SEBASTIAN DANIEL    | COROMINAS SANCHEZ   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| KAROL MARYORI       | CORRALES VASQUEZ    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| DEYCK OMAR          | COTILLO COX         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/8.-Examen-Final-8.md) |
-| ANDREA NICOLLE      | ESTELA YACOLCA      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| SOL SINAI           | ESTRADA GUTIERREZ   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| KATHERINNE JASMIN   | GOMEZ CRISTOBAL     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| KAREN RAQUEL        | HUAMANI RÍOS        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| ANAHI CRISTINA      | LARICO HUERTA       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| KIARA ELENA         | MAURTUA ROSADIO     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| DIEGO ALEXIS        | QUINTANA CASTRO     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/8.-Examen-Final-8.md) |
-| SANTIAGO JOSE       | RIVERA FERREYROS    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/6.-Examen-Final-6.md) |
-| SEBASTIAN ALONSO    | ROJAS CASTILLO      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/7.-Examen-Final-7.md) |
-| ADELINA ELSA SAMIHA | SARMIENTO SARMIENTO | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/1.-Examen-Final-1.md) |
-| ZAHIRA XIMENA       | TAMAYO CENTURION    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/2.-Examen-Final-2.md) |
-| ALEXIA NASMMIN      | VALENTIN ANDRES     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/3.-Examen-Final-3.md) |
-| FABRIZIO            | VENEROS LESCANO     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/4.-Examen-Final-4.md) |
-| PIERO ALEXANDER     | ZEVALLOS AGUILAR    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Ejercicios/8.-Examen-Final-8.md) |
+| Nombre              | Apellido          | Enlace                                                                                       |
+|:--------------------|:------------------|:---------------------------------------------------------------------------------------------|
+| CRISTIAN            | AGUILAR PRINCIPE  | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/3.-Examen-Final-3.md) |
+| MARIO RODRIGO       | ARCE MAMANI       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/1.-Examen-Final-1.md) |
+| CARLOS ALBERTO      | CALDERON ESPINOZA | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/2.-Examen-Final-2.md) |
+| BENJAMIN            | CESPEDES LUNA     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/4.-Examen-Final-4.md) |
+| ALICIA              | CHINGUEL CHINGUEL | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/5.-Examen-Final-5.md) |
+| ATENEA              | COLLAZOS AQUINO   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/6.-Examen-Final-6.md) |
+| EMELY JULISSA       | CONDORI RAMOS     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/7.-Examen-Final-7.md) |
+| XIOMARA NICOLE      | DE LA CRUZ SUTTA  | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/8.-Examen-Final-8.md) |
+| ANGELA LUCERO       | DIAZ CAMPOVERDE   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/3.-Examen-Final-3.md) |
+| SHEYLA MELISA       | ESPINOZA SALAS    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/1.-Examen-Final-1.md) |
+| ANAIS PILAR         | FERNANDEZ MURILLO | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/2.-Examen-Final-2.md) |
+| FIORELLA XIOMARA    | GAGO TELLO        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/4.-Examen-Final-4.md) |
+| MATIAS NAOKI        | HAMADA YUSA       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/5.-Examen-Final-5.md) |
+| MARY LUZ            | HUARANGA MALAVER  | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/6.-Examen-Final-6.md) |
+| KAREN SAORI         | HUILLCA FUENTES   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/7.-Examen-Final-7.md) |
+| RENATO CARLOS       | LEÓN GUTIERREZ    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/8.-Examen-Final-8.md) |
+| SEBASTIAN           | LOYOLA TRUJILLANO | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/3.-Examen-Final-3.md) |
+| ROMINA              | MUÑOZ GONZALES    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/1.-Examen-Final-1.md) |
+| DEICY MARIA         | ORE ESCALANTE     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/2.-Examen-Final-2.md) |
+| SHEYLA BRITNEY      | OSORIO LOYOLA     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/4.-Examen-Final-4.md) |
+| MAYRA ALEXANDRA     | PISCONTE GOMERO   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/5.-Examen-Final-5.md) |
+| GENESIS YOMARA      | SALAZAR HIDALGO   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/6.-Examen-Final-6.md) |
+| SANDRA PAMELA       | SALDAÑA ARCOS     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/7.-Examen-Final-7.md) |
+| GERALDINE ALEJANDRA | VALCARCEL VERA    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/8.-Examen-Final-8.md) |
+| BLANCA CECILIA      | VARGAS HUANI      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/3.-Examen-Final-3.md) |
+| GIACOMO             | VELASCO ABUHADBA  | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/1.-Examen-Final-1.md) |
+| MARICIELO ALEJANDRA | VERA RIEGA        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/2.-Examen-Final-2.md) |
+| DANIELA CRISTINA    | VILCHEZ AGUILAR   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/4.-Examen-Final-4.md) |
+| SARA RAQUEL         | VILLALTA LOYOLA   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/5.-Examen-Final-5.md) |
+| RODRIGO ALONSO      | VILLANO VILCHEZ   | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Jhony/6.-Examen-Final-6.md) |
 
 Instrucciones:
 
-Copiar las preguntas desde el inicio al Rmarkdown y resolver el exámen.
+Copiar las preguntas desde el inicio al Rmarkdown y resolver el examen.
 Examen que no contenga las preguntas, se le restará puntos.
 
 Recordar que el examen es totalmente individual, cualquier sospecha de
-copia sera evaluado. Por otro lado, usted puede hacer uso de sus apuntes
-y clases para la resolución de los ejercicios. Todas las preguntas
-tienen el mismo peso.
+copia sera evaluado con puntos negativos o anulación del examen. Por
+otro lado, usted puede hacer uso de sus apuntes y internet para la
+resolución de los ejercicios. Todas las preguntas tienen el mismo peso.
 
-El exámen se realizará en la sala principal y todos los alumnos deberan
-de tener la camará prendida. Realizar en el mejor de los casos preguntas
-al profesor por el chat privado del Zoom para no interrumpir a los
-compañeros. En caso ser necesario, prender su micro. Las dudas de
-entendimiento y/o error en el enunciado seran atendidas por el profesor.
-No se brindará ayuda a los alumnos desde un punto para la resolución de
-los examenes.
+El examen se realizará en la sala principal y todos los alumnos deberán
+de tener la cámara prendida. Realizar potenciales preguntas de
+entendimiento al profesor por el chat privado del Zoom para no
+interrumpir a los compañeros. No se brindará ayuda a los alumnos desde
+un punto para la resolución de los exámenes.
 
 **IMPORTANTE**: La entrega del examen final se realizará en documento
 Word, trabajado a partir de un documento Rmarkdown. Sino logra terminar
