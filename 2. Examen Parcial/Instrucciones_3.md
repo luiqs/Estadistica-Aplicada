@@ -4,45 +4,26 @@ Instrucciones examen Parcial de estadística aplicada
 # Inntrucciones:
 
 La duración del examen sera de 1 hora con 30 minutos (a partir de las
-14:15 hasta las 15:45) y se darán 5 minutos de gracia para entregar el
-documento en el Aula Virtual.
+08:20 hasta las 9:50) y se darán 5 minutos de gracia para entregar el
+documento a el correo del docente: <lrocai@cientifica.edu.pe>
 
 A cada estudiante se le ha asignado un examen específico, detallado en
 la siguiente tabla (si realiza otro examen que no le ha tocado, no sera
 evaluado):
 
-| Nombre              | Apellido          | Enlace                                                                                                 |
-|:--------------------|:------------------|:-------------------------------------------------------------------------------------------------------|
-| CRISTIAN            | AGUILAR PRINCIPE  | [Examen 1](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_1.md)  |
-| MARIO RODRIGO       | ARCE MAMANI       | [Examen 2](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_2.md)  |
-| CARLOS ALBERTO      | CALDERON ESPINOZA | [Examen 3](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_3.md)  |
-| BENJAMIN            | CESPEDES LUNA     | [Examen 4](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_4.md)  |
-| ALICIA              | CHINGUEL CHINGUEL | [Examen 5](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_5.md)  |
-| ATENEA              | COLLAZOS AQUINO   | [Examen 6](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_6.md)  |
-| EMELY JULISSA       | CONDORI RAMOS     | [Examen 7](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_7.md)  |
-| XIOMARA NICOLE      | DE LA CRUZ SUTTA  | [Examen 8](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md)  |
-| ANGELA LUCERO       | DIAZ CAMPOVERDE   | [Examen 9](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_9.md)  |
-| SHEYLA MELISA       | ESPINOZA SALAS    | [Examen 10](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_1.md) |
-| ANAIS PILAR         | FERNANDEZ MURILLO | [Examen 11](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_2.md) |
-| FIORELLA XIOMARA    | GAGO TELLO        | [Examen 12](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_3.md) |
-| MATIAS NAOKI        | HAMADA YUSA       | [Examen 13](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_4.md) |
-| MARY LUZ            | HUARANGA MALAVER  | [Examen 14](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_5.md) |
-| KAREN SAORI         | HUILLCA FUENTES   | [Examen 15](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_6.md) |
-| RENATO CARLOS       | LEÓN GUTIERREZ    | [Examen 16](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_7.md) |
-| SEBASTIAN           | LOYOLA TRUJILLANO | [Examen 17](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md) |
-| ROMINA              | MUÑOZ GONZALES    | [Examen 18](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_9.md) |
-| DEICY MARIA         | ORE ESCALANTE     | [Examen 19](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_1.md) |
-| SHEYLA BRITNEY      | OSORIO LOYOLA     | [Examen 20](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_2.md) |
-| MAYRA ALEXANDRA     | PISCONTE GOMERO   | [Examen 21](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_3.md) |
-| GENESIS YOMARA      | SALAZAR HIDALGO   | [Examen 22](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_4.md) |
-| SANDRA PAMELA       | SALDAÑA ARCOS     | [Examen 23](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_5.md) |
-| GERALDINE ALEJANDRA | VALCARCEL VERA    | [Examen 24](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_6.md) |
-| BLANCA CECILIA      | VARGAS HUANI      | [Examen 25](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_7.md) |
-| GIACOMO             | VELASCO ABUHADBA  | [Examen 26](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_8.md) |
-| MARICIELO ALEJANDRA | VERA RIEGA        | [Examen 27](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_1.md) |
-| DANIELA CRISTINA    | VILCHEZ AGUILAR   | [Examen 28](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_2.md) |
-| SARA RAQUEL         | VILLALTA LOYOLA   | [Examen 29](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_3.md) |
-| RODRIGO ALONSO      | VILLANO VILCHEZ   | [Examen 30](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Clases%20Extra/ExamenParcial_4.md) |
+| Nombre    | Apellido | Enlace                                                                                                        |
+|:----------|:---------|:--------------------------------------------------------------------------------------------------------------|
+| KRISTELL  | GONZALES | [Examen 1](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_10.md)  |
+| JOSEPH    | HUAMAN   | [Examen 2](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_10.md)  |
+| SAORI     | HUILLCA  | [Examen 3](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_11.md)  |
+| ELIANA    | JAIME    | [Examen 4](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_12.md)  |
+| KATHERINE | JAULIS   | [Examen 5](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_12.md)  |
+| ALISSON   | PEREZ    | [Examen 6](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_11.md)  |
+| YESSICA   | PONGO    | [Examen 7](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_10.md)  |
+| BELEN     | ROZAS    | [Examen 8](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_12.md)  |
+| GREYCY    | RUIZ     | [Examen 9](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_12.md)  |
+| MARIA     | VALERO   | [Examen 10](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_11.md) |
+| JESUS     | VELARDE  | [Examen 11](https://github.com/luiqs/Estadistica-Aplicada/blob/main/3.%20Clases%20Extras/ExamenParcial_12.md) |
 
 Recordar que el examen es totalmente individual, cualquier sospecha de
 copia sera evaluado. Por otro lado, usted puede hacer uso de sus apuntes
