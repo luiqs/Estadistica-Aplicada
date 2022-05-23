@@ -52,8 +52,8 @@ preguntas:
 
 Asumiendo su población como las 40 observaciones de la base de datos
 Incendios, calcule el tamaño muestral para estimar la proporción
-poblacional de incendios. **Discuta e interprete los resultados. Asi
-mismo genere una conclusión final**.
+poblacional de incendios. Asuma un error muestral de 5%. **Discuta e
+interprete los resultados. Asi mismo genere una conclusión final**.
 
 ##### P2.
 
