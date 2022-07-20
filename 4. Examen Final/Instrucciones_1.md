@@ -2,7 +2,7 @@ Instrucciones examen Final de estadística aplicada
 ================
 
 La duración del examen sera de 1 hora con 30 minutos (a partir de las
-08:15 hasta las 09:45 hrs) y se darán 5 minutos adicionales para
+13:15 hasta las 14:45 hrs) y se darán 5 minutos adicionales para
 entregar el documento en el Aula Virtual (si demoran más de este tiempo,
 se descontarán tiempo proporcional al tiempo de tardanza).
 
@@ -10,50 +10,48 @@ A cada estudiante se le ha asignado un examen específico, detallado en
 la siguiente tabla (si realiza otro examen que no le ha tocado, sera
 evaluado con 0):
 
-| Nombre                 | Apellido             | Enlace                                                                                    |
-|:-----------------------|:---------------------|:------------------------------------------------------------------------------------------|
-| Güido Anthony          | Alvarez Campos       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.1.md) |
-| Antuanette Marylia     | Armas Quevedo        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.2.md) |
-| Luis Eduardo           | Balbuena Reyes       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.3.md) |
-| Ivory Katherine Janeth | Capcha Garcia        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.4.md) |
-| Ximena Nicole          | Carazas Flores       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.1.md) |
-| Francis Veronic        | Carbajal Guillen     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.2.md) |
-| Anibal Stefano         | Cardenas Aguilar     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.3.md) |
-| Alonso                 | Caro Pomareda        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.4.md) |
-| Kiara Jashury          | Cartolin Yataco      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.1.md) |
-| Maria Fernanda         | Cerna Arrieta        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.2.md) |
-| Katherine Joanny       | Chira Velasquez      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.3.md) |
-| Alvaro Javier          | Contreras Rivas      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.4.md) |
-| Armando Angel          | Cuya Poma            | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.5.md) |
-| Claudia Andrea         | Dextre Linares       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.6.md) |
-| Chiara Maria           | Dongo Soria Lira     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.1.md) |
-| Mavila Mahoma          | Flores Tello         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.2.md) |
-| Camila Teresa          | Garcia Sotelo        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.3.md) |
-| Joaquin Alfonso        | Garreta Diez         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.4.md) |
-| Jose Luis              | Huauya Arotinco      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.1.md) |
-| Joaquin Sebastian      | Larrea Florez        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.2.md) |
-| Sebastian              | Loyola Trujillano    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.3.md) |
-| Isbeth Ingrid          | Luyo Martinez        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.4.md) |
-| Sandra Sarahi          | Maguiña Ore          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.1.md) |
-| Joyce Alessandra       | Malca Valdez         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.2.md) |
-| Guevara Ruiz           | Maria Fernanda       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.3.md) |
-| Alejandra Cristina     | Medina Raraz         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.4.md) |
-| Valeria Nazareth       | Mera Guadalupe       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.5.md) |
-| Jimena Karina          | Meza Ospinal         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.6.md) |
-| Anali Karen            | Milla Since          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.1.md) |
-| Kimberly Maryan        | Ñahuin Guzman        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.2.md) |
-| Fabrizio               | Ochoa Cano           | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.3.md) |
-| Daniela Abigail        | Ortega Bello         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-1.4.md) |
-| Sayuri                 | Palomino Cardenas    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.1.md) |
-| Eliana Sandra          | Poma Huauya          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.2.md) |
-| Maria Fernanda Karina  | Ponce Reaño          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.3.md) |
-| Oscar Joel             | Ruiz Quispe          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-3.4.md) |
-| Adriana Jimena         | Ruiz Rengifo         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.1.md) |
-| Daniela Abigail        | Rumiche Paredes      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.2.md) |
-| Sophia Fernanda        | Soto Alfaro          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.3.md) |
-| Luz Kelly              | Tello Vargas         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.4.md) |
-| Micaela Valeria        | Ubillus Portocarrero | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.5.md) |
-| Kiara Fernanda         | Zarate Cieza         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.6.md) |
+|   N | Nombre                  | Apellido             | Enlace                                                                                                                             |
+|----:|:------------------------|:---------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
+|   1 | Ximena Elena            | Agama Alvarez        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-1.1.md)  |
+|   2 | Angel Jhomell           | Alfonso Gonzales     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-1.2.md)  |
+|   3 | Marcia Rosa             | Amado Quillama       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-1.3.md)  |
+|   4 | Anthony Bryam           | Arellano Crespo      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-1.4.md)  |
+|   5 | Marco Antonio Fernando  | Ariza Ochoa          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.1.md) |
+|   6 | Kaori Ninoshka          | Baila Laurente       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.2.md) |
+|   7 | Karol Valeria           | Benites Peña         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.3.md) |
+|   8 | Nicole Ariana           | Canales Soller       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.4.md) |
+|   9 | Diego Alexander         | Cardenas Quiliche    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.1.md)  |
+|  10 | Kelly Wendy             | Castro Garcia        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.2.md)  |
+|  11 | Emely Nicoll            | Ccopa Calachahuin    | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.3.md)  |
+|  12 | Daivid Irving           | Chavez Enriquez      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.4.md)  |
+|  13 | Janina                  | Coripuna Narro       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.1.md)  |
+|  14 | Bryan Andree            | Cruzatt Zea          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.2.md)  |
+|  15 | Jhim Elison             | Cusiche Layme        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.3.md)  |
+|  16 | Joana Sofia Del Rosario | Diaz Carlos          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.4.md)  |
+|  17 | Marcos Augusto          | Espinoza Montero     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.5.md)  |
+|  18 | Cristhian Edilberto     | Fernandez Ramos      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.6.md)  |
+|  19 | Renzo Albertt           | Garcia Cabello       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.1.md)  |
+|  20 | Cristhoper Antony       | Guzman Valente       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.2.md)  |
+|  21 | Gerhart Alonso          | Herrera Ludeña       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.3.md)  |
+|  22 | Azucena Milagros        | Huamani Barzola      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.4.md)  |
+|  23 | Oscar Arturo            | Huaroto Mendoza      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.1.md) |
+|  24 | Marco Antonio           | Mamani Ortiz         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.2.md) |
+|  25 | Luisa Maria             | Moreno Misari        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.3.md) |
+|  26 | Alexia                  | Paucarhuanca Fuentes | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-10.4.md) |
+|  27 | Vania Xiomara           | Pelaez Yparraguirre  | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.1.md)  |
+|  28 | Nicole Karen            | Quinto Yupanqui      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.2.md)  |
+|  29 | Gustavo Alonso          | Quique Cabello       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.3.md)  |
+|  30 | Erick Jhon              | Ramos Rojas          | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-3.4.md)  |
+|  31 | Juan Pedro              | Ruesta Barboza       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.1.md)  |
+|  32 | Massiel Elizabeth       | Rufasto Lizarbe      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.2.md)  |
+|  33 | Ruby Yocasta            | Sahua Albornoz       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.3.md)  |
+|  34 | Vincent                 | Terreros Taboada     | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.4.md)  |
+|  35 | Katherine Marisela      | Tovar Aleman         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.5.md)  |
+|  36 | Anthony                 | Valdez Castillo      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-5.6.md)  |
+|  37 | Adriana Patricia        | Valle Huaman         | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.1.md)  |
+|  38 | Valeria Alejandra       | Vasquez Pariona      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.2.md)  |
+|  39 | Maria Flavia            | Vasquez Vilcahuaman  | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.3.md)  |
+|  40 | Victor Manuel           | Yamacacho Chero      | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/Beijing%20-%20Air%20Quality%20measures/Cosu/Examen-Final-7.4.md)  |
 
 Instrucciones:
 
