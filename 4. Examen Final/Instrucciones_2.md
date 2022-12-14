@@ -37,21 +37,17 @@ evaluado con 0):
 |  24 | Laura Rosita        | Vilca Bustillos       | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-5.2.md)  |
 |  25 | Milagros Estefanny  | Zuloaga Flores        | [Enlace](https://github.com/luiqs/Estadistica-Aplicada/blob/main/PDB/Examen-Final-7.2.md)  |
 
-Instrucciones:
-
-Copiar las preguntas desde el inicio al Rmarkdown y resolver el examen.
-Examen que no contenga las preguntas, se le restará puntos.
-
-Recordar que el examen es totalmente individual, cualquier sospecha de
-copia sera evaluado con puntos negativos o anulación del examen. Por
-otro lado, usted puede hacer uso de sus apuntes y internet para la
-resolución de los ejercicios. Todas las preguntas tienen el mismo peso.
-
-El examen se realizará en la sala principal y todos los alumnos deberán
-de tener la cámara prendida. Realizar potenciales preguntas de
-entendimiento al profesor por el chat privado del Zoom para no
-interrumpir a los compañeros. No se brindará ayuda a los alumnos desde
-un punto para la resolución de los exámenes.
+Instrucciones: Copiar las preguntas desde el inicio al Rmarkdown y
+resolver el examen. Examen que no contenga las preguntas, se le restará
+puntos. Recordar que el examen es totalmente individual, cualquier
+sospecha de copia sera evaluado con puntos negativos o anulación del
+examen. Por otro lado, usted puede hacer uso de sus apuntes y internet
+para la resolución de los ejercicios. Todas las preguntas tienen el
+mismo peso. El examen se realizará en la sala principal y todos los
+alumnos deberán de tener la cámara prendida. Realizar potenciales
+preguntas de entendimiento al profesor por el chat privado del Zoom para
+no interrumpir a los compañeros. No se brindará ayuda a los alumnos
+desde un punto para la resolución de los exámenes.
 
 **IMPORTANTE**: La entrega del examen final se realizará en documento
 Word, trabajado a partir de un documento Rmarkdown. Sino logra terminar
